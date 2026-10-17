@@ -1,1706 +1,1045 @@
 export const TOPICS = [
   {
-    id: 1,
-    slug: "introduction-to-python",
-    icon: "Terminal",
-    level: "beginner",
-    estimatedMinutes: 20,
-    title: {
-      fi: "Johdanto Pythoniin",
-      en: "Introduction to Python",
-      ar: "مقدمة إلى بايثون"
+    "id": 1,
+    "slug": "introduction-to-python",
+    "icon": "Terminal",
+    "level": "beginner",
+    "estimatedMinutes": 20,
+    "title": {
+      "fi": "Johdanto Pythoniin",
+      "en": "Introduction to Python",
+      "ar": "مقدمة إلى بايثون"
     },
-    summary: {
-      fi: "Mitä Python on, tulkattavan ja käännettävän kielen erot sekä koodin suoritusympäristö.",
-      en: "What is Python, interpreted vs compiled execution models, and core syntax philosophies.",
-      ar: "ما هي لغة بايثون، الفروق بين اللغات المفسرة والمترجمة، وفلسفة البنية النحوية."
+    "summary": {
+      "fi": "Mitä Python on, tulkattavan ja käännettävän kielen erot sekä koodin suoritusympäristö.",
+      "en": "What is Python, interpreted vs compiled execution models, and core syntax philosophies.",
+      "ar": "ما هي لغة بايثون، الفروق بين اللغات المفسرة والمترجمة، وفلسفة البنية النحوية."
     },
-    theory: {
-      fi: `
-### Mikä Python on?
-Python on korkean tason, yleiskäyttöinen ja dynaamisesti tyypitetty ohjelmointikieli, jonka kehitti **Guido van Rossum** vuonna 1991. Pythonin kantava filosofia on tiivistetty *The Zen of Python* -kokoelmaan (*import this*): koodin luettavuus ja selkeys ovat ensiarvoisen tärkeitä.
-
-### Tulkattava vs. Käännettävä kieli
-* **Käännettävät kielet (esim. C, C++, Rust):** Lähdekoodi käännetään kääntäjällä (compiler) suoraan kohdejärjestelmän konekieleksi (binaaritiedostoksi) ennen suoritusta. Suoritusnopeus on huippuluokkaa, mutta koodi täytyy kääntää erikseen kullekin käyttöjärjestelmälle.
-* **Tulkattavat ja tavukoodipohjaiset kielet (Python / CPython):** Python-lähdekoodi (.py) muunnetaan ensin automaattisesti tavukoodiksi (.pyc), jonka jälkeen **Python Virtual Machine (PVM)** suorittaa sen rivi riviltä. Tämä tekee Pythonista täysin alustariippumattoman (Write Once, Run Anywhere).
-
-### Pythonin syntaksi verrattuna C++ / Javaan
-Pythonissa ei käytetä puolipisteitä rivien päättämiseen eikä aaltosulkeita koodilohkojen rajaamiseen. Koodilohkot määritellään **sisennyksellä** (4 välilyöntiä). Tämä pakottaa kirjoittamaan siistiä ja luettavaa koodia.
-      `,
-      en: `
-### What is Python?
-Python is a high-level, interpreted, general-purpose programming language conceived by **Guido van Rossum** in 1991. Python's core design philosophy emphasizes code readability and simplicity, best captured in *The Zen of Python* (*import this*): *"Readability counts"*.
-
-### Interpreted vs. Compiled Languages
-* **Compiled Languages (e.g. C, C++, Rust):** Source code is processed directly into machine binary code by a compiler ahead of time. This yields maximum raw performance, but requires platform-specific compilation.
-* **Interpreted & Bytecode Languages (Python / CPython):** Standard Python (CPython) compiles source files into intermediate bytecode (\`.pyc\`), which is then executed line-by-line by the **Python Virtual Machine (PVM)**. This offers true cross-platform portability.
-
-### Python Syntax Comparison with C++ / Java
-Python eliminates boilerplate semicolons (\`;\`) and curly braces (\`{}\`). Code blocks are structured using **syntactic whitespace indentation** (strictly 4 spaces), producing readable, human-friendly codebases.
-      `,
-      ar: `
-### ما هي لغة بايثون؟
-بايثون هي لغة برمجة عالية المستوى ومتعددة الاستخدامات، تم إنشاؤها بواسطة **جويدو فان روسم** عام 1991. ترتكز فلسفتها على وضوح الكود وقابليته للقراءة، وهو ما يجسده مبدأ *The Zen of Python*: *"قابلية القراءة أهم من أي شيء"*.
-
-### المقارنة: لغة مفسرة أم مترجمة؟
-* **اللغات المترجمة (Compiled مثل C++ و Rust):** يتم تحويل الكود بالكامل إلى لغة الآلة الثنائية (Machine Code) بواسطة المترجم قبل التشغيل، مما يمنحها سرعة فائقة لكنها تتطلب إعادة ترجمة لكل نظام تشغيل.
-* **اللغات المفسرة وتوليد البايت كود (بايثون / CPython):** تقوم بايثون أولاً بتحويل الكود المصدري إلى بايت كود وسيط (\`.pyc\`)، ثم تقوم الآلة الافتراضية **PVM** بتنفيذه تعليمة تلو الأخرى، مما يوفر مرونة وتشغيلاً على كل المنصات.
-
-### مقارنة بنية بايثون مع C++ وجافا
-تتخلص بايثون من الفواصل المنقوطة والأقواس المعقوفة، وتعتمد حصراً على **المسافات البادئة (Indentation)** لتحديد كتل الأوامر البرمجية.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Mikä Python on?</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Python on korkean tason, yleiskäyttöinen ja dynaamisesti tyypitetty ohjelmointikieli, jonka kehitti <strong class=\"text-white font-semibold\">Guido van Rossum</strong> vuonna 1991. Pythonin kantava filosofia on tiivistetty <em class=\"text-slate-200 italic\">The Zen of Python</em> -kokoelmaan (<em class=\"text-slate-200 italic\">import this</em>): koodin luettavuus ja selkeys ovat ensiarvoisen tärkeitä.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Tulkattava vs. Käännettävä kieli</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Käännettävät kielet (esim. C, C++, Rust):</strong> Lähdekoodi käännetään kääntäjällä (compiler) suoraan kohdejärjestelmän konekieleksi (binaaritiedostoksi) ennen suoritusta. Suoritusnopeus on huippuluokkaa, mutta koodi täytyy kääntää erikseen kullekin käyttöjärjestelmälle.</li>\n    <li><strong class=\"text-white font-semibold\">Tulkattavat ja tavukoodipohjaiset kielet (Python / CPython):</strong> Python-lähdekoodi (.py) muunnetaan ensin automaattisesti tavukoodiksi (.pyc), jonka jälkeen <strong class=\"text-white font-semibold\">Python Virtual Machine (PVM)</strong> suorittaa sen rivi riviltä. Tämä tekee Pythonista täysin alustariippumattoman (Write Once, Run Anywhere).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Pythonin syntaksi verrattuna C++ / Javaan</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonissa ei käytetä puolipisteitä rivien päättämiseen eikä aaltosulkeita koodilohkojen rajaamiseen. Koodilohkot määritellään <strong class=\"text-white font-semibold\">sisennyksellä</strong> (4 välilyöntiä). Tämä pakottaa kirjoittamaan siistiä ja luettavaa koodia.</p>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>What is Python?</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Python is a high-level, interpreted, general-purpose programming language conceived by <strong class=\"text-white font-semibold\">Guido van Rossum</strong> in 1991. Python's core design philosophy emphasizes code readability and simplicity, best captured in <em class=\"text-slate-200 italic\">The Zen of Python</em> (<em class=\"text-slate-200 italic\">import this</em>): <em class=\"text-slate-200 italic\">\"Readability counts\"</em>.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Interpreted vs. Compiled Languages</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Compiled Languages (e.g. C, C++, Rust):</strong> Source code is processed directly into machine binary code by a compiler ahead of time. This yields maximum raw performance, but requires platform-specific compilation.</li>\n    <li><strong class=\"text-white font-semibold\">Interpreted & Bytecode Languages (Python / CPython):</strong> Standard Python (CPython) compiles source files into intermediate bytecode (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.pyc</code>), which is then executed line-by-line by the <strong class=\"text-white font-semibold\">Python Virtual Machine (PVM)</strong>. This offers true cross-platform portability.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Python Syntax Comparison with C++ / Java</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Python eliminates boilerplate semicolons (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">;</code>) and curly braces (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">{}</code>). Code blocks are structured using <strong class=\"text-white font-semibold\">syntactic whitespace indentation</strong> (strictly 4 spaces), producing readable, human-friendly codebases.</p>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>ما هي لغة بايثون؟</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">بايثون هي لغة برمجة عالية المستوى ومتعددة الاستخدامات، تم إنشاؤها بواسطة <strong class=\"text-white font-semibold\">جويدو فان روسم</strong> عام 1991. ترتكز فلسفتها على وضوح الكود وقابليته للقراءة، وهو ما يجسده مبدأ <em class=\"text-slate-200 italic\">The Zen of Python</em>: <em class=\"text-slate-200 italic\">\"قابلية القراءة أهم من أي شيء\"</em>.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>المقارنة: لغة مفسرة أم مترجمة؟</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">اللغات المترجمة (Compiled مثل C++ و Rust):</strong> يتم تحويل الكود بالكامل إلى لغة الآلة الثنائية (Machine Code) بواسطة المترجم قبل التشغيل، مما يمنحها سرعة فائقة لكنها تتطلب إعادة ترجمة لكل نظام تشغيل.</li>\n    <li><strong class=\"text-white font-semibold\">اللغات المفسرة وتوليد البايت كود (بايثون / CPython):</strong> تقوم بايثون أولاً بتحويل الكود المصدري إلى بايت كود وسيط (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.pyc</code>)، ثم تقوم الآلة الافتراضية <strong class=\"text-white font-semibold\">PVM</strong> بتنفيذه تعليمة تلو الأخرى، مما يوفر مرونة وتشغيلاً على كل المنصات.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>مقارنة بنية بايثون مع C++ وجافا</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">تتخلص بايثون من الفواصل المنقوطة والأقواس المعقوفة، وتعتمد حصراً على <strong class=\"text-white font-semibold\">المسافات البادئة (Indentation)</strong> لتحديد كتل الأوامر البرمجية.</p>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 1: Architecture & Syntax
-import sys
-import platform
-
-def inspect_environment():
-    print("Python-versio:", platform.python_version())
-    print("Suoritinarkkitehtuuri:", platform.architecture()[0])
-    print("Toteutus:", platform.python_implementation())
-    print("Tavukoodin maaginen numero:", sys.version_info[:2])
-
-# Verrataan C++ vs Python syntaksia:
-# C++:
-# int sum = 0;
-# for(int i=1; i<=5; i++) { sum += i; }
-
-# Python idiomatic:
-numbers = [1, 2, 3, 4, 5]
-total = sum(numbers)
-print(f"Lukujen summa: {total}")
-
-if __name__ == "__main__":
-    inspect_environment()`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 1: Architecture & Syntax\nimport sys\nimport platform\n\ndef inspect_environment():\n    print(\"Python-versio:\", platform.python_version())\n    print(\"Suoritinarkkitehtuuri:\", platform.architecture()[0])\n    print(\"Toteutus:\", platform.python_implementation())\n    print(\"Tavukoodin maaginen numero:\", sys.version_info[:2])\n\n# Verrataan C++ vs Python syntaksia:\n# C++:\n# int sum = 0;\n# for(int i=1; i<=5; i++) { sum += i; }\n\n# Python idiomatic:\nnumbers = [1, 2, 3, 4, 5]\ntotal = sum(numbers)\nprint(f\"Lukujen summa: {total}\")\n\nif __name__ == \"__main__\":\n    inspect_environment()",
+    "proTips": {
+      "fi": [
         "Käytä aina 4 välilyöntiä sisennystasolle. Älä koskaan sekoita sarkaimia (Tab) ja välilyöntejä keskenään (PEP 8).",
         "Voit lukea Pythonin ohjenuorat suoraan komentoriviltä komennolla: python -c 'import this'",
         "Käytä virtuaaliympäristöjä (venv) riippuvuuksien eristämiseen eri projektien välillä."
       ],
-      en: [
+      "en": [
         "Always use 4 spaces per indentation level. Never mix tabs and spaces in Python files (PEP 8 standard).",
         "You can inspect Python's design philosophy anytime by running: python -c 'import this'",
         "Always isolate project dependencies using built-in virtual environments: python -m venv .venv"
       ],
-      ar: [
+      "ar": [
         "استخدم دائماً 4 مسافات بادئة لكل مستوى، ولا تخلط إطلاقاً بين زر Tab والمسافات (معيار PEP 8).",
         "يمكنك استعراض مبادئ بايثون التصميمية عبر كتابة الأمر: python -c 'import this'.",
         "احرص على عزل حزم مشاريعك باستخدام البيئات الافتراضية: python -m venv .venv."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Mikä osa CPython-arkkitehtuurissa suorittaa käännetyn tavukoodin (.pyc)?",
-        en: "Which component in CPython architecture executes the compiled bytecode (.pyc)?",
-        ar: "ما هو المكون المسؤول في معمارية CPython عن تنفيذ البايت كود المترجم؟"
+    "quiz": {
+      "question": {
+        "fi": "Mikä osa CPython-arkkitehtuurissa suorittaa käännetyn tavukoodin (.pyc)?",
+        "en": "Which component in CPython architecture executes the compiled bytecode (.pyc)?",
+        "ar": "ما هو المكون المسؤول في معمارية CPython عن تنفيذ البايت كود المترجم؟"
       },
-      options: [
-        { id: "a", text: { fi: "GCC Compiler", en: "GCC Compiler", ar: "مترجم GCC" } },
-        { id: "b", text: { fi: "Python Virtual Machine (PVM)", en: "Python Virtual Machine (PVM)", ar: "آلة بايثون الافتراضية (PVM)" } },
-        { id: "c", text: { fi: "Operating System Kernel", en: "Operating System Kernel", ar: "نواة نظام التشغيل" } },
-        { id: "d", text: { fi: "LLVM Linker", en: "LLVM Linker", ar: "رابط LLVM" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "GCC Compiler",
+            "en": "GCC Compiler",
+            "ar": "مترجم GCC"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "Python Virtual Machine (PVM)",
+            "en": "Python Virtual Machine (PVM)",
+            "ar": "آلة بايثون الافتراضية (PVM)"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "Operating System Kernel",
+            "en": "Operating System Kernel",
+            "ar": "نواة نظام التشغيل"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "LLVM Linker",
+            "en": "LLVM Linker",
+            "ar": "رابط LLVM"
+          }
+        }
       ],
-      correctId: "b",
-      explanation: {
-        fi: "CPython kääntää koodin ensin tavukoodiksi, jonka jälkeen PVM (Python Virtual Machine) ajaa sen.",
-        en: "CPython compiles source code to bytecode instructions, which are executed by the Python Virtual Machine (PVM).",
-        ar: "يقوم بايثون بترجمة الكود إلى تعليمات بايت كود وسيطة تتولى آلة بايثون الافتراضية (PVM) تنفيذها."
+      "correctId": "b",
+      "explanation": {
+        "fi": "CPython kääntää koodin ensin tavukoodiksi, jonka jälkeen PVM (Python Virtual Machine) ajaa sen.",
+        "en": "CPython compiles source code to bytecode instructions, which are executed by the Python Virtual Machine (PVM).",
+        "ar": "يقوم بايثون بترجمة الكود إلى تعليمات بايت كود وسيطة تتولى آلة بايثون الافتراضية (PVM) تنفيذها."
       }
     }
   },
   {
-    id: 2,
-    slug: "variables-core-data-types",
-    icon: "Boxes",
-    level: "beginner",
-    estimatedMinutes: 25,
-    title: {
-      fi: "Muuttujat ja ydintietotyypit",
-      en: "Variables & Core Data Types",
-      ar: "المتغيرات وأنواع البيانات الأساسية"
+    "id": 2,
+    "slug": "variables-core-data-types",
+    "icon": "Boxes",
+    "level": "beginner",
+    "estimatedMinutes": 25,
+    "title": {
+      "fi": "Muuttujat ja ydintietotyypit",
+      "en": "Variables & Core Data Types",
+      "ar": "المتغيرات وأنواع البيانات الأساسية"
     },
-    summary: {
-      fi: "Muuttujien nimeäminen, dynaaminen tyypitys, muistinhallinta, id()-funktio ja muuttumattomat tyypit.",
-      en: "Naming conventions, dynamic typing, memory references with id(), and mutable vs immutable types.",
-      ar: "تسمية المتغيرات، النمط الديناميكي للأنواع، إدارة الذاكرة مع id()، والأنواع القابلة للتعديل وغير القابلة."
+    "summary": {
+      "fi": "Muuttujien nimeäminen, dynaaminen tyypitys, muistinhallinta, id()-funktio ja muuttumattomat tyypit.",
+      "en": "Naming conventions, dynamic typing, memory references with id(), and mutable vs immutable types.",
+      "ar": "تسمية المتغيرات، النمط الديناميكي للأنواع، إدارة الذاكرة مع id()، والأنواع القابلة للتعديل وغير القابلة."
     },
-    theory: {
-      fi: `
-### Muuttujat ja dynaaminen tyypitys
-Pythonissa muuttujan tyyppiä ei ilmoiteta etukäteen. Muuttuja luodaan automaattisesti, kun sille sijoitetaan arvo ensimmäisen kerran.
-Python on **vahvasti tyypitetty**, mikä tarkoittaa, että tyyppejä ei muunneta automaattisesti yhteensopimattomissa laskutoimituksissa (esim. \`"ikä: " + 25\` aiheuttaa \`TypeErrorin\`).
-
-### Nimeämiskäytännöt (PEP 8)
-* **Muuttujat ja funktiot:** \`snake_case\` (esim. \`kayttajan_ika\`, \`laske_summa\`)
-* **Vakiot (Constants):** \`UPPER_CASE\` (esim. \`MAX_CONNECTIONS = 100\`)
-* **Luokat:** \`PascalCase\` (esim. \`TiliAsiakas\`)
-
-### Muistinhallinta ja objektiviittaukset
-Pythonissa kaikki on olioita (objects). Muuttuja ei sisällä itse arvoa, vaan se on **viittaus (osoitin)** muistissa sijaitsevaan olioon.
-* **id()-funktio:** Palauttaa olion yksilöllisen muistiosoitteen kokonaislukuna.
-* **is vs ==:** \`==\` vertaa olioiden arvoja, kun taas \`is\` tarkistaa, viittaavatko molemmat täsmälleen samaan muistipaikkaan (\`id(a) == id(b)\`).
-
-### Muuttumattomat (Immutable) vs Muuttuvat (Mutable) tyypit
-* **Muuttumattomat:** \`int\`, \`float\`, \`str\`, \`tuple\`, \`bool\`. Jos muuttumattoman arvoa muutetaan, Python luo muistiin kokonaan uuden olion.
-* **Muuttuvat:** \`list\`, \`dict\`, \`set\`. Näiden sisältöä voidaan muuttaa samassa muistipaikassa.
-      `,
-      en: `
-### Variables & Dynamic Typing
-In Python, variables do not require explicit type declarations. A variable is created the moment an assignment is made (\`x = 42\`).
-Python is **strongly typed**: it does not perform implicit unsafe type coercion (e.g. \`"Score: " + 10\` raises a \`TypeError\`).
-
-### PEP 8 Naming Conventions
-* **Variables & Functions:** \`snake_case\` (e.g., \`user_balance\`, \`calculate_tax\`)
-* **Constants:** \`UPPER_SNAKE_CASE\` (e.g., \`MAX_RETRIES = 5\`)
-* **Classes:** \`PascalCase\` (e.g., \`BankAccount\`)
-
-### Memory Model & Object References
-In Python, "variables" are simply names bound to objects in memory.
-* **The \`id()\` function:** Returns the unique memory address (identity) of an object.
-* **Equality vs Identity (\`==\` vs \`is\`):** \`==\` checks whether values match; \`is\` checks whether both variables reference the identical object in memory.
-
-### Mutability: Mutable vs Immutable
-* **Immutable:** \`int\`, \`float\`, \`str\`, \`tuple\`, \`bool\`. Modifying them generates a new object in memory.
-* **Mutable:** \`list\`, \`dict\`, \`set\`. Their elements can be modified in-place without altering the object's identity.
-      `,
-      ar: `
-### المتغيرات والتعيين الديناميكي
-في بايثون، لا تحتاج للإعلان الصريح عن نوع المتغير. يتم إنشاء المتغير تلقائياً بمجرد إسناد قيمة له.
-تتميز بايثون بأنها **قوية النوعية (Strongly Typed)**؛ فلا تسمح بالدمج العشوائي بين النصوص والأرقام بدون تحويل صريح.
-
-### معايير التسمية الرسمية (PEP 8)
-* **المتغيرات والدوال:** \`snake_case\` (أحرف صغيرة بينها شرطة سفلية: \`user_score\`).
-* **الثوابت:** \`UPPER_CASE\` (أحرف كبيرة: \`MAX_USERS = 500\`).
-* **الفئات (Classes):** \`PascalCase\` (الحرف الأول كبير: \`BankAccount\`).
-
-### نموذج الذاكرة ودالة id()
-المتغيرات في بايثون هي مؤشرات لأسماء تشير إلى كائنات في الذاكرة.
-* **دالة \`id()\`:** ترجع العنوان الرقمي الفريد للكائن في الذاكرة.
-* **الفرق بين \`==\` و \`is\`:** \`==\` يقارن القيم، بينما \`is\` يتأكد من تطابق المرجع في الذاكرة تماماً.
-
-### القابلية للتعديل (Mutability)
-* **غير قابلة للتعديل (Immutable):** \`int\`، \`float\`، \`str\`، \`tuple\`.
-* **قابلة للتعديل (Mutable):** \`list\`، \`dict\`، \`set\`.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Muuttujat ja dynaaminen tyypitys</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonissa muuttujan tyyppiä ei ilmoiteta etukäteen. Muuttuja luodaan automaattisesti, kun sille sijoitetaan arvo ensimmäisen kerran.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Python on <strong class=\"text-white font-semibold\">vahvasti tyypitetty</strong>, mikä tarkoittaa, että tyyppejä ei muunneta automaattisesti yhteensopimattomissa laskutoimituksissa (esim. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"ikä: \" + 25</code> aiheuttaa <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">TypeErrorin</code>).</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Nimeämiskäytännöt (PEP 8)</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Muuttujat ja funktiot:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">snake_case</code> (esim. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">kayttajan_ika</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">laske_summa</code>)</li>\n    <li><strong class=\"text-white font-semibold\">Vakiot (Constants):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">UPPER_CASE</code> (esim. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">MAX_CONNECTIONS = 100</code>)</li>\n    <li><strong class=\"text-white font-semibold\">Luokat:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">PascalCase</code> (esim. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">TiliAsiakas</code>)</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Muistinhallinta ja objektiviittaukset</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonissa kaikki on olioita (objects). Muuttuja ei sisällä itse arvoa, vaan se on <strong class=\"text-white font-semibold\">viittaus (osoitin)</strong> muistissa sijaitsevaan olioon.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">id()-funktio:</strong> Palauttaa olion yksilöllisen muistiosoitteen kokonaislukuna.</li>\n    <li><strong class=\"text-white font-semibold\">is vs ==:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">==</code> vertaa olioiden arvoja, kun taas <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">is</code> tarkistaa, viittaavatko molemmat täsmälleen samaan muistipaikkaan (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">id(a) == id(b)</code>).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Muuttumattomat (Immutable) vs Muuttuvat (Mutable) tyypit</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Muuttumattomat:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">int</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">float</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">str</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">tuple</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">bool</code>. Jos muuttumattoman arvoa muutetaan, Python luo muistiin kokonaan uuden olion.</li>\n    <li><strong class=\"text-white font-semibold\">Muuttuvat:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">list</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">dict</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">set</code>. Näiden sisältöä voidaan muuttaa samassa muistipaikassa.</li>\n</ul>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Variables & Dynamic Typing</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">In Python, variables do not require explicit type declarations. A variable is created the moment an assignment is made (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">x = 42</code>).</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Python is <strong class=\"text-white font-semibold\">strongly typed</strong>: it does not perform implicit unsafe type coercion (e.g. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"Score: \" + 10</code> raises a <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">TypeError</code>).</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>PEP 8 Naming Conventions</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Variables & Functions:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">snake_case</code> (e.g., <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">user_balance</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">calculate_tax</code>)</li>\n    <li><strong class=\"text-white font-semibold\">Constants:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">UPPER_SNAKE_CASE</code> (e.g., <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">MAX_RETRIES = 5</code>)</li>\n    <li><strong class=\"text-white font-semibold\">Classes:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">PascalCase</code> (e.g., <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">BankAccount</code>)</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Memory Model & Object References</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">In Python, \"variables\" are simply names bound to objects in memory.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">The <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">id()</code> function:</strong> Returns the unique memory address (identity) of an object.</li>\n    <li><strong class=\"text-white font-semibold\">Equality vs Identity (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">==</code> vs <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">is</code>):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">==</code> checks whether values match; <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">is</code> checks whether both variables reference the identical object in memory.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Mutability: Mutable vs Immutable</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Immutable:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">int</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">float</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">str</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">tuple</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">bool</code>. Modifying them generates a new object in memory.</li>\n    <li><strong class=\"text-white font-semibold\">Mutable:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">list</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">dict</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">set</code>. Their elements can be modified in-place without altering the object's identity.</li>\n</ul>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>المتغيرات والتعيين الديناميكي</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">في بايثون، لا تحتاج للإعلان الصريح عن نوع المتغير. يتم إنشاء المتغير تلقائياً بمجرد إسناد قيمة له.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">تتميز بايثون بأنها <strong class=\"text-white font-semibold\">قوية النوعية (Strongly Typed)</strong>؛ فلا تسمح بالدمج العشوائي بين النصوص والأرقام بدون تحويل صريح.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>معايير التسمية الرسمية (PEP 8)</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">المتغيرات والدوال:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">snake_case</code> (أحرف صغيرة بينها شرطة سفلية: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">user_score</code>).</li>\n    <li><strong class=\"text-white font-semibold\">الثوابت:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">UPPER_CASE</code> (أحرف كبيرة: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">MAX_USERS = 500</code>).</li>\n    <li><strong class=\"text-white font-semibold\">الفئات (Classes):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">PascalCase</code> (الحرف الأول كبير: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">BankAccount</code>).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>نموذج الذاكرة ودالة id()</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">المتغيرات في بايثون هي مؤشرات لأسماء تشير إلى كائنات في الذاكرة.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">دالة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">id()</code>:</strong> ترجع العنوان الرقمي الفريد للكائن في الذاكرة.</li>\n    <li><strong class=\"text-white font-semibold\">الفرق بين <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">==</code> و <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">is</code>:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">==</code> يقارن القيم، بينما <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">is</code> يتأكد من تطابق المرجع في الذاكرة تماماً.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>القابلية للتعديل (Mutability)</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">غير قابلة للتعديل (Immutable):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">int</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">float</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">str</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">tuple</code>.</li>\n    <li><strong class=\"text-white font-semibold\">قابلة للتعديل (Mutable):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">list</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">dict</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">set</code>.</li>\n</ul>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 2: Variables & Memory Model
-
-# 1. Dynaaminen tyypitys ja tyypin tarkistus
-hinta = 99.90          # float
-maara = 4              # int
-tuote = "Python-kirja" # str
-onko_varastossa = True # bool
-
-print(f"Tuote: {tuote} ({type(tuote).__name__})")
-print(f"Yhteishinta: {hinta * maara}€")
-
-# 2. Muistiosoitteet ja id()
-a = 256
-b = 256
-print(f"a == b: {a == b}, a is b: {a is b}")
-print(f"id(a): {id(a)}, id(b): {id(b)}")
-
-# 3. Muuttumattomuus (Immutable)
-teksti = "PythonHub"
-vanha_id = id(teksti)
-teksti += " Pro"
-uusi_id = id(teksti)
-print("Luotiinko uusi olio muistiin?", vanha_id != uusi_id)
-
-# 4. Muuttuva lista (Mutable)
-lista_a = [10, 20, 30]
-lista_b = lista_a      # Sama viittaus!
-lista_b.append(40)
-print("Molemmat muuttuivat:", lista_a is lista_b, lista_a)`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 2: Variables & Memory Model\n\n# 1. Dynaaminen tyypitys ja tyypin tarkistus\nhinta = 99.90          # float\nmaara = 4              # int\ntuote = \"Python-kirja\" # str\nonko_varastossa = True # bool\n\nprint(f\"Tuote: {tuote} ({type(tuote).__name__})\")\nprint(f\"Yhteishinta: {hinta * maara}€\")\n\n# 2. Muistiosoitteet ja id()\na = 256\nb = 256\nprint(f\"a == b: {a == b}, a is b: {a is b}\")\nprint(f\"id(a): {id(a)}, id(b): {id(b)}\")\n\n# 3. Muuttumattomuus (Immutable)\nteksti = \"PythonHub\"\nvanha_id = id(teksti)\nteksti += \" Pro\"\nuusi_id = id(teksti)\nprint(\"Luotiinko uusi olio muistiin?\", vanha_id != uusi_id)\n\n# 4. Muuttuva lista (Mutable)\nlista_a = [10, 20, 30]\nlista_b = lista_a      # Sama viittaus!\nlista_b.append(40)\nprint(\"Molemmat muuttuivat:\", lista_a is lista_b, lista_a)",
+    "proTips": {
+      "fi": [
         "Python välimuistittaa pienet kokonaisluvut (-5 ... 256) suorituskyvyn parantamiseksi (integer interning).",
-        "Varo kopioidessasi listoja: `b = a` vain kopioi viittauksen. Käytä `b = a.copy()` tai `list(a)` tehdäksesi aidon kopion.",
+        "Varo kopioidessasi listoja: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">b = a</code> vain kopioi viittauksen. Käytä <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">b = a.copy()</code> tai <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">list(a)</code> tehdäksesi aidon kopion.",
         "Voit tarkistaa muuttujan tyypin suositellusti funktiolla: isinstance(muuttuja, int)."
       ],
-      en: [
+      "en": [
         "CPython pre-allocates and caches small integers (-5 to 256), meaning identical numbers share the same id().",
-        "Be careful with list assignment: `b = a` assigns the reference. Use `b = a.copy()` for shallow copy.",
-        "Use `isinstance(obj, type)` rather than `type(obj) == type` to support polymorphism and subclasses."
+        "Be careful with list assignment: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">b = a</code> assigns the reference. Use <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">b = a.copy()</code> for shallow copy.",
+        "Use <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">isinstance(obj, type)</code> rather than <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">type(obj) == type</code> to support polymorphism and subclasses."
       ],
-      ar: [
+      "ar": [
         "تحتفظ بايثون بالأرقام الصغيرة من (-5 إلى 256) مسبقاً في الذاكرة لتسريع الأداء (Integer Interning).",
-        "احذر من إسناد القوائم بـ `b = a` لأنه ينسخ المرجع فقط؛ استخدم `b = a.copy()` لإنشاء نسخة مستقلة.",
-        "استخدم دالة `isinstance(obj, type)` للتحقق من النوع لأنها تدعم التوريث البرمجي."
+        "احذر من إسناد القوائم بـ <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">b = a</code> لأنه ينسخ المرجع فقط؛ استخدم <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">b = a.copy()</code> لإنشاء نسخة مستقلة.",
+        "استخدم دالة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">isinstance(obj, type)</code> للتحقق من النوع لأنها تدعم التوريث البرمجي."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Mitä tulostuu koodista: x = [1, 2]; y = x; y.append(3); print(len(x))?",
-        en: "What is output by: x = [1, 2]; y = x; y.append(3); print(len(x))?",
-        ar: "ما ناتج تنفيذ: x = [1, 2]; y = x; y.append(3); print(len(x))؟"
+    "quiz": {
+      "question": {
+        "fi": "Mitä tulostuu koodista: x = [1, 2]; y = x; y.append(3); print(len(x))?",
+        "en": "What is output by: x = [1, 2]; y = x; y.append(3); print(len(x))?",
+        "ar": "ما ناتج تنفيذ: x = [1, 2]; y = x; y.append(3); print(len(x))؟"
       },
-      options: [
-        { id: "a", text: { fi: "2", en: "2", ar: "2" } },
-        { id: "b", text: { fi: "3", en: "3", ar: "3" } },
-        { id: "c", text: { fi: "TypeError", en: "TypeError", ar: "TypeError" } },
-        { id: "d", text: { fi: "IndexError", en: "IndexError", ar: "IndexError" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "2",
+            "en": "2",
+            "ar": "2"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "3",
+            "en": "3",
+            "ar": "3"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "TypeError",
+            "en": "TypeError",
+            "ar": "TypeError"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "IndexError",
+            "en": "IndexError",
+            "ar": "IndexError"
+          }
+        }
       ],
-      correctId: "b",
-      explanation: {
-        fi: "Listat ovat muuttuvia (mutable) ja y = x asettaa molemmat viittaamaan samaan listaan, joten x:n pituus on 3.",
-        en: "Lists are mutable. `y = x` binds `y` to the exact same list instance in memory, so appending to `y` modifies `x`.",
-        ar: "القوائم كائنات قابلة للتعديل؛ الإسناد y = x يجعل المتغيرين يشيران إلى القائمة نفسها في الذاكرة."
+      "correctId": "b",
+      "explanation": {
+        "fi": "Listat ovat muuttuvia (mutable) ja y = x asettaa molemmat viittaamaan samaan listaan, joten x:n pituus on 3.",
+        "en": "Lists are mutable. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">y = x</code> binds <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">y</code> to the exact same list instance in memory, so appending to <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">y</code> modifies <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">x</code>.",
+        "ar": "القوائم كائنات قابلة للتعديل؛ الإسناد y = x يجعل المتغيرين يشيران إلى القائمة نفسها في الذاكرة."
       }
     }
   },
   {
-    id: 3,
-    slug: "input-and-output",
-    icon: "Sliders",
-    level: "beginner",
-    estimatedMinutes: 20,
-    title: {
-      fi: "Syöte ja tuloste",
-      en: "Input & Output",
-      ar: "الإدخال والإخراج"
+    "id": 3,
+    "slug": "input-and-output",
+    "icon": "Sliders",
+    "level": "beginner",
+    "estimatedMinutes": 20,
+    "title": {
+      "fi": "Syöte ja tuloste",
+      "en": "Input & Output",
+      "ar": "الإدخال والإخراج"
     },
-    summary: {
-      fi: "input()-funktio, print()-parametrit (sep, end), erikoismerkit sekä int- ja float-tyyppimuunnokset.",
-      en: "The input() function, print() parameters (sep, end), escape sequences, and numeric type conversions.",
-      ar: "دالة input()، خيارات دالة print() (sep و end)، محارف الهروب والتحويل الرقمي."
+    "summary": {
+      "fi": "input()-funktio, print()-parametrit (sep, end), erikoismerkit sekä int- ja float-tyyppimuunnokset.",
+      "en": "The input() function, print() parameters (sep, end), escape sequences, and numeric type conversions.",
+      "ar": "دالة input()، خيارات دالة print() (sep و end)، محارف الهروب والتحويل الرقمي."
     },
-    theory: {
-      fi: `
-### input()-funktio ja tyyppimuunnos
-Pythonin \`input()\`-funktio pysäyttää ohjelman suorituksen ja odottaa käyttäjän syötettä päätteeltä.
-**Tärkeää:** \`input()\` palauttaa **aina** merkkijonon (\`str\`), vaikka käyttäjä syöttäisi numeroita! Jos halutaan tehdä laskutoimituksia, syöte on muunnettava erikseen:
-* \`int(syote)\`: Muuntaa kokonaisluvuksi.
-* \`float(syote)\`: Muuntaa liukuluvuksi (desimaaliluvuksi).
-
-### print()-funktion erikoisominaisuudet
-Oletuksena \`print()\` tulostaa annettujen arvojen väliin välilyönnin ja lisää loppuun rivinvaihdon. Tätä käyttäytymistä voidaan mukauttaa kahdella parametrilla:
-* **sep="..."**: Määrittää erottimen tulostettavien arvojen väliin (esim. \`sep=" - "\` tai \`sep="," \`).
-* **end="..."**: Määrittää, mitä tulosteen loppuun lisätään rivinvaihdon (\`\\n\`) sijasta (esim. \`end=" "\` jatkaa samalle riville).
-
-### Pakosarjat (Escape characters)
-Merkkijonoissa käytetään kenoviivaa (\`\\\`) erikoismerkkien esittämiseen:
-* \`\\n\`: Rivinvaihto (Newline)
-* \`\\t\`: Sarkain (Tabulator)
-* \`\\\\\`: Kenoviiva itse
-* \`\\"\` ja \`\\'\`: Lainausmerkit merkkijonon sisällä ilman merkkijonon päättämistä
-      `,
-      en: `
-### The input() Function & Explicit Conversion
-The built-in \`input(prompt)\` reads a line from the user.
-**Crucial Rule:** \`input()\` **always** returns a string (\`str\`), even if the user types numeric digits. Performing arithmetic requires explicit type casting:
-* \`int(val)\`: Converts to integer.
-* \`float(val)\`: Converts to floating-point number.
-
-### Advanced print() Parameters
-By default, \`print()\` separates items with a single space and ends with a newline:
-* **sep="..."**: Specifies the delimiter between arguments (e.g. \`sep=" | "\` or \`sep=""\`).
-* **end="..."**: Controls what is printed at the very end instead of the default \`\\n\` (e.g. \`end=" -> "\`).
-
-### Escape Characters
-Escape sequences allow embedding non-printable and special characters:
-* \`\\n\`: Newline
-* \`\\t\`: Horizontal tab
-* \`\\\\\`: Literal backslash
-* \`\\"\` and \`\\'\`: Escaped quotes
-      `,
-      ar: `
-### دالة input() والتحويل الصريح
-تقرأ دالة \`input()\` البيانات المدخلة من المستخدم عبر الطرفية.
-**قاعدة ذهبية:** ترجع دالة \`input()\` **دائماً** قيمة نصية (\`str\`)، حتى لو قام المستخدم بكتابة أرقام! لإجراء العمليات الحسابية يجب التحويل:
-* \`int(x)\`: لتحويل القيمة إلى عدد صحيح.
-* \`float(x)\`: لتحويل القيمة إلى عدد عشري.
-
-### خيارات دالة print() المتقدمة
-* **sep="..."**: المعامل الفاصل بين القيم المطبوعة (افتراضياً مسافة واحدة).
-* **end="..."**: ما يتم طباعته في نهاية السطر (افتراضياً سطر جديد \`\\n\`).
-
-### محارف الهروب (Escape Characters)
-* \`\\n\`: سطر جديد.
-* \`\\t\`: مسافة جدولة (Tab).
-* \`\\\\\`: طباعة الشرطة المائلة نفسها.
-* \`\\"\` و \`\\'\`: طباعة علامات الاقتباس داخل النص.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>input()-funktio ja tyyppimuunnos</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonin <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">input()</code>-funktio pysäyttää ohjelman suorituksen ja odottaa käyttäjän syötettä päätteeltä.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><strong class=\"text-white font-semibold\">Tärkeää:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">input()</code> palauttaa <strong class=\"text-white font-semibold\">aina</strong> merkkijonon (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">str</code>), vaikka käyttäjä syöttäisi numeroita! Jos halutaan tehdä laskutoimituksia, syöte on muunnettava erikseen:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">int(syote)</code>: Muuntaa kokonaisluvuksi.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">float(syote)</code>: Muuntaa liukuluvuksi (desimaaliluvuksi).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>print()-funktion erikoisominaisuudet</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Oletuksena <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">print()</code> tulostaa annettujen arvojen väliin välilyönnin ja lisää loppuun rivinvaihdon. Tätä käyttäytymistä voidaan mukauttaa kahdella parametrilla:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">sep=\"...\"</strong>: Määrittää erottimen tulostettavien arvojen väliin (esim. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">sep=\" - \"</code> tai <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">sep=\",\" </code>).</li>\n    <li><strong class=\"text-white font-semibold\">end=\"...\"</strong>: Määrittää, mitä tulosteen loppuun lisätään rivinvaihdon (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\n</code>) sijasta (esim. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">end=\" \"</code> jatkaa samalle riville).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Pakosarjat (Escape characters)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Merkkijonoissa käytetään kenoviivaa (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\</code>) erikoismerkkien esittämiseen:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\n</code>: Rivinvaihto (Newline)</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\t</code>: Sarkain (Tabulator)</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\\\</code>: Kenoviiva itse</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\\"</code> ja <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\'</code>: Lainausmerkit merkkijonon sisällä ilman merkkijonon päättämistä</li>\n</ul>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>The input() Function & Explicit Conversion</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">The built-in <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">input(prompt)</code> reads a line from the user.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><strong class=\"text-white font-semibold\">Crucial Rule:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">input()</code> <strong class=\"text-white font-semibold\">always</strong> returns a string (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">str</code>), even if the user types numeric digits. Performing arithmetic requires explicit type casting:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">int(val)</code>: Converts to integer.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">float(val)</code>: Converts to floating-point number.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Advanced print() Parameters</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">By default, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">print()</code> separates items with a single space and ends with a newline:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">sep=\"...\"</strong>: Specifies the delimiter between arguments (e.g. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">sep=\" | \"</code> or <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">sep=\"\"</code>).</li>\n    <li><strong class=\"text-white font-semibold\">end=\"...\"</strong>: Controls what is printed at the very end instead of the default <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\n</code> (e.g. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">end=\" -> \"</code>).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Escape Characters</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Escape sequences allow embedding non-printable and special characters:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\n</code>: Newline</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\t</code>: Horizontal tab</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\\\</code>: Literal backslash</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\\"</code> and <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\'</code>: Escaped quotes</li>\n</ul>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>دالة input() والتحويل الصريح</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">تقرأ دالة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">input()</code> البيانات المدخلة من المستخدم عبر الطرفية.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><strong class=\"text-white font-semibold\">قاعدة ذهبية:</strong> ترجع دالة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">input()</code> <strong class=\"text-white font-semibold\">دائماً</strong> قيمة نصية (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">str</code>)، حتى لو قام المستخدم بكتابة أرقام! لإجراء العمليات الحسابية يجب التحويل:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">int(x)</code>: لتحويل القيمة إلى عدد صحيح.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">float(x)</code>: لتحويل القيمة إلى عدد عشري.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>خيارات دالة print() المتقدمة</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">sep=\"...\"</strong>: المعامل الفاصل بين القيم المطبوعة (افتراضياً مسافة واحدة).</li>\n    <li><strong class=\"text-white font-semibold\">end=\"...\"</strong>: ما يتم طباعته في نهاية السطر (افتراضياً سطر جديد <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\n</code>).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>محارف الهروب (Escape Characters)</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\n</code>: سطر جديد.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\t</code>: مسافة جدولة (Tab).</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\\\</code>: طباعة الشرطة المائلة نفسها.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\\"</code> و <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\'</code>: طباعة علامات الاقتباس داخل النص.</li>\n</ul>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 3: Input & Output Mastery
-
-# 1. input() ja tyyppimuunnos turvallisesti
-kayttajan_syote = "25" # Simuloitu input()
-ika = int(kayttajan_syote)
-syntymavuosi = 2026 - ika
-print(f"Ikäsi on {ika} vuotta, synnyit noin vuonna {syntymavuosi}.")
-
-# 2. print()-funktion sep ja end parametrit
-print("Python", "Developer", "Hub", sep=" -> ")
-print("Lasketaan", end=": ")
-print("1", "2", "3", sep=", ", end="... Valmis!\\n")
-
-# 3. Erikoismerkkien käyttö
-raportti = "Nimi:\\tMatti Meikäläinen\\nArvosana:\\t5/5\\nPolku:\\tC:\\\\kurssit\\\\python"
-print(raportti)
-
-# 4. f-string muotoilu tarkkuudella
-pii = 3.1415926535
-print(f"Piin arvo kahdella desimaalilla: {pii:.2f}")`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 3: Input & Output Mastery\n\n# 1. input() ja tyyppimuunnos turvallisesti\nkayttajan_syote = \"25\" # Simuloitu input()\nika = int(kayttajan_syote)\nsyntymavuosi = 2026 - ika\nprint(f\"Ikäsi on {ika} vuotta, synnyit noin vuonna {syntymavuosi}.\")\n\n# 2. print()-funktion sep ja end parametrit\nprint(\"Python\", \"Developer\", \"Hub\", sep=\" -> \")\nprint(\"Lasketaan\", end=\": \")\nprint(\"1\", \"2\", \"3\", sep=\", \", end=\"... Valmis!\\n\")\n\n# 3. Erikoismerkkien käyttö\nraportti = \"Nimi:\\tMatti Meikäläinen\\nArvosana:\\t5/5\\nPolku:\\tC:\\\\kurssit\\\\python\"\nprint(raportti)\n\n# 4. f-string muotoilu tarkkuudella\npii = 3.1415926535\nprint(f\"Piin arvo kahdella desimaalilla: {pii:.2f}\")",
+    "proTips": {
+      "fi": [
         "Käytä f-stringejä (f'Tulos: {arvo}') vanhojen %- ja .format()-menetelmien sijaan: ne ovat nopeampia ja huomattavasti luettavampia.",
         "Suojaa input()-muunnokset aina try-except ValueError -rakenteella, jotta ohjelma ei kaadu virheelliseen syötteeseen.",
         "Voit tulostaa raakamerkkijonoja (raw strings) etuliitteellä r (esim. r'C:\\kansio\\tiedosto.txt') ilman escape-ongelmia."
       ],
-      en: [
-        "Prefer modern f-strings (\`f'Result: {val:.2f}'\`) over legacy \`%\` formatting and \`.format()\`.",
-        "Always guard numeric \`input()\` conversions with a \`try-except ValueError\` block to prevent crashing on invalid inputs.",
-        "Use raw strings with prefix \`r\` (e.g. \`r'C:\\path\\name'\`) when dealing with Windows paths or regular expressions."
+      "en": [
+        "Prefer modern f-strings (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">f'Result: {val:.2f}'</code>) over legacy <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">%</code> formatting and <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.format()</code>.",
+        "Always guard numeric <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">input()</code> conversions with a <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">try-except ValueError</code> block to prevent crashing on invalid inputs.",
+        "Use raw strings with prefix <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">r</code> (e.g. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">r'C:\\path\\name'</code>) when dealing with Windows paths or regular expressions."
       ],
-      ar: [
+      "ar": [
         "استخدم نصوص f-strings الحديثة (f'{val}') لأنها الأسرع والأكثر وضوحاً مقارنة بالطرق القديمة.",
         "احرص دائماً على إحاطة تحويل الأرقام بـ try-except لتجنب انهيار البرنامج إذا أدخل المستخدم نصاً.",
         "استخدم النصوص الخام ببادئة r (مثل r'C:\\folder\\file') عند التعامل مع مسارات الملفات."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Mitä tulostaa: print('A', 'B', 'C', sep='-', end='!')?",
-        en: "What is output by: print('A', 'B', 'C', sep='-', end='!')?",
-        ar: "ما ناتج تنفيذ: print('A', 'B', 'C', sep='-', end='!')؟"
+    "quiz": {
+      "question": {
+        "fi": "Mitä tulostaa: print('A', 'B', 'C', sep='-', end='!')?",
+        "en": "What is output by: print('A', 'B', 'C', sep='-', end='!')?",
+        "ar": "ما ناتج تنفيذ: print('A', 'B', 'C', sep='-', end='!')؟"
       },
-      options: [
-        { id: "a", text: { fi: "A B C-!", en: "A B C-!", ar: "A B C-!" } },
-        { id: "b", text: { fi: "A-B-C!", en: "A-B-C!", ar: "A-B-C!" } },
-        { id: "c", text: { fi: "A-B-C\\n!", en: "A-B-C\\n!", ar: "A-B-C\\n!" } },
-        { id: "d", text: { fi: "TypeError", en: "TypeError", ar: "TypeError" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "A B C-!",
+            "en": "A B C-!",
+            "ar": "A B C-!"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "A-B-C!",
+            "en": "A-B-C!",
+            "ar": "A-B-C!"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "A-B-C\\n!",
+            "en": "A-B-C\\n!",
+            "ar": "A-B-C\\n!"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "TypeError",
+            "en": "TypeError",
+            "ar": "TypeError"
+          }
+        }
       ],
-      correctId: "b",
-      explanation: {
-        fi: "sep='-' erottaa kirjaimet viivalla (A-B-C) ja end='!' lisää loppuun huutomerkin rivinvaihdon sijasta.",
-        en: "sep='-' places dashes between each item, and end='!' terminates the print statement without a newline.",
-        ar: "يقوم sep='-' بفصل العناصر بشرطة، ويضع end='!' علامة التعجب في النهاية دون سطر جديد."
+      "correctId": "b",
+      "explanation": {
+        "fi": "sep='-' erottaa kirjaimet viivalla (A-B-C) ja end='!' lisää loppuun huutomerkin rivinvaihdon sijasta.",
+        "en": "sep='-' places dashes between each item, and end='!' terminates the print statement without a newline.",
+        "ar": "يقوم sep='-' بفصل العناصر بشرطة، ويضع end='!' علامة التعجب في النهاية دون سطر جديد."
       }
     }
   },
   {
-    id: 4,
-    slug: "string-processing",
-    icon: "Type",
-    level: "beginner",
-    estimatedMinutes: 25,
-    title: {
-      fi: "Merkkijonojen käsittely",
-      en: "String Processing",
-      ar: "معالجة النصوص"
+    "id": 4,
+    "slug": "string-processing",
+    "icon": "Type",
+    "level": "beginner",
+    "estimatedMinutes": 25,
+    "title": {
+      "fi": "Merkkijonojen käsittely",
+      "en": "String Processing",
+      "ar": "معالجة النصوص"
     },
-    summary: {
-      fi: "len(), viipalointi [start:stop:step], merkkijonon kertominen ja tärkeimmät sisäänrakennetut metodit.",
-      en: "len(), slicing with [start:stop:step], string multiplication, and core string manipulation methods.",
-      ar: "دالة len()، تشريح النصوص [start:stop:step]، تكرار النصوص وأهم الدوال الجاهزة."
+    "summary": {
+      "fi": "len(), viipalointi [start:stop:step], merkkijonon kertominen ja tärkeimmät sisäänrakennetut metodit.",
+      "en": "len(), slicing with [start:stop:step], string multiplication, and core string manipulation methods.",
+      "ar": "دالة len()، تشريح النصوص [start:stop:step]، تكرار النصوص وأهم الدوال الجاهزة."
     },
-    theory: {
-      fi: `
-### Merkkijonojen perusominaisuudet
-Pythonissa merkkijono (\`str\`) on **muuttumaton (immutable)** peräkkäisten merkkien sarja.
-* **len(s):** Palauttaa merkkijonon pituuden (merkkien lukumäärän).
-* **Indeksointi:** Indeksit alkavat nollasta (\`0\`). Python tukee myös negatiivista indeksointia: \`-1\` on viimeinen merkki.
-* **Merkkijonon kertominen (\`*\`):** Merkkijono voidaan toistaa kertolaskulla: \`"Ha" * 3\` tuottaa \`"HaHaHa"\`.
-
-### Viipalointi (Slicing): [start : stop : step]
-Viipalointi on yksi Pythonin tehokkaimmista ominaisuuksista:
-* **start:** Aloitusindeksi (sisältyy tulokseen, oletus 0).
-* **stop:** Lopetusindeksi (**EI** sisälly tulokseen!).
-* **step:** Askelväli (oletus 1). Jos askel on negatiivinen, viipalointi etenee takaperin!
-* *Esimerkki käännöksestä:* \`s[::-1]\` kääntää merkkijonon toisinpäin.
-
-### Tärkeimmät sisäänrakennetut metodit
-* \`.upper()\` ja \`.lower()\`: Muuntaa isot/pienet kirjaimet.
-* \`.strip()\`: Poistaa tyhjät merkit (välilyönnit, tabit, rivinvaihdot) alusta ja lopusta.
-* \`.replace(old, new)\`: Korvaa alimerkkijonon toisella.
-* \`.split(separator)\`: Jakaa merkkijonon listaksi erotinmerkin kohdalta.
-* \`separator.join(list)\`: Yhdistää listan alkiot yhtenäiseksi merkkijonoksi.
-* \`.find(sub)\` ja \`.startswith(prefix)\`: Hakee alimerkkijonon olemassaoloa.
-      `,
-      en: `
-### Core String Fundamentals
-In Python, strings (\`str\`) are **immutable** ordered sequences of Unicode characters.
-* **len(s):** Returns total character count.
-* **Indexing:** Zero-indexed from the left (\`0, 1, 2...\`) and negative-indexed from the right (\`-1, -2...\`).
-* **String Multiplication (\`*\`):** Replicates strings: \`"=" * 10\` yields \`"=========="\`.
-
-### Advanced Slicing: [start : stop : step]
-* **start:** Inclusion index (defaults to 0).
-* **stop:** Exclusive stop index (the slice stops just before this position).
-* **step:** Stride/stride direction (defaults to 1).
-* *Reversal idiom:* \`s[::-1]\` efficiently reverses a string.
-
-### Core Built-in String Methods
-* \`.upper()\` / \`.lower()\`: Case manipulation.
-* \`.strip()\`: Strips leading and trailing whitespace.
-* \`.replace(old, new)\`: Replaces substrings.
-* \`.split(delimiter)\`: Splits a string into a list of tokens.
-* \`delimiter.join(list)\`: Joins iterable elements into a single string.
-* \`.startswith(prefix)\` / \`.endswith(suffix)\`: Boolean prefix/suffix inspection.
-      `,
-      ar: `
-### أساسيات معالجة النصوص
-النصوص في بايثون كائنات **غير قابلة للتعديل (Immutable)** وتتبع نظام الترميز العالمي Unicode.
-* **دالة len(s):** تحسب عدد الأحرف.
-* **الفهرسة:** تبدأ من اليسار بـ 0، ومن اليمين بأرقام سالبة (-1 للحرف الأخير).
-* **تكرار النص (\`*\`):** تكرار النص بعدد محدد: \`"Py" * 3\` ينتج \`"PyPyPy"\`.
-
-### تشريح النصوص (Slicing): [start : stop : step]
-* **start:** فهرس البداية (مشمول).
-* **stop:** فهرس النهاية (غير مشمول).
-* **step:** مقدار القفزة أو اتجاهها.
-* *عكس النص بالكامل:* \`s[::-1]\`.
-
-### أهم دوال النصوص الجاهزة
-* \`.strip()\`: إزالة المسافات الفارغة من البداية والنهاية.
-* \`.replace(old, new)\`: استبدال أجزاء من النص.
-* \`.split(delim)\`: تقسيم النص إلى قائمة بناءً على فاصل.
-* \`delim.join(list)\`: دمج قائمة نصوص في نص واحد.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Merkkijonojen perusominaisuudet</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonissa merkkijono (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">str</code>) on <strong class=\"text-white font-semibold\">muuttumaton (immutable)</strong> peräkkäisten merkkien sarja.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">len(s):</strong> Palauttaa merkkijonon pituuden (merkkien lukumäärän).</li>\n    <li><strong class=\"text-white font-semibold\">Indeksointi:</strong> Indeksit alkavat nollasta (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">0</code>). Python tukee myös negatiivista indeksointia: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">-1</code> on viimeinen merkki.</li>\n    <li><strong class=\"text-white font-semibold\">Merkkijonon kertominen (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">×</code>):</strong> Merkkijono voidaan toistaa kertolaskulla: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"Ha\" × 3</code> tuottaa <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"HaHaHa\"</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Viipalointi (Slicing): [start : stop : step]</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Viipalointi on yksi Pythonin tehokkaimmista ominaisuuksista:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">start:</strong> Aloitusindeksi (sisältyy tulokseen, oletus 0).</li>\n    <li><strong class=\"text-white font-semibold\">stop:</strong> Lopetusindeksi (<strong class=\"text-white font-semibold\">EI</strong> sisälly tulokseen!).</li>\n    <li><strong class=\"text-white font-semibold\">step:</strong> Askelväli (oletus 1). Jos askel on negatiivinen, viipalointi etenee takaperin!</li>\n    <li><em class=\"text-slate-200 italic\">Esimerkki käännöksestä:</em> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">s[::-1]</code> kääntää merkkijonon toisinpäin.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Tärkeimmät sisäänrakennetut metodit</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.upper()</code> ja <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.lower()</code>: Muuntaa isot/pienet kirjaimet.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.strip()</code>: Poistaa tyhjät merkit (välilyönnit, tabit, rivinvaihdot) alusta ja lopusta.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.replace(old, new)</code>: Korvaa alimerkkijonon toisella.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.split(separator)</code>: Jakaa merkkijonon listaksi erotinmerkin kohdalta.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">separator.join(list)</code>: Yhdistää listan alkiot yhtenäiseksi merkkijonoksi.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.find(sub)</code> ja <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.startswith(prefix)</code>: Hakee alimerkkijonon olemassaoloa.</li>\n</ul>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Core String Fundamentals</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">In Python, strings (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">str</code>) are <strong class=\"text-white font-semibold\">immutable</strong> ordered sequences of Unicode characters.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">len(s):</strong> Returns total character count.</li>\n    <li><strong class=\"text-white font-semibold\">Indexing:</strong> Zero-indexed from the left (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">0, 1, 2...</code>) and negative-indexed from the right (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">-1, -2...</code>).</li>\n    <li><strong class=\"text-white font-semibold\">String Multiplication (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">×</code>):</strong> Replicates strings: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"=\" × 10</code> yields <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"==========\"</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Advanced Slicing: [start : stop : step]</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">start:</strong> Inclusion index (defaults to 0).</li>\n    <li><strong class=\"text-white font-semibold\">stop:</strong> Exclusive stop index (the slice stops just before this position).</li>\n    <li><strong class=\"text-white font-semibold\">step:</strong> Stride/stride direction (defaults to 1).</li>\n    <li><em class=\"text-slate-200 italic\">Reversal idiom:</em> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">s[::-1]</code> efficiently reverses a string.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Core Built-in String Methods</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.upper()</code> / <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.lower()</code>: Case manipulation.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.strip()</code>: Strips leading and trailing whitespace.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.replace(old, new)</code>: Replaces substrings.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.split(delimiter)</code>: Splits a string into a list of tokens.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">delimiter.join(list)</code>: Joins iterable elements into a single string.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.startswith(prefix)</code> / <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.endswith(suffix)</code>: Boolean prefix/suffix inspection.</li>\n</ul>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>أساسيات معالجة النصوص</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">النصوص في بايثون كائنات <strong class=\"text-white font-semibold\">غير قابلة للتعديل (Immutable)</strong> وتتبع نظام الترميز العالمي Unicode.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">دالة len(s):</strong> تحسب عدد الأحرف.</li>\n    <li><strong class=\"text-white font-semibold\">الفهرسة:</strong> تبدأ من اليسار بـ 0، ومن اليمين بأرقام سالبة (-1 للحرف الأخير).</li>\n    <li><strong class=\"text-white font-semibold\">تكرار النص (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">×</code>):</strong> تكرار النص بعدد محدد: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"Py\" × 3</code> ينتج <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"PyPyPy\"</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>تشريح النصوص (Slicing): [start : stop : step]</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">start:</strong> فهرس البداية (مشمول).</li>\n    <li><strong class=\"text-white font-semibold\">stop:</strong> فهرس النهاية (غير مشمول).</li>\n    <li><strong class=\"text-white font-semibold\">step:</strong> مقدار القفزة أو اتجاهها.</li>\n    <li><em class=\"text-slate-200 italic\">عكس النص بالكامل:</em> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">s[::-1]</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>أهم دوال النصوص الجاهزة</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.strip()</code>: إزالة المسافات الفارغة من البداية والنهاية.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.replace(old, new)</code>: استبدال أجزاء من النص.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.split(delim)</code>: تقسيم النص إلى قائمة بناءً على فاصل.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">delim.join(list)</code>: دمج قائمة نصوص في نص واحد.</li>\n</ul>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 4: String Slicing & Methods
-
-kurssi = "Ohjelmointi Pythonilla"
-
-# 1. Pituus ja viipalointi [start:stop:step]
-print(f"Pituus: {len(kurssi)}")
-print(f"Alku (0..12): {kurssi[0:12]}")
-print(f"Joka toinen merkki: {kurssi[::2]}")
-print(f"Takaperin käännettynä: {kurssi[::-1]}")
-
-# 2. Merkkijonon kertominen ja reunus
-jakaja = "=" * 30
-print(jakaja)
-print("PYTHON DEVELOPER GUIDE".center(30))
-print(jakaja)
-
-# 3. Metodit: strip, replace, split ja join
-raaka_data = "  omena,banaani,appelsiini,mango  "
-siistitty = raaka_data.strip()
-hedelmat = siistitty.split(",")
-print("Listana:", hedelmat)
-
-# Yhdistetään takaisin isolla kirjoitettuna
-tulos = " | ".join([h.strip().upper() for h in hedelmat])
-print("Muotoiltuna:", tulos)`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 4: String Slicing & Methods\n\nkurssi = \"Ohjelmointi Pythonilla\"\n\n# 1. Pituus ja viipalointi [start:stop:step]\nprint(f\"Pituus: {len(kurssi)}\")\nprint(f\"Alku (0..12): {kurssi[0:12]}\")\nprint(f\"Joka toinen merkki: {kurssi[::2]}\")\nprint(f\"Takaperin käännettynä: {kurssi[::-1]}\")\n\n# 2. Merkkijonon kertominen ja reunus\njakaja = \"=\" * 30\nprint(jakaja)\nprint(\"PYTHON DEVELOPER GUIDE\".center(30))\nprint(jakaja)\n\n# 3. Metodit: strip, replace, split ja join\nraaka_data = \"  omena,banaani,appelsiini,mango  \"\nsiistitty = raaka_data.strip()\nhedelmat = siistitty.split(\",\")\nprint(\"Listana:\", hedelmat)\n\n# Yhdistetään takaisin isolla kirjoitettuna\ntulos = \" | \".join([h.strip().upper() for h in hedelmat])\nprint(\"Muotoiltuna:\", tulos)",
+    "proTips": {
+      "fi": [
         "Koska merkkijonot ovat muuttumattomia, mikään metodi ei muuta alkuperäistä merkkijonoa vaan palauttaa aina uuden olion.",
         "Käytä stringien yhdistämiseen listassa aina ''.join(lista) -metodia '+' operaattorin sijaan: join() on huomattavasti tehokkaampi O(N) vs O(N^2).",
         "Palindromin voi tarkistaa yhdellä rivillä: sana == sana[::-1]"
       ],
-      en: [
-        "Strings are immutable in Python; methods like \`.upper()\` or \`.replace()\` return new string instances.",
-        "Always use \`''.join(list)\` to concatenate collections of strings rather than looping with \`+\` (linear O(N) vs quadratic O(N²)).",
-        "Test for palindromes elegantly in one line: \`word == word[::-1]\`."
+      "en": [
+        "Strings are immutable in Python; methods like <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.upper()</code> or <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.replace()</code> return new string instances.",
+        "Always use <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">''.join(list)</code> to concatenate collections of strings rather than looping with <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">+</code> (linear O(N) vs quadratic O(N²)).",
+        "Test for palindromes elegantly in one line: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">word == word[::-1]</code>."
       ],
-      ar: [
+      "ar": [
         "النصوص كائنات غير قابلة للتعديل؛ أي دالة تعديل ترجع كائناً نصياً جديداً تماماً.",
-        "استخدم دائمًا \`''.join(list)\` لدمج سلاسل النصوص الطويلة بدلاً من معامل \`+\` لتحقيق أداء O(N) فائق السرعة.",
+        "استخدم دائمًا <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">''.join(list)</code> لدمج سلاسل النصوص الطويلة بدلاً من معامل <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">+</code> لتحقيق أداء O(N) فائق السرعة.",
         "يمكنك التحقق من الكلمات المتناظرة (Palindromes) بسطر واحد: word == word[::-1]."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Mitä s[1:6:2] palauttaa merkkijonosta s = 'PythonHub'?",
-        en: "What does s[1:6:2] evaluate to for s = 'PythonHub'?",
-        ar: "ما ناتج s[1:6:2] للنص s = 'PythonHub'؟"
+    "quiz": {
+      "question": {
+        "fi": "Mitä s[1:6:2] palauttaa merkkijonosta s = 'PythonHub'?",
+        "en": "What does s[1:6:2] evaluate to for s = 'PythonHub'?",
+        "ar": "ما ناتج s[1:6:2] للنص s = 'PythonHub'؟"
       },
-      options: [
-        { id: "a", text: { fi: "'pto'", en: "'pto'", ar: "'pto'" } },
-        { id: "b", text: { fi: "'yhn'", en: "'yhn'", ar: "'yhn'" } },
-        { id: "c", text: { fi: "'Pth'", en: "'Pth'", ar: "'Pth'" } },
-        { id: "d", text: { fi: "'yhu'", en: "'yhu'", ar: "'yhu'" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "'pto'",
+            "en": "'pto'",
+            "ar": "'pto'"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "'yhn'",
+            "en": "'yhn'",
+            "ar": "'yhn'"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "'Pth'",
+            "en": "'Pth'",
+            "ar": "'Pth'"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "'yhu'",
+            "en": "'yhu'",
+            "ar": "'yhu'"
+          }
+        }
       ],
-      correctId: "b",
-      explanation: {
-        fi: "Indeksi 1 on 'y', indeksi 3 on 'h', indeksi 5 on 'n'. Indeksi 6 ei sisälly. Tulos on 'yhn'.",
-        en: "Index 1 is 'y', step by 2 gives index 3 ('h'), step by 2 gives index 5 ('n'). Stop at 6 is exclusive: result is 'yhn'.",
-        ar: "الفهرس 1 هو 'y'، والقفزة بـ 2 تعطي الفهرس 3 وهو 'h'، ثم الفهرس 5 وهو 'n'، والحد 6 غير مشمول: الناتج 'yhn'."
+      "correctId": "b",
+      "explanation": {
+        "fi": "Indeksi 1 on 'y', indeksi 3 on 'h', indeksi 5 on 'n'. Indeksi 6 ei sisälly. Tulos on 'yhn'.",
+        "en": "Index 1 is 'y', step by 2 gives index 3 ('h'), step by 2 gives index 5 ('n'). Stop at 6 is exclusive: result is 'yhn'.",
+        "ar": "الفهرس 1 هو 'y'، والقفزة بـ 2 تعطي الفهرس 3 وهو 'h'، ثم الفهرس 5 وهو 'n'، والحد 6 غير مشمول: الناتج 'yhn'."
       }
     }
   },
   {
-    id: 5,
-    slug: "control-structures",
-    icon: "GitFork",
-    level: "beginner",
-    estimatedMinutes: 25,
-    title: {
-      fi: "Ohjausrakenteet",
-      en: "Control Structures",
-      ar: "هياكل التحكم والشروط"
+    "id": 5,
+    "slug": "control-structures",
+    "icon": "GitFork",
+    "level": "beginner",
+    "estimatedMinutes": 25,
+    "title": {
+      "fi": "Ohjausrakenteet",
+      "en": "Control Structures",
+      "ar": "هياكل التحكم والشروط"
     },
-    summary: {
-      fi: "if, if-else, if-elif-else, sisennyksen säännöt sekä loogiset ja vertailuoperaattorit.",
-      en: "if, if-else, if-elif-else branching, PEP 8 indentation rules, logical and relational operators.",
-      ar: "الجمل الشرطية if و elif و else، قواعد الإزاحة، والمعاملات المنطقية والمقارنة."
+    "summary": {
+      "fi": "if, if-else, if-elif-else, sisennyksen säännöt sekä loogiset ja vertailuoperaattorit.",
+      "en": "if, if-else, if-elif-else branching, PEP 8 indentation rules, logical and relational operators.",
+      "ar": "الجمل الشرطية if و elif و else، قواعد الإزاحة، والمعاملات المنطقية والمقارنة."
     },
-    theory: {
-      fi: `
-### Ehtorakenteet: if, elif, else
-Ehtorakenteiden avulla ohjelma voi tehdä päätöksiä ja valita eri suorituspolkuja syötteiden tai tilojen perusteella.
-* **if ehto:** Suorittaa lohkon, jos ehto on tosi (\`True\`).
-* **elif toinen_ehto:** (*else if*) Tarkistetaan vain, jos edelliset ehdot olivat epätosia.
-* **else:** Suoritetaan, jos yksikään aiemmista ehdoista ei täyttynyt.
-
-### Sisennyksen säännöt (Indentation)
-Toisin kuin useimmissa muissa kielissä, Pythonissa koodilohkot määritellään **ainoastaan sisennyksellä**.
-* Jokaisen ehdon perään tulee kaksoispiste (\`:\`).
-* Lohkon koodi sisennetään tasan **4 välilyöntiä**.
-* Virheellinen sisennys aiheuttaa välittömän \`IndentationError\`-käännösvirheen.
-
-### Vertailu- ja loogiset operaattorit
-* **Vertailuoperaattorit:** \`==\` (yhtäsuuri), \`!=\` (erisuuri), \`<\`, \`>\`, \`<=\`, \`>=\`.
-* **Loogiset operaattorit:** \`and\` (molemmat tosia), \`or\` (ainakin toinen tosi), \`not\` (negaatio).
-* **Jäsenyysoperaattorit:** \`in\` ja \`not in\` (tarkistaa, löytyykö alkio sarjasta).
-* **Ketjutetut vertailut:** Pythonissa voi kirjoittaa matematiikan tapaan: \`18 <= ika < 65\`.
-      `,
-      en: `
-### Conditional Branching: if, elif, else
-Control structures allow programs to execute specific code blocks depending on runtime boolean states.
-* **if condition:** Executes when expression evaluates to truthy.
-* **elif alternative:** Evaluated strictly if all preceding conditions were falsy.
-* **else:** Default fallback when all conditions fail.
-
-### Python Indentation Rules
-Python enforces structural indentation instead of curly brackets:
-* Every conditional statement ends with a colon (\`:\`).
-* The body must be indented uniformly (4 spaces recommended).
-* Misalignment raises an immediate \`IndentationError\`.
-
-### Relational & Logical Operators
-* **Relational:** \`==\`, \`!=\`, \`<\`, \`>\`, \`<=\`, \`>=\`.
-* **Logical:** \`and\`, \`or\`, \`not\`.
-* **Membership:** \`in\` and \`not in\`.
-* **Chained Comparisons:** Python supports intuitive chaining: \`0 <= score <= 100\`.
-      `,
-      ar: `
-### التفرع الشرطي: if و elif و else
-تسمح الجمل الشرطية بتنفيذ مسارات برمجية مختلفة وفقاً للشروط المنطقية.
-* **if:** يتم تنفيذ الكود التابع لها إذا تحقق الشرط وكان صواباً (\`True\`).
-* **elif:** يتم فحصها بالترتيب فقط في حال عدم تحقق الشروط السابقة.
-* **else:** المسار الافتراضي عند فشل جميع الشروط السابقة.
-
-### قواعد المسافات البادئة (Indentation)
-* تنتهي كل جملة شرطية بنقطتين متعامدتين (\`:\`).
-* يجب أن تتم إزاحة الكتل البرمجية بمقدار 4 مسافات.
-* أي خلل في المسافات البادئة ينتج عنه خطأ فوري \`IndentationError\`.
-
-### معاملات المقارنة والمعاملات المنطقية
-* **المقارنة:** \`==\`، \`!=\`، \`<\`، \`>\`، \`<=\`، \`>=\`.
-* **المنطقية:** \`and\`، \`or\`، \`not\`.
-* **سلاسل المقارنة الرياضية:** تتيح بايثون كتابة \`18 <= age < 65\`.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Ehtorakenteet: if, elif, else</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Ehtorakenteiden avulla ohjelma voi tehdä päätöksiä ja valita eri suorituspolkuja syötteiden tai tilojen perusteella.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">if ehto:</strong> Suorittaa lohkon, jos ehto on tosi (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">True</code>).</li>\n    <li><strong class=\"text-white font-semibold\">elif toinen_ehto:</strong> (<em class=\"text-slate-200 italic\">else if</em>) Tarkistetaan vain, jos edelliset ehdot olivat epätosia.</li>\n    <li><strong class=\"text-white font-semibold\">else:</strong> Suoritetaan, jos yksikään aiemmista ehdoista ei täyttynyt.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Sisennyksen säännöt (Indentation)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Toisin kuin useimmissa muissa kielissä, Pythonissa koodilohkot määritellään <strong class=\"text-white font-semibold\">ainoastaan sisennyksellä</strong>.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li>Jokaisen ehdon perään tulee kaksoispiste (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">:</code>).</li>\n    <li>Lohkon koodi sisennetään tasan <strong class=\"text-white font-semibold\">4 välilyöntiä</strong>.</li>\n    <li>Virheellinen sisennys aiheuttaa välittömän <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">IndentationError</code>-käännösvirheen.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Vertailu- ja loogiset operaattorit</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Vertailuoperaattorit:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">==</code> (yhtäsuuri), <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">!=</code> (erisuuri), <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\"><</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">></code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\"><=</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">>=</code>.</li>\n    <li><strong class=\"text-white font-semibold\">Loogiset operaattorit:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">and</code> (molemmat tosia), <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">or</code> (ainakin toinen tosi), <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">not</code> (negaatio).</li>\n    <li><strong class=\"text-white font-semibold\">Jäsenyysoperaattorit:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">in</code> ja <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">not in</code> (tarkistaa, löytyykö alkio sarjasta).</li>\n    <li><strong class=\"text-white font-semibold\">Ketjutetut vertailut:</strong> Pythonissa voi kirjoittaa matematiikan tapaan: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">18 <= ika < 65</code>.</li>\n</ul>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Conditional Branching: if, elif, else</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Control structures allow programs to execute specific code blocks depending on runtime boolean states.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">if condition:</strong> Executes when expression evaluates to truthy.</li>\n    <li><strong class=\"text-white font-semibold\">elif alternative:</strong> Evaluated strictly if all preceding conditions were falsy.</li>\n    <li><strong class=\"text-white font-semibold\">else:</strong> Default fallback when all conditions fail.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Python Indentation Rules</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Python enforces structural indentation instead of curly brackets:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li>Every conditional statement ends with a colon (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">:</code>).</li>\n    <li>The body must be indented uniformly (4 spaces recommended).</li>\n    <li>Misalignment raises an immediate <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">IndentationError</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Relational & Logical Operators</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Relational:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">==</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">!=</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\"><</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">></code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\"><=</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">>=</code>.</li>\n    <li><strong class=\"text-white font-semibold\">Logical:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">and</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">or</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">not</code>.</li>\n    <li><strong class=\"text-white font-semibold\">Membership:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">in</code> and <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">not in</code>.</li>\n    <li><strong class=\"text-white font-semibold\">Chained Comparisons:</strong> Python supports intuitive chaining: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">0 <= score <= 100</code>.</li>\n</ul>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>التفرع الشرطي: if و elif و else</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">تسمح الجمل الشرطية بتنفيذ مسارات برمجية مختلفة وفقاً للشروط المنطقية.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">if:</strong> يتم تنفيذ الكود التابع لها إذا تحقق الشرط وكان صواباً (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">True</code>).</li>\n    <li><strong class=\"text-white font-semibold\">elif:</strong> يتم فحصها بالترتيب فقط في حال عدم تحقق الشروط السابقة.</li>\n    <li><strong class=\"text-white font-semibold\">else:</strong> المسار الافتراضي عند فشل جميع الشروط السابقة.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>قواعد المسافات البادئة (Indentation)</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li>تنتهي كل جملة شرطية بنقطتين متعامدتين (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">:</code>).</li>\n    <li>يجب أن تتم إزاحة الكتل البرمجية بمقدار 4 مسافات.</li>\n    <li>أي خلل في المسافات البادئة ينتج عنه خطأ فوري <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">IndentationError</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>معاملات المقارنة والمعاملات المنطقية</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">المقارنة:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">==</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">!=</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\"><</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">></code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\"><=</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">>=</code>.</li>\n    <li><strong class=\"text-white font-semibold\">المنطقية:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">and</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">or</code>، <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">not</code>.</li>\n    <li><strong class=\"text-white font-semibold\">سلاسل المقارنة الرياضية:</strong> تتيح بايثون كتابة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">18 <= age < 65</code>.</li>\n</ul>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 5: Control Structures
-
-pisteet = 84
-
-# 1. if-elif-else arvosanan määritykseen
-if pisteet >= 90:
-    arvosana = 5
-elif pisteet >= 80:
-    arvosana = 4
-elif pisteet >= 70:
-    arvosana = 3
-elif pisteet >= 60:
-    arvosana = 2
-elif pisteet >= 50:
-    arvosana = 1
-else:
-    arvosana = 0
-
-print(f"Pisteet: {pisteet} -> Kurssiarvosana: {arvosana}")
-
-# 2. Ketjutetut vertailut ja loogiset operaattorit
-ika = 22
-opiskelija = True
-
-if 18 <= ika <= 29 and opiskelija:
-    print("Olet oikeutettu opiskelija-alennukseen!")
-
-# 3. Ternary operator (ehdollinen lauseke yhdellä rivillä)
-status = "Hyväksytty" if arvosana > 0 else "Hylätty"
-print(f"Kurssistatus: {status}")
-
-# 4. in-operaattori tarkistuksiin
-sallitut_roolit = ["admin", "editor", "teacher"]
-kayttajan_rooli = "teacher"
-
-if kayttajan_rooli in sallitut_roolit:
-    print(f"Pääsy sallittu roolille: {kayttajan_rooli}")`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 5: Control Structures\n\npisteet = 84\n\n# 1. if-elif-else arvosanan määritykseen\nif pisteet >= 90:\n    arvosana = 5\nelif pisteet >= 80:\n    arvosana = 4\nelif pisteet >= 70:\n    arvosana = 3\nelif pisteet >= 60:\n    arvosana = 2\nelif pisteet >= 50:\n    arvosana = 1\nelse:\n    arvosana = 0\n\nprint(f\"Pisteet: {pisteet} -> Kurssiarvosana: {arvosana}\")\n\n# 2. Ketjutetut vertailut ja loogiset operaattorit\nika = 22\nopiskelija = True\n\nif 18 <= ika <= 29 and opiskelija:\n    print(\"Olet oikeutettu opiskelija-alennukseen!\")\n\n# 3. Ternary operator (ehdollinen lauseke yhdellä rivillä)\nstatus = \"Hyväksytty\" if arvosana > 0 else \"Hylätty\"\nprint(f\"Kurssistatus: {status}\")\n\n# 4. in-operaattori tarkistuksiin\nsallitut_roolit = [\"admin\", \"editor\", \"teacher\"]\nkayttajan_rooli = \"teacher\"\n\nif kayttajan_rooli in sallitut_roolit:\n    print(f\"Pääsy sallittu roolille: {kayttajan_rooli}\")",
+    "proTips": {
+      "fi": [
         "Vältä liian syviä sisäkkäisiä if-rakenteita (Guard Clauses): palauta tai poistu funktiosta heti, kun virhe-ehto havaitaan.",
         "Pythonissa 'truthy' ja 'falsy' arvot ovat keskeisiä: tyhjä lista [], luku 0 ja None tulkitaan automaattisesti Falseksi.",
         "Käytä yhden rivin ehdollista sijoitusta: 'arvo = x if ehto else y'."
       ],
-      en: [
+      "en": [
         "Use Guard Clauses to avoid deeply nested conditionals (exit early upon encountering edge cases).",
-        "Master Python falsy values: empty collections (\`[]\`, \`{}\`, \`''\`), number \`0\`, and \`None\` evaluate to \`False\`.",
-        "Leverage ternary expressions for clean variable assignments: \`val = a if condition else b\`."
+        "Master Python falsy values: empty collections (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">[]</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">{}</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">''</code>), number <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">0</code>, and <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">None</code> evaluate to <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">False</code>.",
+        "Leverage ternary expressions for clean variable assignments: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">val = a if condition else b</code>."
       ],
-      ar: [
+      "ar": [
         "تجنب تداخل جمل if المعقدة واستخدم شروط الحماية (Guard Clauses) للخروج المبكر.",
         "افهم القيم الصفرية والفارغة (Falsy values): القوائم الفارغة [] والعدد 0 و None تعتبر جميعها تلقائياً False.",
-        "استخدم العامل الثلاثي الشرطي المختصر: \`val = a if condition else b\`."
+        "استخدم العامل الثلاثي الشرطي المختصر: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">val = a if condition else b</code>."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Mitkä seuraavista arvoista tulkitaan Pythonissa ehdossa Falseksi (Falsy)?",
-        en: "Which of the following values evaluates to False (falsy) in a Python conditional?",
-        ar: "أي من القيم التالية تُعتبر سالبة (Falsy) في شروط بايثون؟"
+    "quiz": {
+      "question": {
+        "fi": "Mitkä seuraavista arvoista tulkitaan Pythonissa ehdossa Falseksi (Falsy)?",
+        "en": "Which of the following values evaluates to False (falsy) in a Python conditional?",
+        "ar": "أي من القيم التالية تُعتبر سالبة (Falsy) في شروط بايثون؟"
       },
-      options: [
-        { id: "a", text: { fi: "[0]", en: "[0]", ar: "[0]" } },
-        { id: "b", text: { fi: "\"False\"", en: "\"False\"", ar: "\"False\"" } },
-        { id: "c", text: { fi: "[] (tyhjä lista)", en: "[] (empty list)", ar: "[] (قائمة فارغة)" } },
-        { id: "d", text: { fi: "{\"arvo\": False}", en: "{\"key\": False}", ar: "{\"key\": False}" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "[0]",
+            "en": "[0]",
+            "ar": "[0]"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "\"False\"",
+            "en": "\"False\"",
+            "ar": "\"False\""
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "[] (tyhjä lista)",
+            "en": "[] (empty list)",
+            "ar": "[] (قائمة فارغة)"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "{\"arvo\": False}",
+            "en": "{\"key\": False}",
+            "ar": "{\"key\": False}"
+          }
+        }
       ],
-      correctId: "c",
-      explanation: {
-        fi: "Tyhjä kokoelma kuten [] tai '' on Pythonissa falsy. [0] ja 'False' ovat epätyhjiä, joten ne ovat True.",
-        en: "Empty collections such as \`[]\` or \`\"\"\` evaluate to \`False\`. A list containing \`[0]\` is non-empty and therefore truthy.",
-        ar: "المجموعات الفارغة مثل [] أو النصوص الفارغة تعتبر False. أما [0] فهي قائمة غير فارغة وتعتبر True."
+      "correctId": "c",
+      "explanation": {
+        "fi": "Tyhjä kokoelma kuten [] tai '' on Pythonissa falsy. [0] ja 'False' ovat epätyhjiä, joten ne ovat True.",
+        "en": "Empty collections such as <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">[]</code> or <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"\"</code> evaluate to <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">False</code>. A list containing <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">[0]</code> is non-empty and therefore truthy.",
+        "ar": "المجموعات الفارغة مثل [] أو النصوص الفارغة تعتبر False. أما [0] فهي قائمة غير فارغة وتعتبر True."
       }
     }
   },
   {
-    id: 6,
-    slug: "loops-and-iteration",
-    icon: "Repeat",
-    level: "intermediate",
-    estimatedMinutes: 25,
-    title: {
-      fi: "Silmukat ja iteraatio",
-      en: "Loops & Iteration",
-      ar: "الحلقات والتكرار"
+    "id": 6,
+    "slug": "loops-and-iteration",
+    "icon": "Repeat",
+    "level": "intermediate",
+    "estimatedMinutes": 25,
+    "title": {
+      "fi": "Silmukat ja iteraatio",
+      "en": "Loops & Iteration",
+      "ar": "الحلقات والتكرار"
     },
-    summary: {
-      fi: "while vs for, range()-funktio, break, continue, pass sekä Pythonin ainutlaatuinen loop-else.",
-      en: "while vs for loops, the range() sequence, break, continue, pass, and Python's unique loop-else clause.",
-      ar: "حلقات while و for، دالة range()، break و continue و pass، وجملة loop-else الفريدة في بايثون."
+    "summary": {
+      "fi": "while vs for, range()-funktio, break, continue, pass sekä Pythonin ainutlaatuinen loop-else.",
+      "en": "while vs for loops, the range() sequence, break, continue, pass, and Python's unique loop-else clause.",
+      "ar": "حلقات while و for، دالة range()، break و continue و pass، وجملة loop-else الفريدة في بايثون."
     },
-    theory: {
-      fi: `
-### for vs while -silmukat
-* **for-silmukka:** Käytetään, kun iteroidaan tunnetun sarjan läpi (lista, merkkijono, monikko, \`range\`). Pythonin for on aidosti *for-each*-silmukka.
-* **while-silmukka:** Toistaa koodilohkoa niin kauan kuin annettu ehto pysyy totena (\`True\`). Käytetään, kun toistojen määrää ei tiedetä etukäteen.
-
-### range()-funktio
-Generoi lukusarjoja muistitehokkaasti (generaattorityyppisesti):
-* \`range(5)\`: 0, 1, 2, 3, 4
-* \`range(2, 8)\`: 2, 3, 4, 5, 6, 7
-* \`range(10, 0, -2)\`: 10, 8, 6, 4, 2 (askel taaksepäin)
-
-### Silmukan ohjauskomennot
-* **break:** Keskeyttää koko silmukan suorituksen välittömästi.
-* **continue:** Ohittaa nykyisen kierroksen loput lauseet ja hyppää seuraavaan iteraatioon.
-* **pass:** Tyhjä operaatio (placeholder). Ei tee mitään, mutta estää syntaksivirheen tyhjässä lohkossa.
-
-### Pythonin ainutlaatuinen: Silmukan else-lohko (Loop-Else)
-Pythonissa sekä \`for\`- että \`while\`-silmukoihin voidaan liittää \`else:\`-lohko!
-**Kultainen sääntö:** \`else:\`-lohko suoritetaan **vain ja ainoastaan silloin**, kun silmukka pyörii loppuun asti **ilman että kohdattiin \`break\`-komentoa**. Jos silmukasta poistutaan \`break\`-lauseella, \`else\`-lohko ohitetaan.
-Tämä sopii täydellisesti hakualgoritmeihin ilman erillistä lippumuuttujaa (flag variable).
-      `,
-      en: `
-### for vs. while Loops
-* **for loop:** Used to iterate over any sequence (iterables such as lists, strings, ranges, dictionaries). In Python, \`for\` is conceptually a *for-each* loop.
-* **while loop:** Executes repeatedly as long as a boolean condition remains \`True\`. Best suited when iteration count is indefinite.
-
-### The range() Constructor
-Generates immutable arithmetic progressions efficiently without allocating the full list in memory:
-* \`range(n)\`: 0 through n-1.
-* \`range(start, stop)\`: start up to (exclusive) stop.
-* \`range(start, stop, step)\`: Custom stride and direction.
-
-### Loop Control Directives
-* **break:** Immediately terminates the enclosing loop.
-* **continue:** Skips the rest of current cycle and proceeds to the next iteration.
-* **pass:** No-op syntactic placeholder for empty code blocks.
-
-### The Unique Python Loop-Else Clause
-Both \`for\` and \`while\` loops support an attached \`else:\` clause!
-**The Golden Rule:** The \`else\` block executes **if and only if** the loop completed all iterations naturally **without encountering a \`break\` statement**. If a \`break\` occurs, the \`else\` block is completely bypassed. This removes the need for boolean flag variables in search routines.
-      `,
-      ar: `
-### الفرق بين حلقات for و while
-* **حلقة for:** تستخدم للتكرار عبر عناصر أي متتالية (قائمة، نص، نطاق أرقام).
-* **حلقة while:** تكرر تنفيذ الكود طالما ظل الشرط محققاً (\`True\`).
-
-### دالة range() الفعالة
-* \`range(stop)\`: تولد أرقاماً من 0 حتى stop - 1.
-* \`range(start, stop, step)\`: بداية ونهاية ومقدار القفز، دون حجز مساحة إضافية في الذاكرة.
-
-### أوامر التحكم في التكرار
-* **break:** إنهاء وخروج فوري من الحلقة بالكامل.
-* **continue:** تخطي ما تبقى من الدورة الحالية والانتقال للدورة التالية مباشرة.
-* **pass:** تعليمة لا تفعل شيئاً، تُستخدم كعنصر نائب لتفادي الأخطاء النحوية.
-
-### جملة loop-else الفريدة في بايثون
-تدعم بايثون وضع كتلة \`else:\` مع حلقات \`for\` و \`while\`.
-**القاعدة الذهبية:** يتم تنفيذ كتلة \`else\` **فقط وحصرياً إذا انتهت الحلقة طبيعياً دون مواجهة أي تعليمة \`break\`**. إذا تم الخروج بـ \`break\`، يتم تخطي \`else\` تماماً.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>for vs while -silmukat</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">for-silmukka:</strong> Käytetään, kun iteroidaan tunnetun sarjan läpi (lista, merkkijono, monikko, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range</code>). Pythonin for on aidosti <em class=\"text-slate-200 italic\">for-each</em>-silmukka.</li>\n    <li><strong class=\"text-white font-semibold\">while-silmukka:</strong> Toistaa koodilohkoa niin kauan kuin annettu ehto pysyy totena (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">True</code>). Käytetään, kun toistojen määrää ei tiedetä etukäteen.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>range()-funktio</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Generoi lukusarjoja muistitehokkaasti (generaattorityyppisesti):</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range(5)</code>: 0, 1, 2, 3, 4</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range(2, 8)</code>: 2, 3, 4, 5, 6, 7</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range(10, 0, -2)</code>: 10, 8, 6, 4, 2 (askel taaksepäin)</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Silmukan ohjauskomennot</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">break:</strong> Keskeyttää koko silmukan suorituksen välittömästi.</li>\n    <li><strong class=\"text-white font-semibold\">continue:</strong> Ohittaa nykyisen kierroksen loput lauseet ja hyppää seuraavaan iteraatioon.</li>\n    <li><strong class=\"text-white font-semibold\">pass:</strong> Tyhjä operaatio (placeholder). Ei tee mitään, mutta estää syntaksivirheen tyhjässä lohkossa.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Pythonin ainutlaatuinen: Silmukan else-lohko (Loop-Else)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonissa sekä <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">for</code>- että <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">while</code>-silmukoihin voidaan liittää <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else:</code>-lohko!</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><strong class=\"text-white font-semibold\">Kultainen sääntö:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else:</code>-lohko suoritetaan <strong class=\"text-white font-semibold\">vain ja ainoastaan silloin</strong>, kun silmukka pyörii loppuun asti <strong class=\"text-white font-semibold\">ilman että kohdattiin <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">break</code>-komentoa</strong>. Jos silmukasta poistutaan <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">break</code>-lauseella, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else</code>-lohko ohitetaan.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Tämä sopii täydellisesti hakualgoritmeihin ilman erillistä lippumuuttujaa (flag variable).</p>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>for vs. while Loops</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">for loop:</strong> Used to iterate over any sequence (iterables such as lists, strings, ranges, dictionaries). In Python, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">for</code> is conceptually a <em class=\"text-slate-200 italic\">for-each</em> loop.</li>\n    <li><strong class=\"text-white font-semibold\">while loop:</strong> Executes repeatedly as long as a boolean condition remains <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">True</code>. Best suited when iteration count is indefinite.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>The range() Constructor</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Generates immutable arithmetic progressions efficiently without allocating the full list in memory:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range(n)</code>: 0 through n-1.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range(start, stop)</code>: start up to (exclusive) stop.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range(start, stop, step)</code>: Custom stride and direction.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Loop Control Directives</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">break:</strong> Immediately terminates the enclosing loop.</li>\n    <li><strong class=\"text-white font-semibold\">continue:</strong> Skips the rest of current cycle and proceeds to the next iteration.</li>\n    <li><strong class=\"text-white font-semibold\">pass:</strong> No-op syntactic placeholder for empty code blocks.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>The Unique Python Loop-Else Clause</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Both <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">for</code> and <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">while</code> loops support an attached <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else:</code> clause!</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><strong class=\"text-white font-semibold\">The Golden Rule:</strong> The <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else</code> block executes <strong class=\"text-white font-semibold\">if and only if</strong> the loop completed all iterations naturally <strong class=\"text-white font-semibold\">without encountering a <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">break</code> statement</strong>. If a <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">break</code> occurs, the <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else</code> block is completely bypassed. This removes the need for boolean flag variables in search routines.</p>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>الفرق بين حلقات for و while</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">حلقة for:</strong> تستخدم للتكرار عبر عناصر أي متتالية (قائمة، نص، نطاق أرقام).</li>\n    <li><strong class=\"text-white font-semibold\">حلقة while:</strong> تكرر تنفيذ الكود طالما ظل الشرط محققاً (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">True</code>).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>دالة range() الفعالة</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range(stop)</code>: تولد أرقاماً من 0 حتى stop - 1.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range(start, stop, step)</code>: بداية ونهاية ومقدار القفز، دون حجز مساحة إضافية في الذاكرة.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>أوامر التحكم في التكرار</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">break:</strong> إنهاء وخروج فوري من الحلقة بالكامل.</li>\n    <li><strong class=\"text-white font-semibold\">continue:</strong> تخطي ما تبقى من الدورة الحالية والانتقال للدورة التالية مباشرة.</li>\n    <li><strong class=\"text-white font-semibold\">pass:</strong> تعليمة لا تفعل شيئاً، تُستخدم كعنصر نائب لتفادي الأخطاء النحوية.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>جملة loop-else الفريدة في بايثون</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">تدعم بايثون وضع كتلة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else:</code> مع حلقات <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">for</code> و <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">while</code>.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><strong class=\"text-white font-semibold\">القاعدة الذهبية:</strong> يتم تنفيذ كتلة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else</code> <strong class=\"text-white font-semibold\">فقط وحصرياً إذا انتهت الحلقة طبيعياً دون مواجهة أي تعليمة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">break</code></strong>. إذا تم الخروج بـ <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">break</code>، يتم تخطي <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else</code> تماماً.</p>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 6: Loops & The Loop-Else Pattern
-
-# 1. for-silmukka ja range(start, stop, step)
-print("Parilliset luvut väliltä 2..10:")
-for num in range(2, 11, 2):
-    print(num, end=" ")
-print()
-
-# 2. Hakualgoritmi Pythonin uniikilla loop-else rakenteella
-opiskelijat = ["Aino", "Mikko", "Elena", "Kari", "Saara"]
-etsittava = "Elena"
-
-for nimi in opiskelijat:
-    if nimi == etsittava:
-        print(f"Löytyi opiskelija: {nimi}!")
-        break
-else:
-    # Suoritetaan VAIN jos silmukka käytiin loppuun ilman break-komentoa!
-    print(f"Opiskelijaa '{etsittava}' ei löytynyt kurssilta.")
-
-# 3. while-silmukka ja continue
-laskuri = 0
-print("Parittomat luvut alle 10:")
-while laskuri < 10:
-    laskuri += 1
-    if laskuri % 2 == 0:
-        continue # Hypätään parillisten yli
-    print(laskuri, end=" ")
-print()`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 6: Loops & The Loop-Else Pattern\n\n# 1. for-silmukka ja range(start, stop, step)\nprint(\"Parilliset luvut väliltä 2..10:\")\nfor num in range(2, 11, 2):\n    print(num, end=\" \")\nprint()\n\n# 2. Hakualgoritmi Pythonin uniikilla loop-else rakenteella\nopiskelijat = [\"Aino\", \"Mikko\", \"Elena\", \"Kari\", \"Saara\"]\netsittava = \"Elena\"\n\nfor nimi in opiskelijat:\n    if nimi == etsittava:\n        print(f\"Löytyi opiskelija: {nimi}!\")\n        break\nelse:\n    # Suoritetaan VAIN jos silmukka käytiin loppuun ilman break-komentoa!\n    print(f\"Opiskelijaa '{etsittava}' ei löytynyt kurssilta.\")\n\n# 3. while-silmukka ja continue\nlaskuri = 0\nprint(\"Parittomat luvut alle 10:\")\nwhile laskuri < 10:\n    laskuri += 1\n    if laskuri % 2 == 0:\n        continue # Hypätään parillisten yli\n    print(laskuri, end=\" \")\nprint()",
+    "proTips": {
+      "fi": [
         "Käytä enumerate(lista) -funktiota, jos tarvitset sekä alkion indeksin että sen arvon: for idx, arvo in enumerate(lista):",
         "Käytä zip()-funktiota kahden tai useamman listan rinnakkaiseen läpikäyntiin.",
         "Loop-else on Pythonin tehokkain tapa välttää apumuuttujat (found = False) etsinnöissä."
       ],
-      en: [
-        "Use \`enumerate(iterable)\` whenever you need both the index and value: \`for i, item in enumerate(items):\`.",
-        "Use \`zip(list_a, list_b)\` to iterate over multiple collections in lockstep.",
-        "The \`loop-else\` idiom eliminates messy boilerplate flag variables like \`found = False\` in search patterns."
+      "en": [
+        "Use <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">enumerate(iterable)</code> whenever you need both the index and value: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">for i, item in enumerate(items):</code>.",
+        "Use <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">zip(list_a, list_b)</code> to iterate over multiple collections in lockstep.",
+        "The <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">loop-else</code> idiom eliminates messy boilerplate flag variables like <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">found = False</code> in search patterns."
       ],
-      ar: [
-        "استخدم دالة `enumerate(list)` دائماً عندما تحتاج الفهرس والقيمة معاً بدقة.",
-        "استخدم دالة `zip()` للمرور بالتوازي على قائمتين أو أكثر في آن واحد.",
-        "توفر جملة `loop-else` حلاً أنيقاً يلغي الحاجة للمتغيرات المنطقية الإضافية (مثل found = False)."
+      "ar": [
+        "استخدم دالة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">enumerate(list)</code> دائماً عندما تحتاج الفهرس والقيمة معاً بدقة.",
+        "استخدم دالة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">zip()</code> للمرور بالتوازي على قائمتين أو أكثر في آن واحد.",
+        "توفر جملة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">loop-else</code> حلاً أنيقاً يلغي الحاجة للمتغيرات المنطقية الإضافية (مثل found = False)."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Milloin for-silmukkaan liitetty else-lohko suoritetaan?",
-        en: "When does the else block attached to a for loop execute?",
-        ar: "متى يتم تنفيذ كتلة else الملحقة بحلقة for؟"
+    "quiz": {
+      "question": {
+        "fi": "Milloin for-silmukkaan liitetty else-lohko suoritetaan?",
+        "en": "When does the else block attached to a for loop execute?",
+        "ar": "متى يتم تنفيذ كتلة else الملحقة بحلقة for؟"
       },
-      options: [
-        { id: "a", text: { fi: "Aina silmukan joka kierroksen lopussa", en: "At the end of every single iteration", ar: "في نهاية كل دورة من دورات الحلقة" } },
-        { id: "b", text: { fi: "Vain jos silmukassa suoritettiin break", en: "Only if a break occurred inside the loop", ar: "فقط في حال حدوث أمر break داخل الحلقة" } },
-        { id: "c", text: { fi: "Vain jos silmukka käytiin loppuun ilman break-komentoa", en: "Only if the loop terminates normally without hitting break", ar: "فقط عندما تكتمل الحلقة طبيعياً دون مصادفة أي تعليمة break" } },
-        { id: "d", text: { fi: "Vain jos silmukan läpikäytävä lista oli tyhjä", en: "Only when the iterable sequence was null or empty", ar: "فقط إذا كانت المتتالية فارغة تماماً" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "Aina silmukan joka kierroksen lopussa",
+            "en": "At the end of every single iteration",
+            "ar": "في نهاية كل دورة من دورات الحلقة"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "Vain jos silmukassa suoritettiin break",
+            "en": "Only if a break occurred inside the loop",
+            "ar": "فقط في حال حدوث أمر break داخل الحلقة"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "Vain jos silmukka käytiin loppuun ilman break-komentoa",
+            "en": "Only if the loop terminates normally without hitting break",
+            "ar": "فقط عندما تكتمل الحلقة طبيعياً دون مصادفة أي تعليمة break"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "Vain jos silmukan läpikäytävä lista oli tyhjä",
+            "en": "Only when the iterable sequence was null or empty",
+            "ar": "فقط إذا كانت المتتالية فارغة تماماً"
+          }
+        }
       ],
-      correctId: "c",
-      explanation: {
-        fi: "Pythonissa loop-else ajetaan vain silloin, kun silmukka iteroi kaikki alkiot eikä sitä keskeytetty break-lauseella.",
-        en: "Python's loop-else runs exclusively when the loop finishes its complete iteration cycle without being broken by a break.",
-        ar: "تنفذ بايثون كتلة loop-else فقط وحصرياً إذا انتهت جميع دورات الحلقة دون أن يقاطعها أمر break."
+      "correctId": "c",
+      "explanation": {
+        "fi": "Pythonissa loop-else ajetaan vain silloin, kun silmukka iteroi kaikki alkiot eikä sitä keskeytetty break-lauseella.",
+        "en": "Python's loop-else runs exclusively when the loop finishes its complete iteration cycle without being broken by a break.",
+        "ar": "تنفذ بايثون كتلة loop-else فقط وحصرياً إذا انتهت جميع دورات الحلقة دون أن يقاطعها أمر break."
       }
     }
   },
   {
-    id: 7,
-    slug: "file-operations",
-    icon: "FileText",
-    level: "intermediate",
-    estimatedMinutes: 25,
-    title: {
-      fi: "Tiedostokäsittely",
-      en: "File Operations",
-      ar: "عمليات الملفات وتدفق البيانات"
+    "id": 7,
+    "slug": "file-operations",
+    "icon": "FileText",
+    "level": "intermediate",
+    "estimatedMinutes": 25,
+    "title": {
+      "fi": "Tiedostokäsittely",
+      "en": "File Operations",
+      "ar": "عمليات الملفات وتدفق البيانات"
     },
-    summary: {
-      fi: "Tekstitiedostojen lukeminen ja kirjoittaminen, with-kontekstinhallinta ja binäärivirtojen käsittely.",
-      en: "Reading and writing text files, the with context manager, and handling binary stream bytes.",
-      ar: "قراءة وكتابة الملفات النصية، مدير السياق with، والتعامل مع تدفق البيانات الثنائية (Binary)."
+    "summary": {
+      "fi": "Tekstitiedostojen lukeminen ja kirjoittaminen, with-kontekstinhallinta ja binäärivirtojen käsittely.",
+      "en": "Reading and writing text files, the with context manager, and handling binary stream bytes.",
+      "ar": "قراءة وكتابة الملفات النصية، مدير السياق with، والتعامل مع تدفق البيانات الثنائية (Binary)."
     },
-    theory: {
-      fi: `
-### Tiedostojen avaaminen ja tilat (Modes)
-Pythonin sisäänrakennettu \`open(polku, tila, encoding)\` avaa tiedostokahvan.
-* **'r' (Read):** Lukutila (oletus). Aiheuttaa \`FileNotFoundErrorin\`, jos tiedostoa ei ole.
-* **'w' (Write):** Kirjoitustila. Luo tiedoston tai **ylikirjoittaa** olemassa olevan tiedoston kokonaan!
-* **'a' (Append):** Lisäystila. Kirjoittaa uuden tiedon olemassa olevan tiedoston loppuun.
-* **'b' (Binary):** Binääritila (esim. \`'rb'\` tai \`'wb'\`). Käsitellään raakabyttejä (\`bytes\`) merkkijonojen sijaan.
-
-### with-kontekstinhallinta (Context Manager)
-Perinteinen \`f.close()\` on altis virheille: jos luvussa tapahtuu poikkeus, tiedosto voi jäädä auki ja lukita resursseja.
-Pythonin suositeltu ja ammattimainen tapa on **with-lause**:
-\`\`\`python
-with open("data.txt", "r", encoding="utf-8") as f:
-    sisalto = f.read()
-\`\`\`
-\`with\`-lohko takaa, että tiedostokahva suljetaan **aina ja automaattisesti**, vaikka lohkon sisällä tapahtuisi poikkeus!
-
-### Binääritiedostojen käsittely ('rb', 'wb')
-Kun käsitellään kuvia, PDF-tiedostoja tai ääniä, tiedostot avataan binääritilassa. Tiedostojen alusta voidaan lukea esimerkiksi maagiset tavut (magic numbers, esim. PNG: \`\\x89PNG\\r\\n\\x1a\\n\`), joilla tunnistetaan tiedostotyyppi riippumatta tiedostopäätteestä.
-      `,
-      en: `
-### File Access Modes in Python
-Files are accessed using the built-in \`open(filepath, mode, encoding)\`:
-* **'r' (Read):** Default mode. Opens for reading; raises \`FileNotFoundError\` if absent.
-* **'w' (Write):** Opens for writing; truncates and overwrites existing contents or creates a new file.
-* **'a' (Append):** Appends newly written data to the end of the file.
-* **'b' (Binary):** Binary mode (e.g. \`'rb'\`, \`'wb'\`); handles raw \`bytes\` objects instead of decoded text.
-
-### The with Context Manager
-Relying on manual \`f.close()\` is hazardous because exceptions prior to closing leak system file descriptors.
-Python provides the **context manager pattern (\`with\` statement)**:
-\`\`\`python
-with open("report.txt", "w", encoding="utf-8") as f:
-    f.write("Clean data\\n")
-\`\`\`
-The context manager guarantees file closure immediately when exiting the block, even during uncaught exceptions.
-
-### Binary Streams & Magic Numbers
-Binary files (\`'rb'\`) read raw bytes. By reading initial bytes, applications can inspect file signatures (e.g., PNG files start with byte signature \`b'\\x89PNG'\`).
-      `,
-      ar: `
-### أوضاع فتح الملفات في بايثون
-يتم التعامل مع الملفات عبر الدالة المدمجة \`open(file, mode, encoding)\`:
-* **'r' (قراءة):** الوضع الافتراضي؛ يطلق خطأ إذا كان الملف غير موجود.
-* **'w' (كتابة):** إنشاء ملف جديد أو **استبدال ومسح** محتوى الملف السابق تماماً!
-* **'a' (إلحاق):** إضافة بيانات جديدة في نهاية الملف دون مسح محتواه.
-* **'b' (ثنائي):** التعامل مع البايتات الخام (مثل الصور والملفات الصوتية).
-
-### مدير السياق with (Context Manager)
-إن إغلاق الملف يدوياً بـ \`f.close()\` قد يفشل إذا حدث خطأ أثناء القراءة.
-الحل الاحترافي هو استخدام جملة **\`with\`**:
-\`\`\`python
-with open("data.txt", "r", encoding="utf-8") as f:
-    content = f.read()
-\`\`\`
-تضمن جملة \`with\` إغلاق الملف وتحرير موارد النظام تلقائياً دائماً وأبداً.
-
-### معالجة الملفات الثنائية
-في وضع \`'rb'\`، نقرأ بايتات خام (\`bytes\`) لفحص تواقيع الملفات الرقمية (Magic Numbers).
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Tiedostojen avaaminen ja tilat (Modes)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonin sisäänrakennettu <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">open(polku, tila, encoding)</code> avaa tiedostokahvan.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">'r' (Read):</strong> Lukutila (oletus). Aiheuttaa <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">FileNotFoundErrorin</code>, jos tiedostoa ei ole.</li>\n    <li><strong class=\"text-white font-semibold\">'w' (Write):</strong> Kirjoitustila. Luo tiedoston tai <strong class=\"text-white font-semibold\">ylikirjoittaa</strong> olemassa olevan tiedoston kokonaan!</li>\n    <li><strong class=\"text-white font-semibold\">'a' (Append):</strong> Lisäystila. Kirjoittaa uuden tiedon olemassa olevan tiedoston loppuun.</li>\n    <li><strong class=\"text-white font-semibold\">'b' (Binary):</strong> Binääritila (esim. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">'rb'</code> tai <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">'wb'</code>). Käsitellään raakabyttejä (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">bytes</code>) merkkijonojen sijaan.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>with-kontekstinhallinta (Context Manager)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Perinteinen <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">f.close()</code> on altis virheille: jos luvussa tapahtuu poikkeus, tiedosto voi jäädä auki ja lukita resursseja.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonin suositeltu ja ammattimainen tapa on <strong class=\"text-white font-semibold\">with-lause</strong>:</p>\n\n<pre class=\"p-4 rounded-xl bg-navy-card border border-navy-border text-gold font-mono text-xs overflow-x-auto my-3\"><code>with open(\"data.txt\", \"r\", encoding=\"utf-8\") as f:\n    sisalto = f.read()</code></pre>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">with</code>-lohko takaa, että tiedostokahva suljetaan <strong class=\"text-white font-semibold\">aina ja automaattisesti</strong>, vaikka lohkon sisällä tapahtuisi poikkeus!</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Binääritiedostojen käsittely ('rb', 'wb')</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Kun käsitellään kuvia, PDF-tiedostoja tai ääniä, tiedostot avataan binääritilassa. Tiedostojen alusta voidaan lukea esimerkiksi maagiset tavut (magic numbers, esim. PNG: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\\x89PNG\\r\\n\\x1a\\n</code>), joilla tunnistetaan tiedostotyyppi riippumatta tiedostopäätteestä.</p>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>File Access Modes in Python</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Files are accessed using the built-in <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">open(filepath, mode, encoding)</code>:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">'r' (Read):</strong> Default mode. Opens for reading; raises <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">FileNotFoundError</code> if absent.</li>\n    <li><strong class=\"text-white font-semibold\">'w' (Write):</strong> Opens for writing; truncates and overwrites existing contents or creates a new file.</li>\n    <li><strong class=\"text-white font-semibold\">'a' (Append):</strong> Appends newly written data to the end of the file.</li>\n    <li><strong class=\"text-white font-semibold\">'b' (Binary):</strong> Binary mode (e.g. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">'rb'</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">'wb'</code>); handles raw <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">bytes</code> objects instead of decoded text.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>The with Context Manager</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Relying on manual <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">f.close()</code> is hazardous because exceptions prior to closing leak system file descriptors.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Python provides the <strong class=\"text-white font-semibold\">context manager pattern (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">with</code> statement)</strong>:</p>\n\n<pre class=\"p-4 rounded-xl bg-navy-card border border-navy-border text-gold font-mono text-xs overflow-x-auto my-3\"><code>with open(\"report.txt\", \"w\", encoding=\"utf-8\") as f:\n    f.write(\"Clean data\\n\")</code></pre>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">The context manager guarantees file closure immediately when exiting the block, even during uncaught exceptions.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Binary Streams & Magic Numbers</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Binary files (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">'rb'</code>) read raw bytes. By reading initial bytes, applications can inspect file signatures (e.g., PNG files start with byte signature <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">b'\\x89PNG'</code>).</p>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>أوضاع فتح الملفات في بايثون</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">يتم التعامل مع الملفات عبر الدالة المدمجة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">open(file, mode, encoding)</code>:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">'r' (قراءة):</strong> الوضع الافتراضي؛ يطلق خطأ إذا كان الملف غير موجود.</li>\n    <li><strong class=\"text-white font-semibold\">'w' (كتابة):</strong> إنشاء ملف جديد أو <strong class=\"text-white font-semibold\">استبدال ومسح</strong> محتوى الملف السابق تماماً!</li>\n    <li><strong class=\"text-white font-semibold\">'a' (إلحاق):</strong> إضافة بيانات جديدة في نهاية الملف دون مسح محتواه.</li>\n    <li><strong class=\"text-white font-semibold\">'b' (ثنائي):</strong> التعامل مع البايتات الخام (مثل الصور والملفات الصوتية).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>مدير السياق with (Context Manager)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">إن إغلاق الملف يدوياً بـ <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">f.close()</code> قد يفشل إذا حدث خطأ أثناء القراءة.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">الحل الاحترافي هو استخدام جملة <strong class=\"text-white font-semibold\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">with</code></strong>:</p>\n\n<pre class=\"p-4 rounded-xl bg-navy-card border border-navy-border text-gold font-mono text-xs overflow-x-auto my-3\"><code>with open(\"data.txt\", \"r\", encoding=\"utf-8\") as f:\n    content = f.read()</code></pre>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">تضمن جملة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">with</code> إغلاق الملف وتحرير موارد النظام تلقائياً دائماً وأبداً.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>معالجة الملفات الثنائية</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">في وضع <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">'rb'</code>، نقرأ بايتات خام (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">bytes</code>) لفحص تواقيع الملفات الرقمية (Magic Numbers).</p>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 7: Professional File Handling
-
-# 1. Tekstitiedoston luominen ja kirjoittaminen with-rakenteella
-lokitiedosto = "palvelin_loki.txt"
-rivit = [
-    "2026-10-17 12:00:01 [INFO] Palvelin käynnistetty",
-    "2026-10-17 12:05:22 [WARNING] Korkea muistinkäyttö",
-    "2026-10-17 12:10:45 [ERROR] Tietokantayhteys katkesi"
-]
-
-with open(lokitiedosto, "w", encoding="utf-8") as f:
-    for rivi in rivit:
-        f.write(rivi + "\\n")
-print(f"Kirjoitettu {len(rivit)} riviä tiedostoon: {lokitiedosto}")
-
-# 2. Tiedoston lukeminen rivi riviltä muistitehokkaasti
-with open(lokitiedosto, "r", encoding="utf-8") as f:
-    for rivinumero, rivi in enumerate(f, start=1):
-        if "[ERROR]" in rivi:
-            print(f"Hälytys rivillä {rivinumero}: {rivi.strip()}")
-
-# 3. Binääritiedoston simulointi (PNG maaginen tavuallekiroitus)
-png_header = bytes([0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A])
-print("Binääritavut (Hex):", png_header.hex())
-print("Onko aito PNG-allekirjoitus?", png_header.startswith(b"\\x89PNG"))`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 7: Professional File Handling\n\n# 1. Tekstitiedoston luominen ja kirjoittaminen with-rakenteella\nlokitiedosto = \"palvelin_loki.txt\"\nrivit = [\n    \"2026-10-17 12:00:01 [INFO] Palvelin käynnistetty\",\n    \"2026-10-17 12:05:22 [WARNING] Korkea muistinkäyttö\",\n    \"2026-10-17 12:10:45 [ERROR] Tietokantayhteys katkesi\"\n]\n\nwith open(lokitiedosto, \"w\", encoding=\"utf-8\") as f:\n    for rivi in rivit:\n        f.write(rivi + \"\\n\")\nprint(f\"Kirjoitettu {len(rivit)} riviä tiedostoon: {lokitiedosto}\")\n\n# 2. Tiedoston lukeminen rivi riviltä muistitehokkaasti\nwith open(lokitiedosto, \"r\", encoding=\"utf-8\") as f:\n    for rivinumero, rivi in enumerate(f, start=1):\n        if \"[ERROR]\" in rivi:\n            print(f\"Hälytys rivillä {rivinumero}: {rivi.strip()}\")\n\n# 3. Binääritiedoston simulointi (PNG maaginen tavuallekiroitus)\npng_header = bytes([0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A])\nprint(\"Binääritavut (Hex):\", png_header.hex())\nprint(\"Onko aito PNG-allekirjoitus?\", png_header.startswith(b\"\\x89PNG\"))",
+    "proTips": {
+      "fi": [
         "Määritä tekstitiedostoja avatessa aina eksplisiittisesti encoding='utf-8', jotta koodi toimii luotettavasti Windows-, macOS- ja Linux-järjestelmissä.",
         "Älä lue suuria gigatavujen tiedostoja muistiin kerralla f.read()-metodilla. Käytä for line in f: -iteraattoria, joka lukee yhden rivin kerrallaan.",
         "Käytä pathlib.Path -kirjastoa tiedostopolkujen käsittelyyn merkkijonojen sijasta."
       ],
-      en: [
-        "Always explicitly declare \`encoding='utf-8'\` when opening text files to prevent cross-platform encoding bugs.",
-        "Never use \`f.read()\` on multi-gigabyte files; iterate line-by-line using \`for line in f:\` for O(1) memory consumption.",
-        "Adopt \`pathlib.Path\` modern object-oriented file paths instead of string concatenation."
+      "en": [
+        "Always explicitly declare <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">encoding='utf-8'</code> when opening text files to prevent cross-platform encoding bugs.",
+        "Never use <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">f.read()</code> on multi-gigabyte files; iterate line-by-line using <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">for line in f:</code> for O(1) memory consumption.",
+        "Adopt <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">pathlib.Path</code> modern object-oriented file paths instead of string concatenation."
       ],
-      ar: [
-        "حدد دائماً \`encoding='utf-8'\` عند فتح الملفات النصية لضمان عملها بالتوافق التام عبر كل المنصات.",
-        "لا تستخدم `f.read()` لقراءة ملفات ضخمة بحجم غيغابايت دفعة واحدة؛ بل اقرأ سطراً بسطر باستخدام `for line in f:`.",
-        "استخدم مكتبة `pathlib.Path` الحديثة لإدارة المسارات البرمجية باحترافية."
+      "ar": [
+        "حدد دائماً <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">encoding='utf-8'</code> عند فتح الملفات النصية لضمان عملها بالتوافق التام عبر كل المنصات.",
+        "لا تستخدم <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">f.read()</code> لقراءة ملفات ضخمة بحجم غيغابايت دفعة واحدة؛ بل اقرأ سطراً بسطر باستخدام <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">for line in f:</code>.",
+        "استخدم مكتبة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">pathlib.Path</code> الحديثة لإدارة المسارات البرمجية باحترافية."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Miksi with open(...) as f: -rakenne on suositeltu tapa tiedostojen avaamiseen?",
-        en: "Why is the with open(...) as f: syntax the recommended pattern for file I/O?",
-        ar: "لماذا تعد صياغة with open(...) as f: الطريقة القياسية الموصى بها لإدارة الملفات؟"
+    "quiz": {
+      "question": {
+        "fi": "Miksi with open(...) as f: -rakenne on suositeltu tapa tiedostojen avaamiseen?",
+        "en": "Why is the with open(...) as f: syntax the recommended pattern for file I/O?",
+        "ar": "لماذا تعد صياغة with open(...) as f: الطريقة القياسية الموصى بها لإدارة الملفات؟"
       },
-      options: [
-        { id: "a", text: { fi: "Se tekee tiedoston lukemisesta kaksi kertaa nopeampaa", en: "It doubles raw filesystem read throughput", ar: "تضاعف سرعة القراءة مرتين" } },
-        { id: "b", text: { fi: "Se takaa automaattisen tiedoston sulkemisen myös poikkeustilanteissa", en: "It guarantees file closure automatically even if exceptions occur", ar: "تضمن إغلاق الملف تلقائياً حتى عند حدوث أخطاء واستثناءات" } },
-        { id: "c", text: { fi: "Se estää tiedostoa koskaan tulemasta poistetuksi", en: "It locks files permanently against deletion", ar: "تمنع حذف الملف نهائياً من القرص" } },
-        { id: "d", text: { fi: "Se kääntää tekstitiedoston automaattisesti JSON-muotoon", en: "It automatically translates content to JSON format", ar: "تحول الملف تلقائياً إلى صيغة JSON" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "Se tekee tiedoston lukemisesta kaksi kertaa nopeampaa",
+            "en": "It doubles raw filesystem read throughput",
+            "ar": "تضاعف سرعة القراءة مرتين"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "Se takaa automaattisen tiedoston sulkemisen myös poikkeustilanteissa",
+            "en": "It guarantees file closure automatically even if exceptions occur",
+            "ar": "تضمن إغلاق الملف تلقائياً حتى عند حدوث أخطاء واستثناءات"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "Se estää tiedostoa koskaan tulemasta poistetuksi",
+            "en": "It locks files permanently against deletion",
+            "ar": "تمنع حذف الملف نهائياً من القرص"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "Se kääntää tekstitiedoston automaattisesti JSON-muotoon",
+            "en": "It automatically translates content to JSON format",
+            "ar": "تحول الملف تلقائياً إلى صيغة JSON"
+          }
+        }
       ],
-      correctId: "b",
-      explanation: {
-        fi: "with-kontekstinhallinta kutsuu automaattisesti tiedoston __exit__-metodia, joka sulkee tiedostokahvan kaikissa tilanteissa.",
-        en: "The context manager's __exit__ hook automatically closes file descriptors cleanly upon leaving the block.",
-        ar: "تستدعي جملة with دالة الخروج __exit__ تلقائياً لإغلاق الملف فور انتهاء الكتلة البرمجية."
+      "correctId": "b",
+      "explanation": {
+        "fi": "with-kontekstinhallinta kutsuu automaattisesti tiedoston __exit__-metodia, joka sulkee tiedostokahvan kaikissa tilanteissa.",
+        "en": "The context manager's __exit__ hook automatically closes file descriptors cleanly upon leaving the block.",
+        "ar": "تستدعي جملة with دالة الخروج __exit__ تلقائياً لإغلاق الملف فور انتهاء الكتلة البرمجية."
       }
     }
   },
   {
-    id: 8,
-    slug: "functions-and-scope",
-    icon: "Code2",
-    level: "intermediate",
-    estimatedMinutes: 30,
-    title: {
-      fi: "Funktiot ja näkyvyysalue",
-      en: "Functions & Scope",
-      ar: "الدوال ونطاق المتغيرات"
+    "id": 8,
+    "slug": "functions-and-scope",
+    "icon": "Code2",
+    "level": "intermediate",
+    "estimatedMinutes": 30,
+    "title": {
+      "fi": "Funktiot ja näkyvyysalue",
+      "en": "Functions & Scope",
+      "ar": "الدوال ونطاق المتغيرات"
     },
-    summary: {
-      fi: "def-avainsana, oletusargumentit, paluuarvot, *args ja **kwargs sekä LEGB-näkyvyyssääntö.",
-      en: "The def statement, default parameters, return mechanics, *args, **kwargs, and the LEGB scope rule.",
-      ar: "إنشاء الدوال بـ def، المعاملات الافتراضية، قيم الإرجاع، *args و **kwargs، وقاعدة نطاق LEGB."
+    "summary": {
+      "fi": "def-avainsana, oletusargumentit, paluuarvot, <em class=\"text-slate-200 italic\">args ja </em>kwargs sekä LEGB-näkyvyyssääntö.",
+      "en": "The def statement, default parameters, return mechanics, <em class=\"text-slate-200 italic\">args, </em>kwargs, and the LEGB scope rule.",
+      "ar": "إنشاء الدوال بـ def، المعاملات الافتراضية، قيم الإرجاع، <em class=\"text-slate-200 italic\">args و </em>kwargs، وقاعدة نطاق LEGB."
     },
-    theory: {
-      fi: `
-### Funktioiden määrittely: def
-Funktiot ovat uudelleenkäytettäviä koodilohkoja. Funktio määritellään \`def\`-avainsanalla, jota seuraa funktion nimi, parametrilista sulkeissa ja kaksoispiste.
-* **Docstringit:** Funktion heti ensimmäiselle riville kirjoitetaan kolminkertaisilla lainausmerkeillä dokumentaatiomerkkijono (\`"""Selitys..."""\`), jonka \`help()\`-funktio osaa lukea.
-
-### Parametrit ja oletusargumentit
-Funktioille voidaan antaa oletusarvoja:
-\`\`\`python
-def tervehdi(nimi, viesti="Tervetuloa"):
-    return f"{viesti}, {nimi}!"
-\`\`\`
-**Kriittinen sääntö:** Parametrit, joilla on oletusarvo, on aina sijoitettava pakollisten parametrien **jälkeen**. Älä koskaan käytä muuttuvia olioita (kuten tyhjää listaa \`[]\`) oletusarvona!
-
-### *args ja **kwargs
-* **\*args:** Kerää ylimääräiset sijaintiargumentit monikoksi (tuple).
-* **\*\*kwargs:** Kerää ylimääräiset nimetyt avainsana-argumentit sanakirjaksi (dictionary).
-
-### Muuttujien näkyvyysalue: LEGB-sääntö
-Kun koodissa viitataan muuttujan nimeen, Python etsii sitä seuraavassa järjestyksessä:
-1. **L (Local):** Funktion paikallinen näkyvyysalue.
-2. **E (Enclosing):** Sisäkkäisen funktion ympäröivä ulompi funktio (sulkeuma / closure).
-3. **G (Global):** Moduulin/tiedoston päätason globaali näkyvyysalue.
-4. **B (Built-in):** Pythonin sisäänrakennetut funktiot ja nimet (\`len\`, \`print\`, \`range\`, jne.).
-Muuttujan arvon muuttamiseen globaalilla tasolla tarvitaan \`global\`-avainsana, ja sulkeumissa \`nonlocal\`.
-      `,
-      en: `
-### Function Definition: The def Keyword
-Functions encapsulate modular, reusable logic.
-* **Docstrings:** High-quality Python functions start with a multi-line docstring (\`"""Description."""\`) for automated documentation via \`help()\`.
-
-### Arguments & Default Parameters
-Parameters can specify default fallback values:
-\`\`\`python
-def connect(host, port=8080, timeout=10):
-    return f"Connecting to {host}:{port}"
-\`\`\`
-**Crucial Warning:** Never use mutable defaults (e.g., \`def fn(items=[]):\`). Because default arguments are evaluated once at module load time, the identical list will be shared across all invocations! Use \`None\` as default instead.
-
-### Variadic Arguments: *args and **kwargs
-* **\*args:** Collects arbitrary positional arguments into a \`tuple\`.
-* **\*\*kwargs:** Collects arbitrary keyword arguments into a \`dict\`.
-
-### Scope Resolution: The LEGB Rule
-Python searches for variable bindings hierarchically:
-1. **Local (L):** Inside current function execution frame.
-2. **Enclosing (E):** In any enclosing outer functions (closures).
-3. **Global (G):** Top-level module variables.
-4. **Built-in (B):** Preloaded Python primitives (\`range\`, \`len\`, \`str\`).
-Modifying enclosing scope variables requires \`nonlocal\`; modifying global scope requires \`global\`.
-      `,
-      ar: `
-### تعريف الدوال بكلمة def
-الدوال هي وحدات برمجية قابلة لإعادة الاستخدام.
-* **نصوص التوثيق (Docstrings):** توثيق عمل الدالة في السطر الأول باستخدام \`"""توثيق..."""\`.
-
-### المعاملات والقيم الافتراضية
-يمكن تحديد قيم افتراضية للمدخلات:
-\`\`\`python
-def send_email(to, subject="إشعار", retries=3):
-    ...
-\`\`\`
-**تحذير بالغ الأهمية:** إياك واستخدام قيم افتراضية قابلة للتعديل مثل القوائم الفارغة \`def fn(data=[]):\` لأن بايثون ستشارك القائمة ذاتها بين كل الاستدعاءات! استخدم \`None\` كقيمة افتراضية بدلاً منها.
-
-### المعاملات المرنة: *args و **kwargs
-* **\*args:** جمع المعاملات الموضعية في هيئة Tuple.
-* **\*\*kwargs:** جمع المعاملات المسماة في هيئة Dictionary.
-
-### قاعدة نطاق المتغيرات (LEGB Rule)
-تبحث بايثون عن أسماء المتغيرات وفق هذا الترتيب الهرمي:
-1. **Local (L):** النطاق المحلي داخل الدالة الحالية.
-2. **Enclosing (E):** الدوال الحاضنة الخارجية (في حال الدوال المتداخلة).
-3. **Global (G):** النطاق العام للملف.
-4. **Built-in (B):** الدوال والكلمات المحجوزة المدمجة في بايثون مثل \`len\` و \`print\`.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Funktioiden määrittely: def</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Funktiot ovat uudelleenkäytettäviä koodilohkoja. Funktio määritellään <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">def</code>-avainsanalla, jota seuraa funktion nimi, parametrilista sulkeissa ja kaksoispiste.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Docstringit:</strong> Funktion heti ensimmäiselle riville kirjoitetaan kolminkertaisilla lainausmerkeillä dokumentaatiomerkkijono (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"\"\"Selitys...\"\"\"</code>), jonka <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">help()</code>-funktio osaa lukea.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Parametrit ja oletusargumentit</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Funktioille voidaan antaa oletusarvoja:</p>\n\n<pre class=\"p-4 rounded-xl bg-navy-card border border-navy-border text-gold font-mono text-xs overflow-x-auto my-3\"><code>def tervehdi(nimi, viesti=\"Tervetuloa\"):\n    return f\"{viesti}, {nimi}!\"</code></pre>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><strong class=\"text-white font-semibold\">Kriittinen sääntö:</strong> Parametrit, joilla on oletusarvo, on aina sijoitettava pakollisten parametrien <strong class=\"text-white font-semibold\">jälkeen</strong>. Älä koskaan käytä muuttuvia olioita (kuten tyhjää listaa <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">[]</code>) oletusarvona!</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span><em class=\"text-slate-200 italic\">args ja </em>kwargs</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">args:</strong> Kerää ylimääräiset sijaintiargumentit monikoksi (tuple).</li>\n    <li><strong class=\"text-white font-semibold\">kwargs:</strong> Kerää ylimääräiset nimetyt avainsana-argumentit sanakirjaksi (dictionary).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Muuttujien näkyvyysalue: LEGB-sääntö</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Kun koodissa viitataan muuttujan nimeen, Python etsii sitä seuraavassa järjestyksessä:</p>\n\n<ol class=\"list-decimal pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">L (Local):</strong> Funktion paikallinen näkyvyysalue.</li>\n    <li><strong class=\"text-white font-semibold\">E (Enclosing):</strong> Sisäkkäisen funktion ympäröivä ulompi funktio (sulkeuma / closure).</li>\n    <li><strong class=\"text-white font-semibold\">G (Global):</strong> Moduulin/tiedoston päätason globaali näkyvyysalue.</li>\n    <li><strong class=\"text-white font-semibold\">B (Built-in):</strong> Pythonin sisäänrakennetut funktiot ja nimet (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">len</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">print</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range</code>, jne.).</li>\n</ol>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Muuttujan arvon muuttamiseen globaalilla tasolla tarvitaan <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">global</code>-avainsana, ja sulkeumissa <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">nonlocal</code>.</p>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Function Definition: The def Keyword</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Functions encapsulate modular, reusable logic.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Docstrings:</strong> High-quality Python functions start with a multi-line docstring (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"\"\"Description.\"\"\"</code>) for automated documentation via <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">help()</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Arguments & Default Parameters</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Parameters can specify default fallback values:</p>\n\n<pre class=\"p-4 rounded-xl bg-navy-card border border-navy-border text-gold font-mono text-xs overflow-x-auto my-3\"><code>def connect(host, port=8080, timeout=10):\n    return f\"Connecting to {host}:{port}\"</code></pre>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><strong class=\"text-white font-semibold\">Crucial Warning:</strong> Never use mutable defaults (e.g., <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">def fn(items=[]):</code>). Because default arguments are evaluated once at module load time, the identical list will be shared across all invocations! Use <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">None</code> as default instead.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Variadic Arguments: <em class=\"text-slate-200 italic\">args and </em>kwargs</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">args:</strong> Collects arbitrary positional arguments into a <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">tuple</code>.</li>\n    <li><strong class=\"text-white font-semibold\">kwargs:</strong> Collects arbitrary keyword arguments into a <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">dict</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Scope Resolution: The LEGB Rule</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Python searches for variable bindings hierarchically:</p>\n\n<ol class=\"list-decimal pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Local (L):</strong> Inside current function execution frame.</li>\n    <li><strong class=\"text-white font-semibold\">Enclosing (E):</strong> In any enclosing outer functions (closures).</li>\n    <li><strong class=\"text-white font-semibold\">Global (G):</strong> Top-level module variables.</li>\n    <li><strong class=\"text-white font-semibold\">Built-in (B):</strong> Preloaded Python primitives (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">range</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">len</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">str</code>).</li>\n</ol>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Modifying enclosing scope variables requires <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">nonlocal</code>; modifying global scope requires <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">global</code>.</p>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>تعريف الدوال بكلمة def</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">الدوال هي وحدات برمجية قابلة لإعادة الاستخدام.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">نصوص التوثيق (Docstrings):</strong> توثيق عمل الدالة في السطر الأول باستخدام <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">\"\"\"توثيق...\"\"\"</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>المعاملات والقيم الافتراضية</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">يمكن تحديد قيم افتراضية للمدخلات:</p>\n\n<pre class=\"p-4 rounded-xl bg-navy-card border border-navy-border text-gold font-mono text-xs overflow-x-auto my-3\"><code>def send_email(to, subject=\"إشعار\", retries=3):\n    ...</code></pre>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\"><strong class=\"text-white font-semibold\">تحذير بالغ الأهمية:</strong> إياك واستخدام قيم افتراضية قابلة للتعديل مثل القوائم الفارغة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">def fn(data=[]):</code> لأن بايثون ستشارك القائمة ذاتها بين كل الاستدعاءات! استخدم <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">None</code> كقيمة افتراضية بدلاً منها.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>المعاملات المرنة: <em class=\"text-slate-200 italic\">args و </em>kwargs</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">args:</strong> جمع المعاملات الموضعية في هيئة Tuple.</li>\n    <li><strong class=\"text-white font-semibold\">kwargs:</strong> جمع المعاملات المسماة في هيئة Dictionary.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>قاعدة نطاق المتغيرات (LEGB Rule)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">تبحث بايثون عن أسماء المتغيرات وفق هذا الترتيب الهرمي:</p>\n\n<ol class=\"list-decimal pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Local (L):</strong> النطاق المحلي داخل الدالة الحالية.</li>\n    <li><strong class=\"text-white font-semibold\">Enclosing (E):</strong> الدوال الحاضنة الخارجية (في حال الدوال المتداخلة).</li>\n    <li><strong class=\"text-white font-semibold\">Global (G):</strong> النطاق العام للملف.</li>\n    <li><strong class=\"text-white font-semibold\">Built-in (B):</strong> الدوال والكلمات المحجوزة المدمجة في بايثون مثل <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">len</code> و <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">print</code>.</li>\n</ol>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 8: Functions, *args, **kwargs & LEGB
-
-# 1. Funktio oletusarvoilla ja tyyppivihjeillä (Type Hints)
-def laske_palkka(tunnit: float, tuntipalkka: float = 24.50, bonus: float = 0.0) -> float:
-    """Laskee työntekijän kokonaispalkan lisineen."""
-    brutto = (tunnit * tuntipalkka) + bonus
-    return round(brutto, 2)
-
-palkka = laske_palkka(37.5, bonus=150.0)
-print(f"Laskettu palkka: {palkka}€")
-
-# 2. *args ja **kwargs joustaviin parametreihin
-def monitoimi_logger(taso: str, *viestit, **metatiedot):
-    yhdistetty_viesti = " ".join(str(v) for v in viestit)
-    print(f"[{taso.upper()}] {yhdistetty_viesti}")
-    if metatiedot:
-        print(f"  Metatiedot: {metatiedot}")
-
-monitoimi_logger("warning", "Palvelin", "ylikuormittunut", cpu=94, ip="192.168.1.10")
-
-# 3. LEGB ja sulkeuma (Closure)
-def luo_laskuri(alkuarvo: int = 0):
-    arvo = alkuarvo # Enclosing scope
-    def kasvata(maara: int = 1):
-        nonlocal arvo # Viittaa ulomman funktion muuttujaan
-        arvo += maara
-        return arvo
-    return kasvata
-
-laskuri = luo_laskuri(10)
-print("Laskuri:", laskuri(), laskuri(5))`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 8: Functions, *args, **kwargs & LEGB\n\n# 1. Funktio oletusarvoilla ja tyyppivihjeillä (Type Hints)\ndef laske_palkka(tunnit: float, tuntipalkka: float = 24.50, bonus: float = 0.0) -> float:\n    \"\"\"Laskee työntekijän kokonaispalkan lisineen.\"\"\"\n    brutto = (tunnit * tuntipalkka) + bonus\n    return round(brutto, 2)\n\npalkka = laske_palkka(37.5, bonus=150.0)\nprint(f\"Laskettu palkka: {palkka}€\")\n\n# 2. *args ja **kwargs joustaviin parametreihin\ndef monitoimi_logger(taso: str, *viestit, **metatiedot):\n    yhdistetty_viesti = \" \".join(str(v) for v in viestit)\n    print(f\"[{taso.upper()}] {yhdistetty_viesti}\")\n    if metatiedot:\n        print(f\"  Metatiedot: {metatiedot}\")\n\nmonitoimi_logger(\"warning\", \"Palvelin\", \"ylikuormittunut\", cpu=94, ip=\"192.168.1.10\")\n\n# 3. LEGB ja sulkeuma (Closure)\ndef luo_laskuri(alkuarvo: int = 0):\n    arvo = alkuarvo # Enclosing scope\n    def kasvata(maara: int = 1):\n        nonlocal arvo # Viittaa ulomman funktion muuttujaan\n        arvo += maara\n        return arvo\n    return kasvata\n\nlaskuri = luo_laskuri(10)\nprint(\"Laskuri:\", laskuri(), laskuri(5))",
+    "proTips": {
+      "fi": [
         "Käytä aina tyyppivihjeitä (Type Hints, esim. def summa(a: int, b: int) -> int:) paremman luettavuuden ja IDE-tuen saavuttamiseksi.",
         "Älä koskaan käytä muuttuvaa oletusargumenttia (kuten def f(x=[]):). Käytä aina: def f(x=None): if x is None: x = []",
         "Pidä funktiot pieninä ja noudata Single Responsibility Principle (SRP) -periaatetta: yksi funktio tekee yhden asian hyvin."
       ],
-      en: [
-        "Incorporate Type Hints (\`def fn(a: int) -> str:\`) for self-documenting code and static analysis verification.",
-        "Never use mutable default arguments like \`def fn(arg=[]):\`. Use the sentinel pattern: \`def fn(arg=None): if arg is None: arg = []\`.",
+      "en": [
+        "Incorporate Type Hints (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">def fn(a: int) -> str:</code>) for self-documenting code and static analysis verification.",
+        "Never use mutable default arguments like <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">def fn(arg=[]):</code>. Use the sentinel pattern: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">def fn(arg=None): if arg is None: arg = []</code>.",
         "Adhere to the Single Responsibility Principle: each function should perform exactly one clear logical task."
       ],
-      ar: [
+      "ar": [
         "استخدم تلميحات الأنواع (Type Hints) لتحسين التوثيق وتسهيل اكتشاف الأخطاء في بيئات التطوير.",
         "تجنب القوائم كمعاملات افتراضية؛ استخدم دائماً نمط الحارس: def fn(items=None): if items is None: items = [].",
         "اجعل كل دالة مسؤولة عن مهمة محددة واحدة فقط وفق مبدأ المسؤولية الفردية (SRP)."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Mikä on tulos, jos funktiota def lisaa(x, lista=[]): lista.append(x); return lista kutsutaan kahdesti: lisaa(1) ja lisaa(2)?",
-        en: "What happens if def append_item(x, items=[]): items.append(x); return items is invoked twice: append_item(1) then append_item(2)?",
-        ar: "ماذا يحدث عند استدعاء الدالة def add(x, lst=[]): lst.append(x); return lst مرتين متتاليتين: add(1) ثم add(2)؟"
+    "quiz": {
+      "question": {
+        "fi": "Mikä on tulos, jos funktiota def lisaa(x, lista=[]): lista.append(x); return lista kutsutaan kahdesti: lisaa(1) ja lisaa(2)?",
+        "en": "What happens if def append_item(x, items=[]): items.append(x); return items is invoked twice: append_item(1) then append_item(2)?",
+        "ar": "ماذا يحدث عند استدعاء الدالة def add(x, lst=[]): lst.append(x); return lst مرتين متتاليتين: add(1) ثم add(2)؟"
       },
-      options: [
-        { id: "a", text: { fi: "Molemmat palauttavat [1] ja [2] erillisinä listoina", en: "Returns [1] then [2] as isolated lists", ar: "ترجع [1] ثم [2] كقوائم مستقلة" } },
-        { id: "b", text: { fi: "Toinen kutsu palauttaa [1, 2], koska oletuslista jaetaan kutsujen välillä", en: "The second call returns [1, 2] because the default list is shared across calls", ar: "الاستدعاء الثاني يرجع [1, 2] لأن القائمة الافتراضية مشتركة بين الاستدعاءات" } },
-        { id: "c", text: { fi: "Python heittää SyntaxErrorin", en: "Python throws a SyntaxError", ar: "تطلق بايثون خطأ SyntaxError" } },
-        { id: "d", text: { fi: "Toinen kutsu ylikirjoittaa ensimmäisen ja palauttaa [2]", en: "The second call overwrites the first and returns [2]", ar: "الاستدعاء الثاني يمسح الأول ويرجع [2]" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "Molemmat palauttavat [1] ja [2] erillisinä listoina",
+            "en": "Returns [1] then [2] as isolated lists",
+            "ar": "ترجع [1] ثم [2] كقوائم مستقلة"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "Toinen kutsu palauttaa [1, 2], koska oletuslista jaetaan kutsujen välillä",
+            "en": "The second call returns [1, 2] because the default list is shared across calls",
+            "ar": "الاستدعاء الثاني يرجع [1, 2] لأن القائمة الافتراضية مشتركة بين الاستدعاءات"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "Python heittää SyntaxErrorin",
+            "en": "Python throws a SyntaxError",
+            "ar": "تطلق بايثون خطأ SyntaxError"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "Toinen kutsu ylikirjoittaa ensimmäisen ja palauttaa [2]",
+            "en": "The second call overwrites the first and returns [2]",
+            "ar": "الاستدعاء الثاني يمسح الأول ويرجع [2]"
+          }
+        }
       ],
-      correctId: "b",
-      explanation: {
-        fi: "Oletusargumentit luodaan Pythonissa vain kerran funktion määrittelyhetkellä, joten muuttuva lista jaetaan kaikkien kutsujen kesken.",
-        en: "Default parameters are evaluated once upon function definition, meaning all invocations share the identical mutable list instance.",
-        ar: "تُنشأ المعاملات الافتراضية مرة واحدة فقط عند تعريف الدالة، مما يجعل القائمة المشتركة تتراكم فيها القيم."
+      "correctId": "b",
+      "explanation": {
+        "fi": "Oletusargumentit luodaan Pythonissa vain kerran funktion määrittelyhetkellä, joten muuttuva lista jaetaan kaikkien kutsujen kesken.",
+        "en": "Default parameters are evaluated once upon function definition, meaning all invocations share the identical mutable list instance.",
+        "ar": "تُنشأ المعاملات الافتراضية مرة واحدة فقط عند تعريف الدالة، مما يجعل القائمة المشتركة تتراكم فيها القيم."
       }
     }
   },
   {
-    id: 9,
-    slug: "modules-and-packages",
-    icon: "Package",
-    level: "intermediate",
-    estimatedMinutes: 25,
-    title: {
-      fi: "Moduulit ja paketit",
-      en: "Modules & Packages",
-      ar: "الوحدات والحزم البرمجية"
+    "id": 9,
+    "slug": "modules-and-packages",
+    "icon": "Package",
+    "level": "intermediate",
+    "estimatedMinutes": 25,
+    "title": {
+      "fi": "Moduulit ja paketit",
+      "en": "Modules & Packages",
+      "ar": "الوحدات والحزم البرمجية"
     },
-    summary: {
-      fi: "Sisäänrakennetut moduulit, import-syntaksit, omien moduulien luominen ja __name__ == '__main__' suojaus.",
-      en: "Standard library modules, import syntaxes, structuring custom modules, and the __name__ guard.",
-      ar: "المكتبات القياسية، صيغ الاستيراد المختلفة، إنشاء وحدات مخصصة، وشرط __name__ الحارس."
+    "summary": {
+      "fi": "Sisäänrakennetut moduulit, import-syntaksit, omien moduulien luominen ja __name__ == '__main__' suojaus.",
+      "en": "Standard library modules, import syntaxes, structuring custom modules, and the __name__ guard.",
+      "ar": "المكتبات القياسية، صيغ الاستيراد المختلفة، إنشاء وحدات مخصصة، وشرط __name__ الحارس."
     },
-    theory: {
-      fi: `
-### Mitä ovat moduulit ja paketit?
-* **Moduuli (Module):** Yksittäinen Python-tiedosto (.py), joka sisältää funktioita, luokkia ja muuttujia.
-* **Paketti (Package):** Hakemisto, joka sisältää useita moduuleja sekä \`__init__.py\`-tiedoston (Python 3.3+ tukee myös namespace-paketteja ilman tätä).
-* **Paristot mukana (Batteries Included):** Python sisältää valtavan sisäänrakennetun standardikirjaston: \`math\`, \`random\`, \`datetime\`, \`json\`, \`os\`, \`sys\`, \`pathlib\`, \`re\`.
-
-### Import-syntaksin eri muodot
-1. \`import math\`: Tuo koko moduulin (kutsutaan \`math.sqrt(16)\`).
-2. \`from math import sqrt, pi\`: Tuo tietyt funktiot suoraan paikalliseen nimiavaruuteen (\`sqrt(16)\`).
-3. \`import numpy as np\`: Tuo moduulin lyhennetyllä aliaksella.
-* *Varoitus:* Vältä \`from moduuli import *\` -syntaksia, sillä se saastuttaa nimiavaruuden ja voi ylikirjoittaa omia funktioita huomaamatta.
-
-### Tiedoston suoritus: if __name__ == '__main__':
-Kun Python-tiedosto ajetaan suoraan terminaalista, Python asettaa sen sisäisen muuttujan arvoksi \`__name__ = '__main__'\`.
-Jos tiedosto sen sijaan tuodaan toiseen tiedostoon \`import\`-komennolla, \`__name__\` saa arvokseen moduulin nimen.
-Suojaamalla testikoodi tällä ehdolla varmistetaan, että koodi ei suoriudu vahingossa, kun moduuli vain importataan!
-      `,
-      en: `
-### Modules vs. Packages
-* **Module:** A single Python file (\`.py\`) encapsulating classes, functions, and runnable code.
-* **Package:** A directory containing a cluster of modules, conventionally identified by an \`__init__.py\` file.
-* **"Batteries Included":** Python ships with an extensive standard library: \`math\`, \`datetime\`, \`json\`, \`random\`, \`os\`, \`pathlib\`, and \`re\`.
-
-### Import Patterns & Best Practices
-1. \`import math\`: Namespaced import (\`math.sqrt(25)\`).
-2. \`from math import sqrt, pi\`: Selective imports into the current namespace.
-3. \`import pandas as pd\`: Alias import for conciseness.
-* *Anti-pattern:* Never use wildcard imports (\`from module import *\`) because they pollute the namespace and obscure symbol origins.
-
-### The Standard Entry Guard: if __name__ == '__main__':
-When a script is run directly from the terminal, Python sets \`__name__ = '__main__'\`.
-When imported as a module, \`__name__\` equals the module filename.
-Wrapping executable code inside this check ensures your code can serve both as a standalone script and as an importable library without unwanted side effects.
-      `,
-      ar: `
-### الفرق بين الوحدات (Modules) والحزم (Packages)
-* **الوحدة (Module):** ملف بايثون فردي بصيغة (\`.py\`) يحتوي دوال ومتغيرات.
-* **الحزمة (Package):** مجلد يحتوي عدة وحدات مع ملف \`__init__.py\` لتعريفه كحزمة متكاملة.
-* **فلسفة "Batteries Included":** تمتلك بايثون مكتبة قياسية غنية تشمل \`math\` و \`json\` و \`datetime\` و \`random\`.
-
-### أشكال جمل الاستيراد (Import)
-1. \`import math\`: استيراد كامل للوحدة واستدعاؤها بـ \`math.pi\`.
-2. \`from math import sqrt\`: استيراد دالة محددة مباشرة.
-3. \`import numpy as np\`: استيراد مع اسم مستعار مختصر.
-* *تحذير:* تجنب استخدام \`from module import *\` لأنها تخلط الأسماء وتؤدي لتضارب غير مرئي في الكود.
-
-### شرط التشغيل الرئيسي: if __name__ == '__main__':
-عند تشغيل الملف مباشرة بواسطة بايثون تصبح قيمة المتغير الداخلي \`__name__ = '__main__'\`.
-أما عند استيراد الملف كوحدة في كود آخر، تصبح قيمته اسم الملف ذاته.
-يحمي هذا الشرط كود الاختبار من التنفيذ التلقائي عند مجرد استيراد الملف.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Mitä ovat moduulit ja paketit?</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Moduuli (Module):</strong> Yksittäinen Python-tiedosto (.py), joka sisältää funktioita, luokkia ja muuttujia.</li>\n    <li><strong class=\"text-white font-semibold\">Paketti (Package):</strong> Hakemisto, joka sisältää useita moduuleja sekä <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__init__.py</code>-tiedoston (Python 3.3+ tukee myös namespace-paketteja ilman tätä).</li>\n    <li><strong class=\"text-white font-semibold\">Paristot mukana (Batteries Included):</strong> Python sisältää valtavan sisäänrakennetun standardikirjaston: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">math</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">random</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">datetime</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">json</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">os</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">sys</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">pathlib</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">re</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Import-syntaksin eri muodot</span></h3>\n\n<ol class=\"list-decimal pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">import math</code>: Tuo koko moduulin (kutsutaan <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">math.sqrt(16)</code>).</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">from math import sqrt, pi</code>: Tuo tietyt funktiot suoraan paikalliseen nimiavaruuteen (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">sqrt(16)</code>).</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">import numpy as np</code>: Tuo moduulin lyhennetyllä aliaksella.</li>\n</ol>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><em class=\"text-slate-200 italic\">Varoitus:</em> Vältä <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">from moduuli import ×</code> -syntaksia, sillä se saastuttaa nimiavaruuden ja voi ylikirjoittaa omia funktioita huomaamatta.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Tiedoston suoritus: if __name__ == '__main__':</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Kun Python-tiedosto ajetaan suoraan terminaalista, Python asettaa sen sisäisen muuttujan arvoksi <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__name__ = '__main__'</code>.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Jos tiedosto sen sijaan tuodaan toiseen tiedostoon <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">import</code>-komennolla, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__name__</code> saa arvokseen moduulin nimen.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Suojaamalla testikoodi tällä ehdolla varmistetaan, että koodi ei suoriudu vahingossa, kun moduuli vain importataan!</p>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Modules vs. Packages</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Module:</strong> A single Python file (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.py</code>) encapsulating classes, functions, and runnable code.</li>\n    <li><strong class=\"text-white font-semibold\">Package:</strong> A directory containing a cluster of modules, conventionally identified by an <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__init__.py</code> file.</li>\n    <li><strong class=\"text-white font-semibold\">\"Batteries Included\":</strong> Python ships with an extensive standard library: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">math</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">datetime</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">json</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">random</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">os</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">pathlib</code>, and <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">re</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Import Patterns & Best Practices</span></h3>\n\n<ol class=\"list-decimal pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">import math</code>: Namespaced import (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">math.sqrt(25)</code>).</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">from math import sqrt, pi</code>: Selective imports into the current namespace.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">import pandas as pd</code>: Alias import for conciseness.</li>\n</ol>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><em class=\"text-slate-200 italic\">Anti-pattern:</em> Never use wildcard imports (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">from module import ×</code>) because they pollute the namespace and obscure symbol origins.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>The Standard Entry Guard: if __name__ == '__main__':</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">When a script is run directly from the terminal, Python sets <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__name__ = '__main__'</code>.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">When imported as a module, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__name__</code> equals the module filename.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Wrapping executable code inside this check ensures your code can serve both as a standalone script and as an importable library without unwanted side effects.</p>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>الفرق بين الوحدات (Modules) والحزم (Packages)</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">الوحدة (Module):</strong> ملف بايثون فردي بصيغة (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.py</code>) يحتوي دوال ومتغيرات.</li>\n    <li><strong class=\"text-white font-semibold\">الحزمة (Package):</strong> مجلد يحتوي عدة وحدات مع ملف <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__init__.py</code> لتعريفه كحزمة متكاملة.</li>\n    <li><strong class=\"text-white font-semibold\">فلسفة \"Batteries Included\":</strong> تمتلك بايثون مكتبة قياسية غنية تشمل <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">math</code> و <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">json</code> و <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">datetime</code> و <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">random</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>أشكال جمل الاستيراد (Import)</span></h3>\n\n<ol class=\"list-decimal pl-5 space-y-2 my-3\">\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">import math</code>: استيراد كامل للوحدة واستدعاؤها بـ <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">math.pi</code>.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">from math import sqrt</code>: استيراد دالة محددة مباشرة.</li>\n    <li><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">import numpy as np</code>: استيراد مع اسم مستعار مختصر.</li>\n</ol>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><em class=\"text-slate-200 italic\">تحذير:</em> تجنب استخدام <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">from module import ×</code> لأنها تخلط الأسماء وتؤدي لتضارب غير مرئي في الكود.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>شرط التشغيل الرئيسي: if __name__ == '__main__':</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">عند تشغيل الملف مباشرة بواسطة بايثون تصبح قيمة المتغير الداخلي <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__name__ = '__main__'</code>.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">أما عند استيراد الملف كوحدة في كود آخر، تصبح قيمته اسم الملف ذاته.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">يحمي هذا الشرط كود الاختبار من التنفيذ التلقائي عند مجرد استيراد الملف.</p>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 9: Standard Modules & Custom Architecture
-import math
-import random
-from datetime import datetime, date
-
-# 1. Standardikirjaston käyttöä
-print("Pii:", round(math.pi, 4))
-print("Neliöjuuri:", math.sqrt(144))
-
-satunnainen_noppa = random.randint(1, 6)
-print(f"Heitettiin noppaa: {satunnainen_noppa}")
-
-tanaan = datetime.now()
-print(f"Aikaleima: {tanaan.strftime('%Y-%m-%d %H:%M:%S')}")
-
-# 2. Moduulin suojattu rakenne
-def muunna_lampotila(celsius: float) -> float:
-    """Muuntaa Celsius-asteet Fahrenheit-asteiksi."""
-    return (celsius * 9/5) + 32
-
-if __name__ == "__main__":
-    # Tämä lohko suoritetaan VAIN jos tiedosto ajetaan suoraan!
-    print("Moduulin oma sisäinen testiajo:")
-    testi_c = 25.0
-    print(f"{testi_c}°C = {muunna_lampotila(testi_c)}°F")`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 9: Standard Modules & Custom Architecture\nimport math\nimport random\nfrom datetime import datetime, date\n\n# 1. Standardikirjaston käyttöä\nprint(\"Pii:\", round(math.pi, 4))\nprint(\"Neliöjuuri:\", math.sqrt(144))\n\nsatunnainen_noppa = random.randint(1, 6)\nprint(f\"Heitettiin noppaa: {satunnainen_noppa}\")\n\ntanaan = datetime.now()\nprint(f\"Aikaleima: {tanaan.strftime('%Y-%m-%d %H:%M:%S')}\")\n\n# 2. Moduulin suojattu rakenne\ndef muunna_lampotila(celsius: float) -> float:\n    \"\"\"Muuntaa Celsius-asteet Fahrenheit-asteiksi.\"\"\"\n    return (celsius * 9/5) + 32\n\nif __name__ == \"__main__\":\n    # Tämä lohko suoritetaan VAIN jos tiedosto ajetaan suoraan!\n    print(\"Moduulin oma sisäinen testiajo:\")\n    testi_c = 25.0\n    print(f\"{testi_c}°C = {muunna_lampotila(testi_c)}°F\")",
+    "proTips": {
+      "fi": [
         "Järjestä import-lauseet PEP 8 -suosituksen mukaisesti: 1) Standardikirjastot, 2) Kolmannen osapuolen paketit, 3) Oman projektin moduulit.",
         "Voit tutkia minkä tahansa moduulin sisältämiä funktioita ja attribuutteja dir()-funktiolla (esim. dir(math)).",
         "Käytä requirements.txt-tiedostoa tai pyproject.toml-tiedostoa ulkoisten pakettien versiohallintaan."
       ],
-      en: [
+      "en": [
         "Group import statements according to PEP 8: 1) Standard library, 2) Third-party packages, 3) Local application imports.",
-        "Inspect available methods and constants of any module dynamically with \`dir(module_name)\`.",
-        "Lock third-party module versions strictly using \`pip freeze > requirements.txt\` or \`pyproject.toml\`."
+        "Inspect available methods and constants of any module dynamically with <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">dir(module_name)</code>.",
+        "Lock third-party module versions strictly using <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">pip freeze > requirements.txt</code> or <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">pyproject.toml</code>."
       ],
-      ar: [
+      "ar": [
         "نظم جمل الاستيراد وفق معيار PEP 8: 1) المكتبات القياسية، 2) حزم الطرف الثالث، 3) ملفات مشروعك الخاصة.",
-        "استكشف محتويات أي وحدة برمجية بسهولة باستخدام الدالة الفاحصة \`dir(module)\`.",
-        "ثبت إصدارات الحزم الخارجية بدقة في ملف \`requirements.txt\` لتجنب تضارب التحديثات."
+        "استكشف محتويات أي وحدة برمجية بسهولة باستخدام الدالة الفاحصة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">dir(module)</code>.",
+        "ثبت إصدارات الحزم الخارجية بدقة في ملف <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">requirements.txt</code> لتجنب تضارب التحديثات."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Mitä tapahtuu if __name__ == '__main__': -ehdon alla olevalle koodille, kun kyseinen tiedosto tuodaan import-lauseella toiseen tiedostoon?",
-        en: "What happens to the code nested under if __name__ == '__main__': when that file is imported by another script?",
-        ar: "ماذا يحدث للكود الموجود داخل شرط if __name__ == '__main__': عند استيراد الملف كوحدة في ملف آخر؟"
+    "quiz": {
+      "question": {
+        "fi": "Mitä tapahtuu if __name__ == '__main__': -ehdon alla olevalle koodille, kun kyseinen tiedosto tuodaan import-lauseella toiseen tiedostoon?",
+        "en": "What happens to the code nested under if __name__ == '__main__': when that file is imported by another script?",
+        "ar": "ماذا يحدث للكود الموجود داخل شرط if __name__ == '__main__': عند استيراد الملف كوحدة في ملف آخر؟"
       },
-      options: [
-        { id: "a", text: { fi: "Se suoritetaan välittömästi importin yhteydessä", en: "It executes automatically at import time", ar: "يتم تنفيذه تلقائياً وفورياً وقت الاستيراد" } },
-        { id: "b", text: { fi: "Se ohitetaan kokonaan, eikä sitä suoriteta", en: "It is bypassed completely and not executed", ar: "يتم تخطيه تماماً ولا يتم تنفيذه إطلاقاً" } },
-        { id: "c", text: { fi: "Python antaa ImportError-virheen", en: "Python raises an ImportError", ar: "تطلق بايثون خطأ استيراد ImportError" } },
-        { id: "d", text: { fi: "Koodi poistetaan tiedostosta automaattisesti", en: "The code is permanently stripped from memory", ar: "يتم حذف الكود نهائياً من الذاكرة" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "Se suoritetaan välittömästi importin yhteydessä",
+            "en": "It executes automatically at import time",
+            "ar": "يتم تنفيذه تلقائياً وفورياً وقت الاستيراد"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "Se ohitetaan kokonaan, eikä sitä suoriteta",
+            "en": "It is bypassed completely and not executed",
+            "ar": "يتم تخطيه تماماً ولا يتم تنفيذه إطلاقاً"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "Python antaa ImportError-virheen",
+            "en": "Python raises an ImportError",
+            "ar": "تطلق بايثون خطأ استيراد ImportError"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "Koodi poistetaan tiedostosta automaattisesti",
+            "en": "The code is permanently stripped from memory",
+            "ar": "يتم حذف الكود نهائياً من الذاكرة"
+          }
+        }
       ],
-      correctId: "b",
-      explanation: {
-        fi: "Tuodussa tiedostossa __name__ saa arvokseen moduulin nimen (eikä '__main__'), joten kyseinen lohko ohitetaan turvallisesti.",
-        en: "When imported, \`__name__\` is assigned the module's actual name rather than '__main__', effectively skipping execution of the block.",
-        ar: "عند الاستيراد، يحمل المتغير \`__name__\` اسم الملف الحقيقي بدلاً من '__main__'، وبالتالي يتم تجاوز الكود بأمان."
+      "correctId": "b",
+      "explanation": {
+        "fi": "Tuodussa tiedostossa __name__ saa arvokseen moduulin nimen (eikä '__main__'), joten kyseinen lohko ohitetaan turvallisesti.",
+        "en": "When imported, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__name__</code> is assigned the module's actual name rather than '__main__', effectively skipping execution of the block.",
+        "ar": "عند الاستيراد، يحمل المتغير <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__name__</code> اسم الملف الحقيقي بدلاً من '__main__'، وبالتالي يتم تجاوز الكود بأمان."
       }
     }
   },
   {
-    id: 10,
-    slug: "error-and-exception-handling",
-    icon: "AlertTriangle",
-    level: "intermediate",
-    estimatedMinutes: 30,
-    title: {
-      fi: "Virheiden ja poikkeusten käsittely",
-      en: "Error & Exception Handling",
-      ar: "معالجة الأخطاء والاستثناءات"
+    "id": 10,
+    "slug": "error-and-exception-handling",
+    "icon": "AlertTriangle",
+    "level": "intermediate",
+    "estimatedMinutes": 30,
+    "title": {
+      "fi": "Virheiden ja poikkeusten käsittely",
+      "en": "Error & Exception Handling",
+      "ar": "معالجة الأخطاء والاستثناءات"
     },
-    summary: {
-      fi: "try-except-else-finally elinkaari, useiden poikkeusten sieppaus ja IndexErrorin välttäminen.",
-      en: "The try-except-else-finally lifecycle, catching multiple exceptions, and guarding against IndexError.",
-      ar: "دورة حياة try-except-else-finally، التقاط الاستثناءات المتعددة وتفادي خطأ IndexError."
+    "summary": {
+      "fi": "try-except-else-finally elinkaari, useiden poikkeusten sieppaus ja IndexErrorin välttäminen.",
+      "en": "The try-except-else-finally lifecycle, catching multiple exceptions, and guarding against IndexError.",
+      "ar": "دورة حياة try-except-else-finally، التقاط الاستثناءات المتعددة وتفادي خطأ IndexError."
     },
-    theory: {
-      fi: `
-### Syntaksivirheet vs Poikkeukset (Exceptions)
-* **Syntaksivirheet (SyntaxError):** Koodin kielioppivirheitä, jotka estävät ohjelman kääntämisen ja käynnistymisen kokonaan (esim. puuttuva kaksoispiste).
-* **Poikkeukset (Runtime Exceptions):** Koodi on syntaktisesti oikein, mutta suorituksen aikana tapahtuu odottamaton tilanne (esim. nollalla jako \`ZeroDivisionError\` tai olemattomaan listan indeksiin viittaaminen \`IndexError\`).
-
-### Täydellinen try-except-else-finally -arkkitehtuuri
-1. **try:** Suorittaa koodin, jossa poikkeus saattaa tapahtua.
-2. **except VirheTyyppi as e:** Sieppaa määritellyn virheen ja suorittaa toipumiskoodin.
-3. **else:** Suoritetaan **vain jos mitään poikkeusta EI tapahtunut** try-lohkossa!
-4. **finally:** Suoritetaan **aina**, riippumatta siitä tuliko virhe vai ei (ihanteellinen resurssien siivoamiseen).
-
-### IndexErrorin välttäminen ammattimaisesti
-Yleinen aloittelijan virhe on yrittää viitata listan indeksiin, jota ei ole olemassa (\`IndexError: list index out of range\`).
-Sen sijaan, että turvaudutaan vain virheen sieppaamiseen, suositellaan **ennakoivaa tarkistusta (EAFP vs LBYL)**:
-* Tarkistetaan listan pituus ennen indeksointia: \`if 0 <= indeksi < len(lista):\`
-* Sanakirjoissa käytetään \`.get(avain, oletus)\`-metodia \`KeyErrorin\` välttämiseksi.
-      `,
-      en: `
-### Syntax Errors vs. Runtime Exceptions
-* **SyntaxError:** Grammatical invalidities detected at parse time before code executes.
-* **Exceptions:** Logical faults encountered during active execution (e.g., \`ZeroDivisionError\`, \`IndexError\`, \`ValueError\`).
-
-### The Robust try-except-else-finally Lifecycle
-1. **try:** Encloses hazardous operations that might raise an exception.
-2. **except SpecificError as err:** Catches and isolates designated exceptions.
-3. **else:** Executes **strictly if no exception was raised** in the \`try\` block.
-4. **finally:** Guaranteed execution in all scenarios (perfect for closing sockets, database connections, and locks).
-
-### Preventing IndexError Elegantly
-Attempting to read non-existent list indices triggers \`IndexError: list index out of range\`.
-Senior engineering paradigms:
-* Guard index bounds conditionally: \`if 0 <= idx < len(items):\`
-* For dictionaries, use \`.get(key, default)\` to completely eliminate \`KeyError\` exceptions.
-* Leverage Python's EAFP (*Easier to Ask for Forgiveness than Permission*) idiom responsibly.
-      `,
-      ar: `
-### الأخطاء النحوية مقابل الاستثناءات البرمجية
-* **خطأ نحوي (SyntaxError):** خلل في قواعد لغة بايثون يمنع تشغيل البرنامج أصلاً.
-* **استثناء وقت التشغيل (Exception):** كود سليم نحوياً لكنه يواجه حدثاً غير متوقع مثل القسمة على صفر (\`ZeroDivisionError\`) أو الوصول لعنصر غير موجود في القائمة (\`IndexError\`).
-
-### هيكل try-except-else-finally المتكامل
-1. **try:** وضع الكود المعرض للخطأ بداخله.
-2. **except SpecificError as e:** التقاط نوع الخطأ والتعامل معه بمرونة.
-3. **else:** يتم تنفيذها **فقط في حال عدم حدوث أي خطأ إطلاقاً** داخل try.
-4. **finally:** يتم تنفيذها **دائماً وأبداً** سواء حدث خطأ أم لم يحدث (مثالية لإغلاق الاتصالات بالخوادم والملفات).
-
-### تجنب خطأ IndexError باحترافية
-يحدث خطأ \`IndexError\` عند محاولة قراءة فهرس يتجاوز حجم القائمة.
-* التحقق من الحدود أولاً: \`if 0 <= index < len(lst):\`.
-* استخدام دالة \`.get()\` مع القواميس لمنع حدوث \`KeyError\`.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Syntaksivirheet vs Poikkeukset (Exceptions)</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Syntaksivirheet (SyntaxError):</strong> Koodin kielioppivirheitä, jotka estävät ohjelman kääntämisen ja käynnistymisen kokonaan (esim. puuttuva kaksoispiste).</li>\n    <li><strong class=\"text-white font-semibold\">Poikkeukset (Runtime Exceptions):</strong> Koodi on syntaktisesti oikein, mutta suorituksen aikana tapahtuu odottamaton tilanne (esim. nollalla jako <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">ZeroDivisionError</code> tai olemattomaan listan indeksiin viittaaminen <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">IndexError</code>).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Täydellinen try-except-else-finally -arkkitehtuuri</span></h3>\n\n<ol class=\"list-decimal pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">try:</strong> Suorittaa koodin, jossa poikkeus saattaa tapahtua.</li>\n    <li><strong class=\"text-white font-semibold\">except VirheTyyppi as e:</strong> Sieppaa määritellyn virheen ja suorittaa toipumiskoodin.</li>\n    <li><strong class=\"text-white font-semibold\">else:</strong> Suoritetaan <strong class=\"text-white font-semibold\">vain jos mitään poikkeusta EI tapahtunut</strong> try-lohkossa!</li>\n    <li><strong class=\"text-white font-semibold\">finally:</strong> Suoritetaan <strong class=\"text-white font-semibold\">aina</strong>, riippumatta siitä tuliko virhe vai ei (ihanteellinen resurssien siivoamiseen).</li>\n</ol>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>IndexErrorin välttäminen ammattimaisesti</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Yleinen aloittelijan virhe on yrittää viitata listan indeksiin, jota ei ole olemassa (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">IndexError: list index out of range</code>).</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Sen sijaan, että turvaudutaan vain virheen sieppaamiseen, suositellaan <strong class=\"text-white font-semibold\">ennakoivaa tarkistusta (EAFP vs LBYL)</strong>:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li>Tarkistetaan listan pituus ennen indeksointia: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">if 0 <= indeksi < len(lista):</code></li>\n    <li>Sanakirjoissa käytetään <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.get(avain, oletus)</code>-metodia <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">KeyErrorin</code> välttämiseksi.</li>\n</ul>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Syntax Errors vs. Runtime Exceptions</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">SyntaxError:</strong> Grammatical invalidities detected at parse time before code executes.</li>\n    <li><strong class=\"text-white font-semibold\">Exceptions:</strong> Logical faults encountered during active execution (e.g., <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">ZeroDivisionError</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">IndexError</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">ValueError</code>).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>The Robust try-except-else-finally Lifecycle</span></h3>\n\n<ol class=\"list-decimal pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">try:</strong> Encloses hazardous operations that might raise an exception.</li>\n    <li><strong class=\"text-white font-semibold\">except SpecificError as err:</strong> Catches and isolates designated exceptions.</li>\n    <li><strong class=\"text-white font-semibold\">else:</strong> Executes <strong class=\"text-white font-semibold\">strictly if no exception was raised</strong> in the <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">try</code> block.</li>\n    <li><strong class=\"text-white font-semibold\">finally:</strong> Guaranteed execution in all scenarios (perfect for closing sockets, database connections, and locks).</li>\n</ol>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Preventing IndexError Elegantly</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Attempting to read non-existent list indices triggers <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">IndexError: list index out of range</code>.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Senior engineering paradigms:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li>Guard index bounds conditionally: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">if 0 <= idx < len(items):</code></li>\n    <li>For dictionaries, use <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.get(key, default)</code> to completely eliminate <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">KeyError</code> exceptions.</li>\n    <li>Leverage Python's EAFP (<em class=\"text-slate-200 italic\">Easier to Ask for Forgiveness than Permission</em>) idiom responsibly.</li>\n</ul>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>الأخطاء النحوية مقابل الاستثناءات البرمجية</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">خطأ نحوي (SyntaxError):</strong> خلل في قواعد لغة بايثون يمنع تشغيل البرنامج أصلاً.</li>\n    <li><strong class=\"text-white font-semibold\">استثناء وقت التشغيل (Exception):</strong> كود سليم نحوياً لكنه يواجه حدثاً غير متوقع مثل القسمة على صفر (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">ZeroDivisionError</code>) أو الوصول لعنصر غير موجود في القائمة (<code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">IndexError</code>).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>هيكل try-except-else-finally المتكامل</span></h3>\n\n<ol class=\"list-decimal pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">try:</strong> وضع الكود المعرض للخطأ بداخله.</li>\n    <li><strong class=\"text-white font-semibold\">except SpecificError as e:</strong> التقاط نوع الخطأ والتعامل معه بمرونة.</li>\n    <li><strong class=\"text-white font-semibold\">else:</strong> يتم تنفيذها <strong class=\"text-white font-semibold\">فقط في حال عدم حدوث أي خطأ إطلاقاً</strong> داخل try.</li>\n    <li><strong class=\"text-white font-semibold\">finally:</strong> يتم تنفيذها <strong class=\"text-white font-semibold\">دائماً وأبداً</strong> سواء حدث خطأ أم لم يحدث (مثالية لإغلاق الاتصالات بالخوادم والملفات).</li>\n</ol>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>تجنب خطأ IndexError باحترافية</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">يحدث خطأ <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">IndexError</code> عند محاولة قراءة فهرس يتجاوز حجم القائمة.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li>التحقق من الحدود أولاً: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">if 0 <= index < len(lst):</code>.</li>\n    <li>استخدام دالة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.get()</code> مع القواميس لمنع حدوث <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">KeyError</code>.</li>\n</ul>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 10: Robust Error & Exception Handling
-
-def jaa_luvut(osoittaja_str: str, nimittaja_str: str):
-    """Turvallinen jakolaskutoimitus poikkeustenkäsittelyllä."""
-    try:
-        a = float(osoittaja_str)
-        b = float(nimittaja_str)
-        tulos = a / b
-    except ValueError as e:
-        print(f"[VIRHE] Syöte ei ole kelvollinen luku: {e}")
-        return None
-    except ZeroDivisionError:
-        print("[VIRHE] Nollalla jakaminen on matemaattisesti mahdotonta!")
-        return None
-    else:
-        # Ajetaan VAIN jos try onnistui täydellisesti!
-        print(f"[ONNISTUI] Jakolaskun tulos: {tulos}")
-        return tulos
-    finally:
-        # Ajetaan AINA!
-        print("[LOKI] Jakolaskutoimituksen käsittely päättyi.\\n")
-
-# Testataan eri tilanteita
-jaa_luvut("100", "4")    # Onnistuu
-jaa_luvut("50", "0")     # ZeroDivisionError
-jaa_luvut("sata", "5")   # ValueError
-
-# 2. IndexErrorin välttäminen ehdolla
-hedelmat = ["omena", "banaani"]
-valittu_indeksi = 4
-
-if 0 <= valittu_indeksi < len(hedelmat):
-    print("Valittu:", hedelmat[valittu_indeksi])
-else:
-    print(f"Indeksi {valittu_indeksi} ylittää listan koon (max {len(hedelmat)-1})")`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 10: Robust Error & Exception Handling\n\ndef jaa_luvut(osoittaja_str: str, nimittaja_str: str):\n    \"\"\"Turvallinen jakolaskutoimitus poikkeustenkäsittelyllä.\"\"\"\n    try:\n        a = float(osoittaja_str)\n        b = float(nimittaja_str)\n        tulos = a / b\n    except ValueError as e:\n        print(f\"[VIRHE] Syöte ei ole kelvollinen luku: {e}\")\n        return None\n    except ZeroDivisionError:\n        print(\"[VIRHE] Nollalla jakaminen on matemaattisesti mahdotonta!\")\n        return None\n    else:\n        # Ajetaan VAIN jos try onnistui täydellisesti!\n        print(f\"[ONNISTUI] Jakolaskun tulos: {tulos}\")\n        return tulos\n    finally:\n        # Ajetaan AINA!\n        print(\"[LOKI] Jakolaskutoimituksen käsittely päättyi.\\n\")\n\n# Testataan eri tilanteita\njaa_luvut(\"100\", \"4\")    # Onnistuu\njaa_luvut(\"50\", \"0\")     # ZeroDivisionError\njaa_luvut(\"sata\", \"5\")   # ValueError\n\n# 2. IndexErrorin välttäminen ehdolla\nhedelmat = [\"omena\", \"banaani\"]\nvalittu_indeksi = 4\n\nif 0 <= valittu_indeksi < len(hedelmat):\n    print(\"Valittu:\", hedelmat[valittu_indeksi])\nelse:\n    print(f\"Indeksi {valittu_indeksi} ylittää listan koon (max {len(hedelmat)-1})\")",
+    "proTips": {
+      "fi": [
         "Älä koskaan käytä paljasta except: -lausetta ilman virhetyyppiä, sillä se sieppaa myös ohjelman sulkukomennot (KeyboardInterrupt, SystemExit).",
         "Käytä else-lohkoa toiminnoille, joiden tulee suoriutua vain onnistuneen try-kokeilun jälkeen.",
         "Voit heittää omia poikkeuksia selkeällä virheilmoituksella: raise ValueError('Luvun on oltava positiivinen')."
       ],
-      en: [
-        "Never write a bare \`except:\` clause; it intercepts critical OS signals such as \`KeyboardInterrupt\` and \`SystemExit\`.",
-        "Put code that must only run when \`try\` succeeded inside the \`else:\` block to keep the \`try\` block minimal.",
-        "Raise custom informative errors using \`raise ValueError('Detailed context here')\`."
+      "en": [
+        "Never write a bare <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">except:</code> clause; it intercepts critical OS signals such as <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">KeyboardInterrupt</code> and <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">SystemExit</code>.",
+        "Put code that must only run when <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">try</code> succeeded inside the <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else:</code> block to keep the <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">try</code> block minimal.",
+        "Raise custom informative errors using <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">raise ValueError('Detailed context here')</code>."
       ],
-      ar: [
-        "إياك واستخدام عبارة \`except:\` مجردة دون تحديد نوع الخطأ؛ لأنها تلتقط حتى أوامر إيقاف البرنامج الفوري.",
-        "ضع الكود الذي يتطلب نجاح المحاولة فقط داخل كتلة \`else:\` لتبسيط وفصل كود \`try\`.",
-        "أطلق أخطاء مخصصة واضحة لبرنامجك باستخدام: \`raise ValueError('رسالة التوضيح')\`."
+      "ar": [
+        "إياك واستخدام عبارة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">except:</code> مجردة دون تحديد نوع الخطأ؛ لأنها تلتقط حتى أوامر إيقاف البرنامج الفوري.",
+        "ضع الكود الذي يتطلب نجاح المحاولة فقط داخل كتلة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else:</code> لتبسيط وفصل كود <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">try</code>.",
+        "أطلق أخطاء مخصصة واضحة لبرنامجك باستخدام: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">raise ValueError('رسالة التوضيح')</code>."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Mikä lohko suoritetaan try-rakenteessa vain silloin, kun yhtäkään poikkeusta EI tapahtunut?",
-        en: "Which block in a try construct executes exclusively when NO exception occurred?",
-        ar: "أي كتلة في بنية try يتم تنفيذها حصراً عند عدم حدوث أي استثناء إطلاقاً؟"
+    "quiz": {
+      "question": {
+        "fi": "Mikä lohko suoritetaan try-rakenteessa vain silloin, kun yhtäkään poikkeusta EI tapahtunut?",
+        "en": "Which block in a try construct executes exclusively when NO exception occurred?",
+        "ar": "أي كتلة في بنية try يتم تنفيذها حصراً عند عدم حدوث أي استثناء إطلاقاً؟"
       },
-      options: [
-        { id: "a", text: { fi: "finally", en: "finally", ar: "finally" } },
-        { id: "b", text: { fi: "else", en: "else", ar: "else" } },
-        { id: "c", text: { fi: "except", en: "except", ar: "except" } },
-        { id: "d", text: { fi: "pass", en: "pass", ar: "pass" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "finally",
+            "en": "finally",
+            "ar": "finally"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "else",
+            "en": "else",
+            "ar": "else"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "except",
+            "en": "except",
+            "ar": "except"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "pass",
+            "en": "pass",
+            "ar": "pass"
+          }
+        }
       ],
-      correctId: "b",
-      explanation: {
-        fi: "try-rakenteen else-lohko suoritetaan nimenomaan silloin, kun try-lohko selvisi ilman poikkeuksia. finally ajetaan aina.",
-        en: "The \`else\` clause executes strictly when the \`try\` body completed without encountering an exception.",
-        ar: "كتلة \`else\` مخصصة للتنفيذ فقط عند اكتمال \`try\` بنجاح دون أي استثناء، بينما \`finally\` تنفذ في كل الأحوال."
+      "correctId": "b",
+      "explanation": {
+        "fi": "try-rakenteen else-lohko suoritetaan nimenomaan silloin, kun try-lohko selvisi ilman poikkeuksia. finally ajetaan aina.",
+        "en": "The <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else</code> clause executes strictly when the <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">try</code> body completed without encountering an exception.",
+        "ar": "كتلة <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">else</code> مخصصة للتنفيذ فقط عند اكتمال <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">try</code> بنجاح دون أي استثناء، بينما <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">finally</code> تنفذ في كل الأحوال."
       }
     }
   },
   {
-    id: 11,
-    slug: "data-structures",
-    icon: "Layers",
-    level: "advanced",
-    estimatedMinutes: 35,
-    title: {
-      fi: "Tietorakenteet",
-      en: "Data Structures",
-      ar: "هياكل البيانات المتقدمة"
+    "id": 11,
+    "slug": "data-structures",
+    "icon": "Layers",
+    "level": "advanced",
+    "estimatedMinutes": 35,
+    "title": {
+      "fi": "Tietorakenteet",
+      "en": "Data Structures",
+      "ar": "هياكل البيانات المتقدمة"
     },
-    summary: {
-      fi: "Listat, sanakirjat, monikot ja joukot: metodit, aikavaativuudet ja oikean tietorakenteen valinta.",
-      en: "Lists, Dictionaries, Tuples, and Sets: methods, time complexity, and selection guidelines.",
-      ar: "القوائم، القواميس، الصفوف، والمجموعات: الدوال، التعقيد الزمني واختيار البنية المناسبة."
+    "summary": {
+      "fi": "Listat, sanakirjat, monikot ja joukot: metodit, aikavaativuudet ja oikean tietorakenteen valinta.",
+      "en": "Lists, Dictionaries, Tuples, and Sets: methods, time complexity, and selection guidelines.",
+      "ar": "القوائم، القواميس، الصفوف، والمجموعات: الدوال، التعقيد الزمني واختيار البنية المناسبة."
     },
-    theory: {
-      fi: `
-### Pythonin 4 keskeistä tietorakennetta
-Pythonissa on 4 sisäänrakennettua tietorakennetta, joilla jokaisella on omat vahvuutensa:
-
-| Tietorakenne | Järjestetty? | Muuttuva? (Mutable) | Duplikaatit? | Esimerkki |
-| :--- | :--- | :--- | :--- | :--- |
-| **List (Lista)** | Kyllä | Kyllä | Sallittu | \`[1, 2, 2, 3]\` |
-| **Dictionary (Sanakirja)** | Kyllä (3.7+) | Kyllä | Uniikit avaimet | \`{"id": 1, "nimi": "Matti"}\` |
-| **Tuple (Monikko)** | Kyllä | **Ei (Immutable)** | Sallittu | \`(10, 20)\` |
-| **Set (Joukko)** | Ei | Kyllä | **Vain uniikit** | \`{1, 2, 3}\` |
-
-### 1. Listat (Lists)
-Dynaamisia taulukoita. Metodit: \`.append()\`, \`.extend()\`, \`.insert()\`, \`.pop()\`, \`.remove()\`, \`.sort()\`.
-* **List comprehension:** Elegantti ja nopea tapa luoda uusi lista: \`[x**2 for x in range(10) if x % 2 == 0]\`.
-
-### 2. Sanakirjat (Dictionaries)
-Hajautustaulu (Hash Map) avain-arvo-pareille. Haku avaimella on huippunopea **O(1)**.
-Metodit: \`.keys()\`, \`.values()\`, \`.items()\`, \`.get(key, default)\`, \`.update()\`.
-
-### 3. Monikot (Tuples)
-Kevyempiä ja muistitehokkaampia kuin listat. Koska monikot ovat muuttumattomia, niitä voidaan käyttää sanakirjan avaimina ja joukon alkioina.
-
-### 4. Joukot (Sets)
-Kokoelma uniikkeja arvoja. Tarjoaa matematiikasta tutut joukko-operaatiot:
-* Yhdiste (Union): \`A | B\`
-* Leikkaus (Intersection): \`A & B\`
-* Erotus (Difference): \`A - B\`
-      `,
-      en: `
-### The 4 Pillars of Python Collections
-
-| Collection | Ordered | Mutable | Duplicates | Syntax Example |
-| :--- | :--- | :--- | :--- | :--- |
-| **List** | Yes | Yes | Allowed | \`['apple', 'banana', 'apple']\` |
-| **Dictionary** | Yes (3.7+) | Yes | Unique Keys | \`{'id': 101, 'status': 'active'}\` |
-| **Tuple** | Yes | **Immutable** | Allowed | \`(1920, 1080)\` |
-| **Set** | No | Yes | **Unique Only** | \`{'python', 'react', 'git'}\` |
-
-### Lists & Comprehensions
-Dynamic arrays with amortization. Key methods: \`.append()\`, \`.pop()\`, \`.sort()\`.
-Comprehension idiom: \`[n * 2 for n in data if n > 0]\`.
-
-### Dictionaries (Hash Tables)
-Constant time complexity **O(1)** key lookups.
-Essential access method: \`dict.get(key, default)\` avoids catastrophic key exceptions.
-
-### Tuples (Immutable Records)
-Safe, memory-compact collections suitable for fixed coordinates, database rows, or dictionary keys.
-
-### Sets (Mathematical Sets)
-High-performance membership testing and deduplication:
-* Union: \`A | B\`
-* Intersection: \`A & B\`
-* Difference: \`A - B\`
-      `,
-      ar: `
-### هياكل البيانات الأربعة الأساسية في بايثون
-
-| الهيكل | الترتيب | قابلية التعديل | تكرار العناصر | مثال |
-| :--- | :--- | :--- | :--- | :--- |
-| **List (القائمة)** | مرتبة | نعم | مسموح | \`[10, 20, 20]\` |
-| **Dict (القاموس)** | مرتبة | نعم | مفاتيح فريدة | \`{'id': 1, 'name': 'علي'}\` |
-| **Tuple (الصف)** | مرتبة | **غير قابلة للتعديل** | مسموح | \`(100, 200)\` |
-| **Set (المجموعة)** | غير مرتبة | نعم | **قيم فريدة فقط** | \`{1, 2, 3}\` |
-
-### القوائم وتوليدها (List Comprehension)
-مصفوفات ديناميكية: \`.append()\` و \`.pop()\`. أسلوب التوليد: \`[x*2 for x in data]\`.
-
-### القواميس (Dictionaries)
-جداول تجزئة (Hash Tables) فائقة السرعة بزمن O(1). استخدم دائماً \`.get()\` للأمان.
-
-### المجموعات (Sets) والعمليات الرياضية
-* الاتحاد: \`A | B\`
-* التقاطع: \`A & B\`
-* الفرق: \`A - B\`
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Pythonin 4 keskeistä tietorakennetta</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonissa on 4 sisäänrakennettua tietorakennetta, joilla jokaisella on omat vahvuutensa:</p>\n\n<div class=\"overflow-x-auto my-4 rounded-xl border border-navy-border shadow-md\">\n  <table class=\"w-full text-xs font-sans text-left border-collapse\">\n    <thead class=\"bg-navy-card border-b border-navy-border text-gold font-mono\">\n      <tr>\n        <th class=\"p-3 font-semibold\">Tietorakenne</th>\n        <th class=\"p-3 font-semibold\">Järjestetty?</th>\n        <th class=\"p-3 font-semibold\">Muuttuva? (Mutable)</th>\n        <th class=\"p-3 font-semibold\">Duplikaatit?</th>\n        <th class=\"p-3 font-semibold\">Esimerkki</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-navy-border bg-navy/80\">\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">List (Lista)</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Kyllä</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Kyllä</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Sallittu</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">[1, 2, 2, 3]</code></td>\n      </tr>\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Dictionary (Sanakirja)</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Kyllä (3.7+)</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Kyllä</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Uniikit avaimet</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">{\"id\": 1, \"nimi\": \"Matti\"}</code></td>\n      </tr>\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Tuple (Monikko)</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Kyllä</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Ei (Immutable)</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Sallittu</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">(10, 20)</code></td>\n      </tr>\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Set (Joukko)</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Ei</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Kyllä</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Vain uniikit</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">{1, 2, 3}</code></td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>1. Listat (Lists)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Dynaamisia taulukoita. Metodit: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.append()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.extend()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.insert()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.pop()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.remove()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.sort()</code>.</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">List comprehension:</strong> Elegantti ja nopea tapa luoda uusi lista: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">[x ×× 2 for x in range(10) if x % 2 == 0]</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>2. Sanakirjat (Dictionaries)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Hajautustaulu (Hash Map) avain-arvo-pareille. Haku avaimella on huippunopea <strong class=\"text-white font-semibold\">O(1)</strong>.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Metodit: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.keys()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.values()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.items()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.get(key, default)</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.update()</code>.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>3. Monikot (Tuples)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Kevyempiä ja muistitehokkaampia kuin listat. Koska monikot ovat muuttumattomia, niitä voidaan käyttää sanakirjan avaimina ja joukon alkioina.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>4. Joukot (Sets)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Kokoelma uniikkeja arvoja. Tarjoaa matematiikasta tutut joukko-operaatiot:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li>Yhdiste (Union): <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">A | B</code></li>\n    <li>Leikkaus (Intersection): <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">A & B</code></li>\n    <li>Erotus (Difference): <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">A - B</code></li>\n</ul>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>The 4 Pillars of Python Collections</span></h3>\n\n<div class=\"overflow-x-auto my-4 rounded-xl border border-navy-border shadow-md\">\n  <table class=\"w-full text-xs font-sans text-left border-collapse\">\n    <thead class=\"bg-navy-card border-b border-navy-border text-gold font-mono\">\n      <tr>\n        <th class=\"p-3 font-semibold\">Collection</th>\n        <th class=\"p-3 font-semibold\">Ordered</th>\n        <th class=\"p-3 font-semibold\">Mutable</th>\n        <th class=\"p-3 font-semibold\">Duplicates</th>\n        <th class=\"p-3 font-semibold\">Syntax Example</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-navy-border bg-navy/80\">\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">List</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Yes</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Yes</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Allowed</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">['apple', 'banana', 'apple']</code></td>\n      </tr>\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Dictionary</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Yes (3.7+)</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Yes</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Unique Keys</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">{'id': 101, 'status': 'active'}</code></td>\n      </tr>\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Tuple</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Yes</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Immutable</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Allowed</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">(1920, 1080)</code></td>\n      </tr>\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Set</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">No</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">Yes</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Unique Only</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">{'python', 'react', 'git'}</code></td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Lists & Comprehensions</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Dynamic arrays with amortization. Key methods: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.append()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.pop()</code>, <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.sort()</code>.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Comprehension idiom: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">[n × 2 for n in data if n > 0]</code>.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Dictionaries (Hash Tables)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Constant time complexity <strong class=\"text-white font-semibold\">O(1)</strong> key lookups.</p>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Essential access method: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">dict.get(key, default)</code> avoids catastrophic key exceptions.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Tuples (Immutable Records)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Safe, memory-compact collections suitable for fixed coordinates, database rows, or dictionary keys.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Sets (Mathematical Sets)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">High-performance membership testing and deduplication:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li>Union: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">A | B</code></li>\n    <li>Intersection: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">A & B</code></li>\n    <li>Difference: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">A - B</code></li>\n</ul>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>هياكل البيانات الأربعة الأساسية في بايثون</span></h3>\n\n<div class=\"overflow-x-auto my-4 rounded-xl border border-navy-border shadow-md\">\n  <table class=\"w-full text-xs font-sans text-left border-collapse\">\n    <thead class=\"bg-navy-card border-b border-navy-border text-gold font-mono\">\n      <tr>\n        <th class=\"p-3 font-semibold\">الهيكل</th>\n        <th class=\"p-3 font-semibold\">الترتيب</th>\n        <th class=\"p-3 font-semibold\">قابلية التعديل</th>\n        <th class=\"p-3 font-semibold\">تكرار العناصر</th>\n        <th class=\"p-3 font-semibold\">مثال</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-navy-border bg-navy/80\">\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">List (القائمة)</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">مرتبة</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">نعم</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">مسموح</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">[10, 20, 20]</code></td>\n      </tr>\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Dict (القاموس)</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">مرتبة</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">نعم</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">مفاتيح فريدة</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">{'id': 1, 'name': 'علي'}</code></td>\n      </tr>\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Tuple (الصف)</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">مرتبة</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">غير قابلة للتعديل</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">مسموح</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">(100, 200)</code></td>\n      </tr>\n      <tr class=\"hover:bg-navy-card/50 transition-colors\">\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">Set (المجموعة)</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">غير مرتبة</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\">نعم</td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><strong class=\"text-white font-semibold\">قيم فريدة فقط</strong></td>\n        <td class=\"p-3 text-slate-300 font-mono text-[11px]\"><code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">{1, 2, 3}</code></td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>القوائم وتوليدها (List Comprehension)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">مصفوفات ديناميكية: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.append()</code> و <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.pop()</code>. أسلوب التوليد: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">[x×2 for x in data]</code>.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>القواميس (Dictionaries)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">جداول تجزئة (Hash Tables) فائقة السرعة بزمن O(1). استخدم دائماً <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">.get()</code> للأمان.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>المجموعات (Sets) والعمليات الرياضية</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li>الاتحاد: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">A | B</code></li>\n    <li>التقاطع: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">A & B</code></li>\n    <li>الفرق: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">A - B</code></li>\n</ul>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 11: Modern Data Structures Lab
-
-# 1. List Comprehension ja suodatus
-luvut = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-neliot = [x**2 for x in luvut if x % 2 == 0]
-print("Parillisten neliöt:", neliot)
-
-# 2. Sanakirjan tehokäyttö ja get()
-kayttaja = {"id": 101, "nimi": "Fahad", "rooli": "admin"}
-print("Käyttäjänimi:", kayttaja.get("nimi"))
-print("Puhelin (oletusarvolla):", kayttaja.get("puhelin", "Ei määritelty"))
-
-# 3. Monikon purkaminen (Tuple Unpacking)
-koordinaatit = (60.1699, 24.9384) # Helsinki lat, lon
-lat, lon = koordinaatit
-print(f"Helsingin sijainti: Leveysaste {lat}, Pituusaste {lon}")
-
-# 4. Joukkojen (Sets) matematiikka ja duplikaattien poisto
-kurssi_a = {"Python", "Git", "SQL", "Docker"}
-kurssi_b = {"Python", "JavaScript", "HTML", "Docker"}
-
-print("Molemmat kurssit jakavat (Leikkaus):", kurssi_a & kurssi_b)
-print("Kaikki taidot yhteensä (Yhdiste):", kurssi_a | kurssi_b)
-print("Vain kurssilla A (Erotus):", kurssi_a - kurssi_b)`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 11: Modern Data Structures Lab\n\n# 1. List Comprehension ja suodatus\nluvut = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nneliot = [x**2 for x in luvut if x % 2 == 0]\nprint(\"Parillisten neliöt:\", neliot)\n\n# 2. Sanakirjan tehokäyttö ja get()\nkayttaja = {\"id\": 101, \"nimi\": \"Fahad\", \"rooli\": \"admin\"}\nprint(\"Käyttäjänimi:\", kayttaja.get(\"nimi\"))\nprint(\"Puhelin (oletusarvolla):\", kayttaja.get(\"puhelin\", \"Ei määritelty\"))\n\n# 3. Monikon purkaminen (Tuple Unpacking)\nkoordinaatit = (60.1699, 24.9384) # Helsinki lat, lon\nlat, lon = koordinaatit\nprint(f\"Helsingin sijainti: Leveysaste {lat}, Pituusaste {lon}\")\n\n# 4. Joukkojen (Sets) matematiikka ja duplikaattien poisto\nkurssi_a = {\"Python\", \"Git\", \"SQL\", \"Docker\"}\nkurssi_b = {\"Python\", \"JavaScript\", \"HTML\", \"Docker\"}\n\nprint(\"Molemmat kurssit jakavat (Leikkaus):\", kurssi_a & kurssi_b)\nprint(\"Kaikki taidot yhteensä (Yhdiste):\", kurssi_a | kurssi_b)\nprint(\"Vain kurssilla A (Erotus):\", kurssi_a - kurssi_b)",
+    "proTips": {
+      "fi": [
         "Jos sinun täytyy tarkistaa toistuvasti 'if alkio in kokoelma:', muunna lista joukoksi (set): haku on O(1) vakioaikainen listan O(N) sijaan!",
         "Käytä collections.defaultdict- ja collections.Counter -erikoistietorakenteita monimutkaisiin laskentoihin.",
         "Monikot (tuples) ovat muistitehokkaampia ja nopeampia luoda kuin listat."
       ],
-      en: [
-        "If you repeatedly execute \`if item in collection:\`, cast to a \`set\`: lookups are O(1) hash lookups instead of O(N) linear scans.",
-        "Leverage \`collections.defaultdict\` and \`collections.Counter\` from the standard library for advanced counting tasks.",
+      "en": [
+        "If you repeatedly execute <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">if item in collection:</code>, cast to a <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">set</code>: lookups are O(1) hash lookups instead of O(N) linear scans.",
+        "Leverage <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">collections.defaultdict</code> and <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">collections.Counter</code> from the standard library for advanced counting tasks.",
         "Tuples require less memory and instantiate faster than lists; use them for fixed datasets."
       ],
-      ar: [
-        "إذا كنت تبحث كثيراً بـ `in` داخل مجموعة كبيرة، حولها إلى `set`؛ فالبحث فيها يستغرق زمناً ثابتاً O(1) مقارنة بـ O(N) للقوائم.",
-        "استفد من هياكل `collections.Counter` الجاهزة لإحصاء تكرار العناصر باحترافية.",
+      "ar": [
+        "إذا كنت تبحث كثيراً بـ <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">in</code> داخل مجموعة كبيرة، حولها إلى <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">set</code>؛ فالبحث فيها يستغرق زمناً ثابتاً O(1) مقارنة بـ O(N) للقوائم.",
+        "استفد من هياكل <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">collections.Counter</code> الجاهزة لإحصاء تكرار العناصر باحترافية.",
         "الصفوف (Tuples) تستهلك مساحة أقل في الذاكرة وتُنشأ أسرع من القوائم؛ استخدمها للبيانات الثابتة."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Mikä seuraavista tietorakenteista poistaa automaattisesti kaikki kaksoiskappaleet (duplikaatit)?",
-        en: "Which Python collection automatically discards and deduplicates duplicate items?",
-        ar: "أي من هياكل البيانات التالية يقوم بحذف العناصر المكررة تلقائياً؟"
+    "quiz": {
+      "question": {
+        "fi": "Mikä seuraavista tietorakenteista poistaa automaattisesti kaikki kaksoiskappaleet (duplikaatit)?",
+        "en": "Which Python collection automatically discards and deduplicates duplicate items?",
+        "ar": "أي من هياكل البيانات التالية يقوم بحذف العناصر المكررة تلقائياً؟"
       },
-      options: [
-        { id: "a", text: { fi: "List", en: "List", ar: "List" } },
-        { id: "b", text: { fi: "Tuple", en: "Tuple", ar: "Tuple" } },
-        { id: "c", text: { fi: "Set (Joukko)", en: "Set", ar: "Set (المجموعة)" } },
-        { id: "d", text: { fi: "Array", en: "Array", ar: "Array" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "List",
+            "en": "List",
+            "ar": "List"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "Tuple",
+            "en": "Tuple",
+            "ar": "Tuple"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "Set (Joukko)",
+            "en": "Set",
+            "ar": "Set (المجموعة)"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "Array",
+            "en": "Array",
+            "ar": "Array"
+          }
+        }
       ],
-      correctId: "c",
-      explanation: {
-        fi: "Joukko (Set) sisältää määritelmänsä mukaan vain uniikkeja arvoja, joten duplikaatit karsiutuvat automaattisesti.",
-        en: "Sets are defined strictly as collections of unique hashable elements, discarding duplicates automatically.",
-        ar: "المجموعة (Set) مبنية رياضياً لتحتوي قيماً فريدة فقط، لذا تُسقط أي عنصر مكرر فوراً."
+      "correctId": "c",
+      "explanation": {
+        "fi": "Joukko (Set) sisältää määritelmänsä mukaan vain uniikkeja arvoja, joten duplikaatit karsiutuvat automaattisesti.",
+        "en": "Sets are defined strictly as collections of unique hashable elements, discarding duplicates automatically.",
+        "ar": "المجموعة (Set) مبنية رياضياً لتحتوي قيماً فريدة فقط، لذا تُسقط أي عنصر مكرر فوراً."
       }
     }
   },
   {
-    id: 12,
-    slug: "object-oriented-programming",
-    icon: "Boxes",
-    level: "advanced",
-    estimatedMinutes: 40,
-    title: {
-      fi: "Olio-ohjelmointi (OOP)",
-      en: "Object-Oriented Programming",
-      ar: "البرمجة كائنية التوجه (OOP)"
+    "id": 12,
+    "slug": "object-oriented-programming",
+    "icon": "Boxes",
+    "level": "advanced",
+    "estimatedMinutes": 40,
+    "title": {
+      "fi": "Olio-ohjelmointi (OOP)",
+      "en": "Object-Oriented Programming",
+      "ar": "البرمجة كائنية التوجه (OOP)"
     },
-    summary: {
-      fi: "Luokat, oliot, __init__-konstruktori, periytyminen, kapselointi ja metodien ylikirjoitus.",
-      en: "Classes, objects, __init__ constructor, inheritance, encapsulation, and method overriding.",
-      ar: "الفئات، الكائنات، المنشئ __init__، التوريث، التغليف، وتجاوز الدوال (Overriding)."
+    "summary": {
+      "fi": "Luokat, oliot, __init__-konstruktori, periytyminen, kapselointi ja metodien ylikirjoitus.",
+      "en": "Classes, objects, __init__ constructor, inheritance, encapsulation, and method overriding.",
+      "ar": "الفئات، الكائنات، المنشئ __init__، التوريث، التغليف، وتجاوز الدوال (Overriding)."
     },
-    theory: {
-      fi: `
-### Olio-ohjelmoinnin peruskäsitteet
-* **Luokka (Class):** Piirustus tai mallipohja olioille (esim. \`class Auto:\`).
-* **Olio (Object / Instance):** Luokasta luotu konkreettinen ilmentymä muistissa (esim. \`oma_auto = Auto("Tesla", 2024)\`).
-* **__init__-metodi:** Luokan konstruktori (alustaja), joka suoritetaan automaattisesti, kun uusi olio luodaan.
-* **self-parametri:** Viittaa luotavaan konkreettiseen olioon itseensä. Sillä sidotaan attribuutit olioon: \`self.nimi = nimi\`.
-
-### Kapselointi ja tietojen suojaus (Encapsulation)
-Pythonissa ei ole muiden kielten \`private\`-avainsanaa, vaan suojaus perustuu nimeämiskäytäntöihin:
-* **Julkinen (Public):** \`self.nimi\` (vapaasti luettavissa ja muokattavissa).
-* **Suojattu (Protected convention):** \`self._saldo\` (yksi alaviiva ilmaisee kehittäjille: käytä vain luokan sisällä tai aliluokissa).
-* **Yksityinen (Private name mangling):** \`self.__salasana\` (kaksi alaviivaa muuttaa nimen sisäisesti muotoon \`_Luokka__salasana\`, estäen suoran vahingollisen ylikirjoituksen ulkoa).
-
-### Periytyminen (Inheritance) ja super()
-Aliluokka (subclass) voi periä yliluokan (parent class) attribuutit ja metodit:
-\`\`\`python
-class Sahkoauto(Auto):
-    def __init__(self, merkki, akkukoko):
-        super().__init__(merkki) # Kutsuu yliluokan konstruktoria
-        self.akkukoko = akkukoko
-\`\`\`
-
-### Metodien ylikirjoitus (Method Overriding) ja polymorfismi
-Aliluokka voi määritellä yliluokalta perityn metodin uudelleen omalla erikoistuneella toteutuksellaan. Polymorfismi tarkoittaa, että eri luokkien olioita voidaan käsitellä yhtenäisen rajapinnan kautta.
-      `,
-      en: `
-### OOP Paradigms in Python
-* **Class:** Blueprint or template defining states (attributes) and behaviors (methods).
-* **Object / Instance:** Concrete entity instantiated from a class into memory.
-* **The \`__init__\` Method:** Dunder constructor automatically invoked upon object instantiation.
-* **The \`self\` Reference:** Explicit parameter referring to the bound instance itself.
-
-### Encapsulation & Access Modifiers
-Python embraces community conventions rather than strict compiler-enforced access keywords:
-* **Public:** \`self.title\` (freely accessible).
-* **Protected (Convention):** \`self._balance\` (single underscore hints private internal usage).
-* **Private (Name Mangling):** \`self.__secret_key\` (double underscore triggers automatic identifier mangling to \`_Class__secret_key\` to prevent collision in subclasses).
-
-### Inheritance & The super() Proxy
-Subclasses inherit capabilities from parent classes:
-\`\`\`python
-class ElectricVehicle(Vehicle):
-    def __init__(self, brand, battery_kwh):
-        super().__init__(brand) # Delegates initialization to parent
-        self.battery_kwh = battery_kwh
-\`\`\`
-
-### Method Overriding & Polymorphism
-Subclasses can override inherited methods to customize behavior. Polymorphism allows uniform invocation of common methods across diverse object hierarchies.
-      `,
-      ar: `
-### مفاهيم البرمجة كائنية التوجه في بايثون
-* **الفئة (Class):** المخطط النموذجي (Blueprint) لإنشاء الكائنات.
-* **الكائن (Object):** نسخة حقيقية يتم إنشاؤها من الفئة في الذاكرة.
-* **المنشئ \`__init__\`:** دالة التهيئة التلقائية التي تعمل فور إنشاء الكائن.
-* **المعامل \`self\`:** مؤشر يشير إلى الكائن الحالي لتخزين واستدعاء خصائصه.
-
-### التغليف ومستويات الوصول (Encapsulation)
-* **عام (Public):** \`self.name\` متاح للوصول والتعديل بحرية.
-* **محمي (Protected):** \`self._balance\` بشرطة سفلية واحدة تنبه المطورين بعدم استخدامه خارجياً.
-* **خاص (Private):** \`self.__pin\` بشرطتين سفليتين، يفعّل نظام التمويه (Name Mangling) لمنع التعديل المباشر.
-
-### التوريث (Inheritance) ودالة super()
-تتيح الفئات الفرعية وراثة خصائص الفئة الأم مع استخدام \`super().__init__()\` لاستدعاء منشئ الفئة الأم بأمان.
-
-### تجاوز الدوال (Method Overriding) وتعدد الأشكال
-يمكن للفئة الابن إعادة كتابة أي دالة موروثة لتقديم سلوك مخصص يلائمها.
-      `
+    "theory": {
+      "fi": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Olio-ohjelmoinnin peruskäsitteet</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Luokka (Class):</strong> Piirustus tai mallipohja olioille (esim. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">class Auto:</code>).</li>\n    <li><strong class=\"text-white font-semibold\">Olio (Object / Instance):</strong> Luokasta luotu konkreettinen ilmentymä muistissa (esim. <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">oma_auto = Auto(\"Tesla\", 2024)</code>).</li>\n    <li><strong class=\"text-white font-semibold\">__init__-metodi:</strong> Luokan konstruktori (alustaja), joka suoritetaan automaattisesti, kun uusi olio luodaan.</li>\n    <li><strong class=\"text-white font-semibold\">self-parametri:</strong> Viittaa luotavaan konkreettiseen olioon itseensä. Sillä sidotaan attribuutit olioon: <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self.nimi = nimi</code>.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Kapselointi ja tietojen suojaus (Encapsulation)</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Pythonissa ei ole muiden kielten <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">private</code>-avainsanaa, vaan suojaus perustuu nimeämiskäytäntöihin:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Julkinen (Public):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self.nimi</code> (vapaasti luettavissa ja muokattavissa).</li>\n    <li><strong class=\"text-white font-semibold\">Suojattu (Protected convention):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self._saldo</code> (yksi alaviiva ilmaisee kehittäjille: käytä vain luokan sisällä tai aliluokissa).</li>\n    <li><strong class=\"text-white font-semibold\">Yksityinen (Private name mangling):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self.__salasana</code> (kaksi alaviivaa muuttaa nimen sisäisesti muotoon <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">_Luokka__salasana</code>, estäen suoran vahingollisen ylikirjoituksen ulkoa).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Periytyminen (Inheritance) ja super()</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Aliluokka (subclass) voi periä yliluokan (parent class) attribuutit ja metodit:</p>\n\n<pre class=\"p-4 rounded-xl bg-navy-card border border-navy-border text-gold font-mono text-xs overflow-x-auto my-3\"><code>class Sahkoauto(Auto):\n    def __init__(self, merkki, akkukoko):\n        super().__init__(merkki) # Kutsuu yliluokan konstruktoria\n        self.akkukoko = akkukoko</code></pre>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Metodien ylikirjoitus (Method Overriding) ja polymorfismi</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Aliluokka voi määritellä yliluokalta perityn metodin uudelleen omalla erikoistuneella toteutuksellaan. Polymorfismi tarkoittaa, että eri luokkien olioita voidaan käsitellä yhtenäisen rajapinnan kautta.</p>",
+      "en": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>OOP Paradigms in Python</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Class:</strong> Blueprint or template defining states (attributes) and behaviors (methods).</li>\n    <li><strong class=\"text-white font-semibold\">Object / Instance:</strong> Concrete entity instantiated from a class into memory.</li>\n    <li><strong class=\"text-white font-semibold\">The <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__init__</code> Method:</strong> Dunder constructor automatically invoked upon object instantiation.</li>\n    <li><strong class=\"text-white font-semibold\">The <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self</code> Reference:</strong> Explicit parameter referring to the bound instance itself.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Encapsulation & Access Modifiers</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Python embraces community conventions rather than strict compiler-enforced access keywords:</p>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">Public:</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self.title</code> (freely accessible).</li>\n    <li><strong class=\"text-white font-semibold\">Protected (Convention):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self._balance</code> (single underscore hints private internal usage).</li>\n    <li><strong class=\"text-white font-semibold\">Private (Name Mangling):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self.__secret_key</code> (double underscore triggers automatic identifier mangling to <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">_Class__secret_key</code> to prevent collision in subclasses).</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Inheritance & The super() Proxy</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Subclasses inherit capabilities from parent classes:</p>\n\n<pre class=\"p-4 rounded-xl bg-navy-card border border-navy-border text-gold font-mono text-xs overflow-x-auto my-3\"><code>class ElectricVehicle(Vehicle):\n    def __init__(self, brand, battery_kwh):\n        super().__init__(brand) # Delegates initialization to parent\n        self.battery_kwh = battery_kwh</code></pre>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>Method Overriding & Polymorphism</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">Subclasses can override inherited methods to customize behavior. Polymorphism allows uniform invocation of common methods across diverse object hierarchies.</p>",
+      "ar": "<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>مفاهيم البرمجة كائنية التوجه في بايثون</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">الفئة (Class):</strong> المخطط النموذجي (Blueprint) لإنشاء الكائنات.</li>\n    <li><strong class=\"text-white font-semibold\">الكائن (Object):</strong> نسخة حقيقية يتم إنشاؤها من الفئة في الذاكرة.</li>\n    <li><strong class=\"text-white font-semibold\">المنشئ <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__init__</code>:</strong> دالة التهيئة التلقائية التي تعمل فور إنشاء الكائن.</li>\n    <li><strong class=\"text-white font-semibold\">المعامل <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self</code>:</strong> مؤشر يشير إلى الكائن الحالي لتخزين واستدعاء خصائصه.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>التغليف ومستويات الوصول (Encapsulation)</span></h3>\n\n<ul class=\"list-disc pl-5 space-y-2 my-3\">\n    <li><strong class=\"text-white font-semibold\">عام (Public):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self.name</code> متاح للوصول والتعديل بحرية.</li>\n    <li><strong class=\"text-white font-semibold\">محمي (Protected):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self._balance</code> بشرطة سفلية واحدة تنبه المطورين بعدم استخدامه خارجياً.</li>\n    <li><strong class=\"text-white font-semibold\">خاص (Private):</strong> <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">self.__pin</code> بشرطتين سفليتين، يفعّل نظام التمويه (Name Mangling) لمنع التعديل المباشر.</li>\n</ul>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>التوريث (Inheritance) ودالة super()</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">تتيح الفئات الفرعية وراثة خصائص الفئة الأم مع استخدام <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">super().__init__()</code> لاستدعاء منشئ الفئة الأم بأمان.</p>\n\n<h3 class=\"text-base sm:text-lg font-bold text-white mt-6 mb-2 flex items-center gap-2.5 border-b border-navy-border pb-2\"><span class=\"w-1.5 h-4 rounded-full bg-crimson inline-block\"></span><span>تجاوز الدوال (Method Overriding) وتعدد الأشكال</span></h3>\n\n<p class=\"text-slate-300 leading-relaxed text-sm\">يمكن للفئة الابن إعادة كتابة أي دالة موروثة لتقديم سلوك مخصص يلائمها.</p>"
     },
-    codeSnippet: `# Python Developer Guide - Topic 12: Object-Oriented Architecture
-
-# 1. Kantaluokka kapseloinnilla
-class Pankkitili:
-    pankin_nimi = "Nordic Bank" # Luokkamuuttuja (Class attribute)
-
-    def __init__(self, omistaja: str, alkusaldo: float = 0.0):
-        self.omistaja = omistaja       # Julkinen attribuutti
-        self.__saldo = alkusaldo       # Yksityinen attribuutti (Private)
-
-    def talleta(self, maara: float) -> bool:
-        if maara > 0:
-            self.__saldo += maara
-            return True
-        return False
-
-    def nosta(self, maara: float) -> bool:
-        if 0 < maara <= self.__saldo:
-            self.__saldo -= maara
-            return True
-        return False
-
-    def get_saldo(self) -> float:
-        """Turvallinen getter-metodi saldon lukemiseen."""
-        return self.__saldo
-
-# 2. Periytyminen ja metodin ylikirjoitus
-class Saastotili(Pankkitili):
-    def __init__(self, omistaja: str, alkusaldo: float, korkoprosentti: float = 3.5):
-        super().__init__(omistaja, alkusaldo)
-        self.korkoprosentti = korkoprosentti
-
-    def maksa_korko(self):
-        korko = self.get_saldo() * (self.korkoprosentti / 100)
-        self.talleta(korko)
-        print(f"Korkoa maksettu: {korko:.2f}€")
-
-# Testataan toimintaa
-tili = Saastotili("Matti Meikäläinen", 1000.0, korkoprosentti=4.0)
-tili.talleta(500.0)
-tili.maksa_korko()
-print(f"Asiakkaan {tili.omistaja} loppusaldo: {tili.get_saldo():.2f}€")`,
-    proTips: {
-      fi: [
+    "codeSnippet": "# Python Developer Guide - Topic 12: Object-Oriented Architecture\n\n# 1. Kantaluokka kapseloinnilla\nclass Pankkitili:\n    pankin_nimi = \"Nordic Bank\" # Luokkamuuttuja (Class attribute)\n\n    def __init__(self, omistaja: str, alkusaldo: float = 0.0):\n        self.omistaja = omistaja       # Julkinen attribuutti\n        self.__saldo = alkusaldo       # Yksityinen attribuutti (Private)\n\n    def talleta(self, maara: float) -> bool:\n        if maara > 0:\n            self.__saldo += maara\n            return True\n        return False\n\n    def nosta(self, maara: float) -> bool:\n        if 0 < maara <= self.__saldo:\n            self.__saldo -= maara\n            return True\n        return False\n\n    def get_saldo(self) -> float:\n        \"\"\"Turvallinen getter-metodi saldon lukemiseen.\"\"\"\n        return self.__saldo\n\n# 2. Periytyminen ja metodin ylikirjoitus\nclass Saastotili(Pankkitili):\n    def __init__(self, omistaja: str, alkusaldo: float, korkoprosentti: float = 3.5):\n        super().__init__(omistaja, alkusaldo)\n        self.korkoprosentti = korkoprosentti\n\n    def maksa_korko(self):\n        korko = self.get_saldo() * (self.korkoprosentti / 100)\n        self.talleta(korko)\n        print(f\"Korkoa maksettu: {korko:.2f}€\")\n\n# Testataan toimintaa\ntili = Saastotili(\"Matti Meikäläinen\", 1000.0, korkoprosentti=4.0)\ntili.talleta(500.0)\ntili.maksa_korko()\nprint(f\"Asiakkaan {tili.omistaja} loppusaldo: {tili.get_saldo():.2f}€\")",
+    "proTips": {
+      "fi": [
         "Käytä @property-dekoraattoria luodaksesi pythonic-tyylisiä gettereitä ja settereitä perinteisten get_x()-metodien sijaan.",
         "Suosi komposition (Composition) käyttöä perinnän (Inheritance) sijaan silloin, kun suhde ei ole aito 'is-a' vaan 'has-a'.",
         "Toteuta luokissasi aina __repr__- ja __str__-metodit selkeää virheenjäljitystä ja tulostamista varten."
       ],
-      en: [
-        "Use the \`@property\` decorator to implement Pythonic getters and setters with transparent validation.",
+      "en": [
+        "Use the <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">@property</code> decorator to implement Pythonic getters and setters with transparent validation.",
         "Favor composition over inheritance when relationships resemble 'has-a' rather than 'is-a'.",
-        "Always implement \`__repr__\` and \`__str__\` dunder methods on domain classes for effortless debugging."
+        "Always implement <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__repr__</code> and <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__str__</code> dunder methods on domain classes for effortless debugging."
       ],
-      ar: [
-        "استخدم المزخرف `@property` لإنشاء دوال القراءة والتحقق بطريقة بايثونية أنيقة.",
+      "ar": [
+        "استخدم المزخرف <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">@property</code> لإنشاء دوال القراءة والتحقق بطريقة بايثونية أنيقة.",
         "فضّل التركيب (Composition) على التوريث (Inheritance) إذا كانت العلاقة تمثل 'يمتلك' بدلاً من 'هو نوع من'.",
-        "احرص دائماً على تعريف دوال `__repr__` و `__str__` لتسهيل فحص وطباعة الكائنات أثناء التطوير."
+        "احرص دائماً على تعريف دوال <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__repr__</code> و <code class=\"px-1.5 py-0.5 rounded bg-navy-card border border-navy-border text-gold font-mono text-[11px] inline-block mx-0.5\">__str__</code> لتسهيل فحص وطباعة الكائنات أثناء التطوير."
       ]
     },
-    quiz: {
-      question: {
-        fi: "Miten Python estää vahingollisen pääsyn kaksoisalaviivalla alkaviin attribuutteihin (esim. self.__saldo)?",
-        en: "How does Python protect double-underscore attributes (e.g. self.__balance) against accidental external modification?",
-        ar: "كيف تحمي بايثون الخصائص المسبوقة بشرطتين سفليتين (مثل self.__balance) من التعديل العفوي الخارجي؟"
+    "quiz": {
+      "question": {
+        "fi": "Miten Python estää vahingollisen pääsyn kaksoisalaviivalla alkaviin attribuutteihin (esim. self.__saldo)?",
+        "en": "How does Python protect double-underscore attributes (e.g. self.__balance) against accidental external modification?",
+        "ar": "كيف تحمي بايثون الخصائص المسبوقة بشرطتين سفليتين (مثل self.__balance) من التعديل العفوي الخارجي؟"
       },
-      options: [
-        { id: "a", text: { fi: "Käyttöjärjestelmä asettaa muistiosoitteen vain luku -tilaan", en: "The operating system hardware-locks the memory segment", ar: "يقفل نظام التشغيل عنوان الذاكرة للقراءة فقط" } },
-        { id: "b", text: { fi: "Name Mangling -mekanismilla, joka muuttaa nimeksi _LuokanNimi__saldo", en: "Via Name Mangling, which rewrites the internal name to _ClassName__balance", ar: "عبر آلية تمويه الأسماء (Name Mangling) التي تحول الاسم داخلياً إلى _ClassName__balance" } },
-        { id: "c", text: { fi: "Python salaa muuttujan arvon AES-256-algoritmilla", en: "Python encrypts the value in memory with AES-256", ar: "تشفير القيمة في الذاكرة بخوارزمية AES-256" } },
-        { id: "d", text: { fi: "Attribuutti poistetaan muistista heti luonnin jälkeen", en: "The attribute is automatically deleted after constructor exit", ar: "يتم حذف الخاصية فور الخروج من المنشئ" } }
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "fi": "Käyttöjärjestelmä asettaa muistiosoitteen vain luku -tilaan",
+            "en": "The operating system hardware-locks the memory segment",
+            "ar": "يقفل نظام التشغيل عنوان الذاكرة للقراءة فقط"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "fi": "Name Mangling -mekanismilla, joka muuttaa nimeksi _LuokanNimi__saldo",
+            "en": "Via Name Mangling, which rewrites the internal name to _ClassName__balance",
+            "ar": "عبر آلية تمويه الأسماء (Name Mangling) التي تحول الاسم داخلياً إلى _ClassName__balance"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "fi": "Python salaa muuttujan arvon AES-256-algoritmilla",
+            "en": "Python encrypts the value in memory with AES-256",
+            "ar": "تشفير القيمة في الذاكرة بخوارزمية AES-256"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "fi": "Attribuutti poistetaan muistista heti luonnin jälkeen",
+            "en": "The attribute is automatically deleted after constructor exit",
+            "ar": "يتم حذف الخاصية فور الخروج من المنشئ"
+          }
+        }
       ],
-      correctId: "b",
-      explanation: {
-        fi: "Python käyttää Name Mangling -menetelmää: kaksi alaviivaa muuttaa nimen automaattisesti muotoon _Luokka__attribuutti, mikä estää tahattoman törmäyksen.",
-        en: "Python applies Name Mangling, automatically prefixing the identifier with _ClassName to avoid collisions.",
-        ar: "تطبق بايثون أسلوب Name Mangling الذي يضيف اسم الفئة مسبوقاً بشرطة إلى اسم الخاصية لمنع تضارب الأسماء."
+      "correctId": "b",
+      "explanation": {
+        "fi": "Python käyttää Name Mangling -menetelmää: kaksi alaviivaa muuttaa nimen automaattisesti muotoon _Luokka__attribuutti, mikä estää tahattoman törmäyksen.",
+        "en": "Python applies Name Mangling, automatically prefixing the identifier with _ClassName to avoid collisions.",
+        "ar": "تطبق بايثون أسلوب Name Mangling الذي يضيف اسم الفئة مسبوقاً بشرطة إلى اسم الخاصية لمنع تضارب الأسماء."
       }
     }
   }

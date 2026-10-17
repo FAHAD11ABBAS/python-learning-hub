@@ -104,3 +104,60 @@
 .light .code-builtin { color: #0284c7; }
 .light .code-operator { color: #b45309; }
 .light .code-variable { color: #1e293b; }
+
+/* Theory content HTML element styling */
+.theory-content ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.theory-content ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.theory-content li {
+  margin-top: 0.375rem !important;
+  margin-bottom: 0.375rem !important;
+  line-height: 1.65 !important;
+}
+
+.theory-content strong {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.light .theory-content strong {
+  color: #0f172a !important;
+}
+
+.theory-content em {
+  color: #fde68a !important;
+  font-style: italic !important;
+}
+
+.light .theory-content em {
+  color: #b45309 !important;
+}
+
+.theory-content code {
+  background-color: #111827;
+  border: 1px solid #1F293D;
+  color: #FBBF24;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85em;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.375rem;
+  display: inline-block;
+  margin: 0 0.15rem;
+}
+
+.light .theory-content code {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #b45309;
+}
